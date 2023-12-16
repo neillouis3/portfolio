@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import HeaderBanner from './components/headerBanner';
+import NavBar from './components/navBar';
 
 
 function App() {
