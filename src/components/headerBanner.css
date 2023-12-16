@@ -1,0 +1,39 @@
+
+
+.bannerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+   
+
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.bannerSVG{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background-color: transparent
+}
+.orangeBannerSVG{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background-color: transparent
+}
+
+.bannerText {
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+
+}
