@@ -1,5 +1,20 @@
 import React, {useState} from "react";
 
-export default function HeaderBanner() {
+function HeaderBanner() {
+    return (
+        <>
+            <div class="header-banner">
+            
+            
+                <h1>Hi, I'm Dylan</h1>
+            
+            </div>
+        
+        </>
 
+
+
+    )
 }
+
+export default HeaderBanner;

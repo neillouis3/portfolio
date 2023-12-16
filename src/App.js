@@ -2,13 +2,20 @@ import React from 'react';
 import './App.css';
 import HeaderBanner from './components/headerBanner';
 import NavBar from './components/navBar';
+import Index from './components/pages/index';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>My Portfolio</h1>
-    </div>
+    <>
+      <Router>
+        <HeaderBanner />
+        <Routes>
+          <Route exact path="/" element={<Index/>} />
+        </Routes>
+      </Router> 
+    </>
   );
 }
 
