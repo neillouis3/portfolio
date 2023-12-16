@@ -14,21 +14,35 @@
     margin: 0;
     padding: 0;
 
+    background-color: #282C34;  
 }
 
-.bannerSVG{
+
+
+.purpleBannerSVG{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+.pinkBannerSVG{
     position: absolute;
     margin: 0;
     padding: 0;
     z-index: 1;
-    background-color: transparent
+    background-color: transparent;
+    animation: waveAnimation 2s ease-in-out infinite;
 }
+
 .orangeBannerSVG{
     position: absolute;
     margin: 0;
     padding: 0;
     z-index: 2;
-    background-color: transparent
+    background-color: transparent;
+    animation: waveAnimation 2s ease-in-out infinite;
 }
 
 .bannerText {
@@ -36,4 +50,22 @@
     padding: 0;
     z-index: 10;
 
+}
+
+
+
+
+@keyframes waveAnimation {
+    0% {
+        transform: rotate(45deg);
+        
+    }
+    50% {
+        transform: rotate(45deg);
+        transform: translateY(100);
+        transform: translateX(100);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
 }
