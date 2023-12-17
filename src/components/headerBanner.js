@@ -14,22 +14,14 @@ function HeaderBanner() {
 
             <div className="bannerContainer">
 
-                <div className="upperWaveContainer">
-                    <div className="upperWave orangeWave">
-                        <img src={process.env.PUBLIC_URL + '/images/orangeWave.png'}  />
-                    </div>
-                    <div className="upperWave orangeWave">
-                        <img src={process.env.PUBLIC_URL + '/images/pinkWave.png'}  />
-                    </div>
-                    <div className="upperWave orangeWave">
-                        <img src={process.env.PUBLIC_URL + '/images/purpleWave.png'}  />
-                    </div>
-                    
-                    
+                
+                <div className="waveContainer">
+                
+                
                 </div>
                 
                 
-                
+                <div className="textContainer">
                 <h1>
                 <Typed 
                     className="bannerText"
@@ -42,10 +34,8 @@ function HeaderBanner() {
                     typeSpeed={40} loop />
 
                 </h1>
-                
-                <div className="bottomWaveContainer">
-                    
                 </div>
+                
                 
             </div>
         
