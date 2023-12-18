@@ -17,10 +17,15 @@
 
 .profileTextContainer {
     background-color: red;
-    display: absolute;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .profileText {
     background-color: transparent;
+
+    margin: 0;
+
+
 }

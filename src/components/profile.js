@@ -18,7 +18,7 @@ function Profile() {
 
 					<h2 className="profileText"></h2>
 					<Typed
-						className="bannerText"
+						className="profileText"
 						strings={[
 							"Software Engineer",
 							"UI/UX Designer",
