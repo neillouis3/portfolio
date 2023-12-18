@@ -1,13 +1,15 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 export default function Social() {
 
     return (
         <>
         <div className="socialContainer">
-            
-            <a href="https://www.linkedin.com/in/alexander-lee-1b1b1b1b1/" target="_blank" rel="noopener noreferrer">
-            </a>
+
+            <p>Linkedin</p>
+            <p>Github</p>
+            <p>Instagram</p>
         </div>
 
         
