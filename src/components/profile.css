@@ -11,4 +11,13 @@
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+    border: 1px solid #fff;
+    padding: 1rem;
+}
+
+.profileTextContainer {
+    background-color: transparent;
+}
+.profileText {
+    background-color: transparent;
 }

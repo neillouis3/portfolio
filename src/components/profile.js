@@ -28,6 +28,7 @@ function Profile() {
 						delaySpeed={1000}
 						loop
 					/>
+                    <p className="profileText">3rd Year Computer Engineering Student at Memorial University</p>
 				</div>
 			</div>
 		</>
