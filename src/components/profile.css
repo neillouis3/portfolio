@@ -16,7 +16,10 @@
 }
 
 .profileTextContainer {
-    background-color: transparent;
+    background-color: red;
+    display: absolute;
+    align-items: center;
+    justify-content: center;
 }
 .profileText {
     background-color: transparent;
