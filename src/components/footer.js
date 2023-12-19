@@ -5,7 +5,6 @@ export default function Footer() {
         <>
         <div className="footerContainer">
             <p>Designed and built by Neil Louise</p>
-
         </div>
         </>
     )
