@@ -6,7 +6,7 @@ import Profile from './components/profile';
 import Index from './components/pages/index';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Social from './components/social';
-
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <Route exact path="/" element={<Index/>} />
         </Routes>
         <Social/>
+        <Footer/>
       </Router> 
     </>
   );
