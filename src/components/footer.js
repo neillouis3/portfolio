@@ -1,12 +1,22 @@
 import React from "react"
-import "./footer.css"
+
 
 export default function Footer() {
     return (
         <>
-        <div className="footerContainer">
-            <p>Designed and built by Neil Louise</p>
-        </div>
+        <footer 
+            class="
+                container 
+            "
+        >
+            <p 
+                class="
+                    text-center
+                    bg-transparent
+                    text-gray
+                "
+            >Designed & built by Neil Louise</p>
+        </footer>
         </>
     )
 }

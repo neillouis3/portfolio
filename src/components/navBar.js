@@ -1,7 +1,6 @@
-import React, {useState, useEffect, useCallback} from "react";
-import Typed from "react-typed";
-import "./headerBanner.css";
-import { motion } from "framer-motion"
+import React from "react";
+
+
 
 export default function navBar() {
 
