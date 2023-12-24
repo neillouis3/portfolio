@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import Typed from "react-typed";
 import "./headerBanner.css";
-import { motion } from "framer-motion";
-import Wave from "react-wavify";
+
 
 function HeaderBanner() {
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
+
   return (
     <div className="bannerContainer">
       <div className="waveContainer"></div>
