@@ -10,7 +10,13 @@ import Footer from './components/footer';
 
 function App() {
   return (
-    <>
+    <div
+      class="
+        bg-gray-dark
+        container
+        w-9/12
+      "
+    >
       <Router>
         <Profile/>
         <Routes>
@@ -19,7 +25,7 @@ function App() {
         <Social/>
         <Footer/>
       </Router> 
-    </>
+    </div>
   );
 }
 
