@@ -18,6 +18,7 @@ function App() {
       "
     >
       <Router>
+        <HeaderBanner/>
         <Profile/>
         <Routes>
           <Route exact path="/" element={<Index/>} />

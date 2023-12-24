@@ -6,13 +6,13 @@ import Typed from "react-typed";
 function HeaderBanner() {
 
   return (
-    <div className="bannerContainer">
-      <div className="waveContainer"></div>
+    <div class="containr">
+      <div class="waveContainer"></div>
 
-      <div className="textContainer">
+      <div class="textContainer">
         <h1>
           <Typed
-            className="bannerText"
+            class="bannerText"
             strings={[
               "Hi there, I'm Neil Louise",
               "Have you tried dragging the boxes?",
