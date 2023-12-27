@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Social from './components/social';
 import Footer from './components/footer';
 
+
 function App() {
   return (
     <div
@@ -19,6 +20,7 @@ function App() {
     >
       <Router>
         <HeaderBanner/>
+        <NavBar/>
         <Profile/>
         <Routes>
           <Route exact path="/" element={<Index/>} />

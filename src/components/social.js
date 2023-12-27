@@ -1,12 +1,11 @@
-import React from 'react';
-import {ReactSocialMediaIcons} from 'react-social-media-icons';
+import React from "react";
+import { ReactSocialMediaIcons } from "react-social-media-icons";
 
 export default function Social() {
-
-    return (
-        <>
-        <div 
-            class="
+	return (
+		<>
+			<div
+				class="
                 container 
                 flex
                 flex-row
@@ -20,50 +19,40 @@ export default function Social() {
                 items-center
 
             "
-        >
+			>
+				<ReactSocialMediaIcons
+					borderWith="1"
+					borderColor="#5C6370"
+					borderStyle="solid"
+					roundness="50%"
+					backgroundColor="none"
+					target="_blank"
+					icon="github"
+					url="https://github.com/neillouis3"
+				/>
 
-                <ReactSocialMediaIcons
-                    borderWith="1"
-                    borderColor="#5C6370"
-                    borderStyle="solid"
-                    roundness="50%"
-                    backgroundColor="none" 
-                    target="_blank"
-                    icon="github"
-                    url="https://github.com/neillouis3"  
-                />
+				<ReactSocialMediaIcons
+					borderWith="1"
+					borderColor="#5C6370"
+					borderStyle="solid"
+					roundness="50%"
+					backgroundColor="none"
+					target="_blank"
+					icon="linkedin"
+					url="https://www.linkedin.com/in/neillouis3/"
+				/>
 
-            
-           
-                <ReactSocialMediaIcons 
-                    borderWith="1"
-                    borderColor="#5C6370"
-                    borderStyle="solid"
-                    roundness="50%"
-                    backgroundColor="none" 
-                    target="_blank"
-                    icon="linkedin"
-                    url="https://www.linkedin.com/in/neillouis3/" 
-                />
-  
-            
-            
-                <ReactSocialMediaIcons 
-                    borderWith="1"
-                    borderColor="#5C6370"
-                    borderStyle="solid"
-                    roundness="50%"
-                    backgroundColor="none" 
-                    target="_blank"
-                    icon="instagram"
-                    url="https://www.instagram.com/neillouis3/" 
-                />
-
-                
-
-        </div>
-
-        
-        </>
-)
+				<ReactSocialMediaIcons
+					borderWith="1"
+					borderColor="#5C6370"
+					borderStyle="solid"
+					roundness="50%"
+					backgroundColor="none"
+					target="_blank"
+					icon="instagram"
+					url="https://www.instagram.com/neillouis3/"
+				/>
+			</div>
+		</>
+	);
 }

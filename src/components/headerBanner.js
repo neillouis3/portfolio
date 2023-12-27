@@ -1,15 +1,16 @@
 import React from "react";
 import Typed from "react-typed";
 
-
-
 function HeaderBanner() {
-
   return (
-    <div class="containr">
+    <div class="container">
       <div class="waveContainer"></div>
 
-      <div class="textContainer">
+      <div
+        class="
+          container
+        "
+      >
         <h1>
           <Typed
             class="bannerText"
