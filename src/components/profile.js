@@ -21,7 +21,6 @@ function Profile() {
 					w-72
 					h-72
 
-					bg-transparent
 
 					p-2
 				"
@@ -31,7 +30,7 @@ function Profile() {
 						container 
 						flex
 						justify-center
-						items-center\
+						items-center
 
 						bg-transparent
 						

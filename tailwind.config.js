@@ -36,12 +36,17 @@ module.exports = {
       'gray-dark': '#282C34',
       'gray': '#5C6370',
       'gray-light': '#ABB2BF',
+      'white': '#FFFFFF',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
     extend: {
+      backgroundImage: {
+        'bannerBG': "url('../public/images/bannerBackground.png')",
+      },
+
       spacing: {
         '128': '32rem',
         '144': '36rem',

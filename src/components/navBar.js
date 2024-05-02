@@ -6,6 +6,7 @@ export default function NavBar() {
         <>
             <nav
                 class="
+                    container
                     rounded-lg
                     border-2
                     border-gray

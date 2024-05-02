@@ -13,7 +13,7 @@ function App() {
   return (
     <div
       class="
-        bg-gray-dark
+
         container
         w-9/12
       "
