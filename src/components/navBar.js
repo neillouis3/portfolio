@@ -9,9 +9,13 @@ export default function NavBar() {
                     container
                     rounded-lg
                     border-2
-                    border-gray
-                    p-2
+                    border-black
+                    p-5
                     
+                    bg-white
+
+                    h-10
+
                 "
             >
                 <div
@@ -20,6 +24,7 @@ export default function NavBar() {
 
                         bg-transparent
                         rounder-lg
+                        h-full
                     `}
                 
                 >
@@ -27,11 +32,13 @@ export default function NavBar() {
                         class="
                             flex
                             flex-row
-
+                            items-center
                             bg-transparent
                             rounder-lg
                             gap-4
-                            
+
+                            text-xs
+                            h-full
                         "
                     >
                         <li>

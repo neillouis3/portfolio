@@ -25,14 +25,13 @@ export default function HeaderBanner() {
               <div
                 class="
                 text-center
-                bg-inheret
-                text-yellow-500
+                bg-transparent
                 "
               >
                 <h1 class="
-                    text-center
-                    bg-inheret
-                    text-yellow-500
+                    text-white
+                    text-4xl
+                    font-bold
                     "
                 >Hey there, I'm Neil Louise</h1>
               </div>

@@ -14,10 +14,6 @@ function Profile() {
 					justify-center
 					items-center
 
-					rounded-lg
-					border-2
-					border-gray
-
 					w-72
 					h-72
 
@@ -37,8 +33,13 @@ function Profile() {
 					"
 				>
 					<img
-						class="profileImage"
-						src="https://i.imgur.com/4LQ0Jtj.jpg"
+						class="
+							w-36
+							h-36
+							rounded-full
+						"
+
+						src="../../images/profilePhoto.png"
 						alt="profile"
 					/>
 				</div>
@@ -56,11 +57,14 @@ function Profile() {
 						
 					"
 				>
-					<h1 class="profileText">Neil Louise</h1>
+					<h1 class="
+							text-xs
+						"
+					>Neil Louise</h1>
 
-					<h2 class="profileText"></h2>
 					<Typed
-						class="profileText"
+						style={{ size: "1rem" }}
+
 						strings={[
 							"Software Engineer",
 							"UI/UX Designer",
@@ -70,7 +74,10 @@ function Profile() {
 						delaySpeed={1000}
 						loop
 					/>
-                    <p class="profileText">3rd Year Computer Engineering Student at Memorial University</p>
+                    <p class="
+							text-xs
+						"
+					>3rd Year Computer Engineering Student at Memorial University</p>
 				</div>
 			</div>
 		</>
