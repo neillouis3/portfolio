@@ -12,7 +12,7 @@ export default function HeaderBanner() {
                   flex
 
                   w-full
-                  h-72
+                  h-36
 
                   items-center
                   justify-center

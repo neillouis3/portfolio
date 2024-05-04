@@ -12,7 +12,7 @@ export default function Social() {
                 gap-4
                 justify-center
 
-                w-72
+                w-full
                 h-16
                 items-center
 				

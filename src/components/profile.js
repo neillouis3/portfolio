@@ -14,7 +14,7 @@ function Profile() {
 					justify-center
 					items-center
 
-					w-72
+					w-full
 					h-72
 
 
@@ -34,7 +34,7 @@ function Profile() {
 				>
 					<img
 						class="
-							w-36
+							w-1/2
 							h-36
 							rounded-full
 						"

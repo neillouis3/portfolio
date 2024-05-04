@@ -8,7 +8,7 @@ export default function NavBar() {
                 class="
                     container
                     rounded-lg
-                    border-2
+                    border-1
                     border-black
                     p-5
                     
@@ -49,7 +49,7 @@ export default function NavBar() {
 
                                 "
                             
-                            >Projects</a>
+                            >PROJECTS</a>
                         </li>
                         <li>
                             <a 
@@ -58,7 +58,7 @@ export default function NavBar() {
                                     block
 
                                 "
-                            >Experience</a>
+                            >EXPERIENCE</a>
                         </li>
                         <li>
                             <a 
@@ -67,7 +67,7 @@ export default function NavBar() {
                                     block
 
                                 "
-                            >Education</a>
+                            >EDUCATION</a>
                         </li>
                         <li>
                             <a 
@@ -76,7 +76,7 @@ export default function NavBar() {
                                     block
                                 
                                 "
-                            >Contact</a>
+                            ></a>
                         </li>
 
 
