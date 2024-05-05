@@ -9,8 +9,42 @@ export default function ExperienceBody() {
                 
                 "
             >
+                <div 
+                    class="
+                    
+                    "
+                >
+                    <h1
+                        class="
+ 
+                        "
+                    >Experience</h1>
+                </div>
+
+                <div
+                    class="
+                        container
+                        flex
+                    "
+                >
+                    <div 
+                        class="
+                    
+                        "
+                    >
 
 
+                    </div>
+
+                    <div
+                        class="
+                        
+                        "
+                    >
+
+                    </div>
+
+                </div>
 
 
             </div>
