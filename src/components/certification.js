@@ -44,7 +44,9 @@ export default function Certification() {
                         >Onshape Fundamentals: CAD</h1>
                     </div>
                 </div>
+
             </div>
+            
         </>
     );
 }
