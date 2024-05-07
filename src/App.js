@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Projects from './components/pages/projects';
+import Index from './components/pages/index';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -12,7 +12,7 @@ function App() {
       <Router>
     
           <Routes>
-            <Route exact path="/" element={<Projects />} />
+            <Route exact path="/" element={<Index />} />
           </Routes>
 
       </Router> 
