@@ -4,6 +4,7 @@ import Profile from '../profile';
 import Social from '../social';
 import Footer from '../footer';
 import ExperienceBody from '../experienceBody';
+import ProgLang from '../progLang';
 
 export default function Index() {
     return (
@@ -19,7 +20,7 @@ export default function Index() {
                 class="
                 container
                 flex
-                w-10/12
+                w-8/12
                 gap-4
 
                 z-10
@@ -30,24 +31,23 @@ export default function Index() {
                     class="
                     container
 
-                    rounded-lg
-                    border-1
-                    border-black
                     w-80
-                    h-screen
-                    bg-white
+
+
                     "
                 >
                     <Profile/>
                     <Social/>
+                    <ProgLang/>
                 </div>
                 <div
                     class="
                     container
-
                     "
                 >
-                    
+                    <ExperienceBody
+                        height="screen"
+                    />
                 </div>
             
 

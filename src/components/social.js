@@ -13,10 +13,16 @@ export default function Social() {
                 justify-center
 
                 w-full
-                h-16
+				p-2
+                h-auto
                 items-center
 				
+				bg-white
+				rounded-lg
+				border-2
+				border-black
 
+				mt-4
             "
 			>
 				<ReactSocialMediaIcons

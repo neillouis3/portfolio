@@ -12,29 +12,22 @@ export default function HeaderBanner() {
                   flex
 
                   w-full
-                  h-36
+                  h-40
 
                   items-center
                   justify-center
 
                   bg-bannerBG
+                  bg-cover
+                  bg-center
                 " 
-
-
             >
-              <div
-                class="
-                text-center
-                bg-transparent
-                "
-              >
                 <h1 class="
                     text-white
                     text-4xl
                     font-bold
                     "
                 >Hey there, I'm Neil Louise</h1>
-              </div>
             </div>
         </>
 
