@@ -6,17 +6,19 @@ export default function Certification() {
             <div 
                 class="'
                     certificationContainer
-                    container
-                    flex
                 "
             >
                 <div
                     class="
-                        listContainer
+                        titleContainer
                         container
                     "
                 >
-
+                    <h1
+                        class="
+                            text-4xl
+                        "
+                    >Certifications</h1>
                 </div>
                 <div
                     class="
@@ -24,30 +26,41 @@ export default function Certification() {
                         container
                     "
                 >
-                    <div 
+                    <div
                         class="
-                            reactContainer
+                            awsContainer
                             container
                         "
                     >
-                        <h1
-                            class="
-                                text-4xl
-                            "
-                        >React JS</h1>
                     </div>
                     <div
                         class="
-                            onshapeContainer
+                            bodyContainer
                             container
                         "
                     >
-                        <h1
+                        <div 
                             class="
-                                text-4xl
+                                reactContainer
+                                container
                             "
-                        >Onshape Fundamentals: CAD</h1>
+                        >
+                            <p>DEC 2023</p>
+                            <p>React JS</p>
+                            <p>Udemy</p>
+                        </div>
+                        <div
+                            class="
+                                onshapeContainer
+                                container
+                            "
+                        >
+                            <p>AUG 2022</p>
+                            <p>Onshape Fundamentals: CAD</p>
+                            <p>Onshape</p>
+                        </div>
                     </div>
+                    
                 </div>
 
             </div>
