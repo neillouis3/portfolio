@@ -1,9 +1,9 @@
 import React from "react";
 import HeaderBanner from '../headerBanner';
-import NavBar from '../navBar';
 import Profile from '../profile';
 import Social from '../social';
 import Footer from '../footer';
+import ExperienceBody from '../experienceBody';
 
 export default function Index() {
     return (
@@ -26,29 +26,29 @@ export default function Index() {
                 -mt-5
                 "
             >
-            <div
-                class="
-                container
+                <div
+                    class="
+                    container
 
-                rounded-lg
-                border-1
-                border-black
-                w-80
-                h-screen
-                bg-white
-                "
-            >
-                <Profile/>
-                <Social/>
-            </div>
-            <div
-                class="
-                container
+                    rounded-lg
+                    border-1
+                    border-black
+                    w-80
+                    h-screen
+                    bg-white
+                    "
+                >
+                    <Profile/>
+                    <Social/>
+                </div>
+                <div
+                    class="
+                    container
 
-                "
-            >
-                
-            </div>
+                    "
+                >
+                    
+                </div>
             
 
 
@@ -58,19 +58,8 @@ export default function Index() {
 
     
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     </>
-
-
 
     );
 
