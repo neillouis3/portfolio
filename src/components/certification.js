@@ -4,13 +4,15 @@ export default function Certification() {
     return (
         <>
             <div 
-                class="
+                class="'
+                    certificationContainer
                     container
                     flex
                 "
             >
                 <div
                     class="
+                        listContainer
                         container
                     "
                 >
@@ -18,11 +20,13 @@ export default function Certification() {
                 </div>
                 <div
                     class="
+                        listBodyContainer
                         container
                     "
                 >
                     <div 
                         class="
+                            reactContainer
                             container
                         "
                     >
@@ -34,6 +38,7 @@ export default function Certification() {
                     </div>
                     <div
                         class="
+                            onshapeContainer
                             container
                         "
                     >
