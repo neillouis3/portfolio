@@ -55,7 +55,7 @@ export default function ExperienceBody() {
 
                     <div
                         class="
-                        
+                            container
                         "
                     >
                         <div

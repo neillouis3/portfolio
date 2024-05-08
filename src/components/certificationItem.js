@@ -1,16 +1,28 @@
 import React from "react";
 
-export default function CertificatonItem ({certification, date, issuer}) {
+export default function CertificatonItem ({certification, date, issuer, isBottom}) {
     return (
         <>
             <div
-                class="
-                    container
-                "
+                class={
+                    isBottom ? "container" : "container mb-10"}
             >
-                <p>{date}</p>
-                <p>{certification}</p>
-                <p>{issuer}</p>
+                <p
+                    class="
+                        font-bold
+                        text-gray
+                    "
+                >{date}</p>
+                <p
+                    class="
+                        font-bold
+                    "
+                >{certification}</p>
+                <p
+                    class="
+                        font-bold
+                    "
+                >{issuer}</p>
             </div>
         </>
     );
