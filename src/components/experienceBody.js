@@ -9,7 +9,8 @@ export default function ExperienceBody() {
 
                     bg-white
 
-                    h-102
+                    2xl:h-102
+                    3xl:h-144
 
                     border-2
                     border-black
@@ -20,13 +21,16 @@ export default function ExperienceBody() {
             >
                 <div 
                     class="
-                        pl-11
+                        2xl:pl-11
                     "
                 >
                     <h1
                         class="
-                            text-xl
                             font-bold
+                            
+                            2xl:text-xl
+                            3xl:text-3xl
+                            
                         "
                     >Experience</h1>
                 </div>
@@ -35,7 +39,7 @@ export default function ExperienceBody() {
                     class="
                         container
                         flex
-                        mt-8
+                        2xl:mt-8
                     "
                 >
                     <div 
@@ -62,38 +66,52 @@ export default function ExperienceBody() {
                         >
                             <p
                                 class="
-                                    text-xs
                                     text-gray
                                     font-bold
+                                    
+                                    2xl:text-xs
+
+                                    3xl:text-lg
                                 "
                             >SEP 2023 - DEC 2023</p>
                             <p
                                 class="
-                                    text-xs
                                     font-bold
+                                    
+                                    2xl:text-xs
+
+
+                                    3xl:text-lg
 
                                 "
                             >Software Engineer (Coop)</p>
                             <p
                                 class="
-                                    text-xs
+                                    2xl:text-xs
+
+                                    3xl:text-lg
 
                                 "
                             >NL Eats</p>
                             <p
                                 class="
-                                    text-xs
                                     text-gray
                                     
-                                    mt-2
+                                    2xl:text-xs
+                                    2xl:mt-2
+
+                                    3xl:text-lg
                                 "
                             >Developed robust mobile applications with React Native, delivering cross-platform solutions with high performance and responsiveness.</p>
                             <p
                                 class="
-                                    text-xs
                                     font-bold
                                     text-gray
-                                    mt-1
+
+                                    2xl:text-xs
+                                    2xl:mt-1
+
+                                    3xl:text-lg
                                 "
                             >Skills:</p>
                         </div>

@@ -12,6 +12,8 @@ export default function ProgLang() {
                     rounded-lg
 
                     mt-4
+
+                    h-32
                 "
             
             >

@@ -1,6 +1,6 @@
 import React from "react";
 
-
+ 
 export default function HeaderBanner() {
 
 
@@ -12,7 +12,7 @@ export default function HeaderBanner() {
                   flex
 
                   w-full
-                  h-40
+                  3xl:h-64
 
                   items-center
                   justify-center
@@ -24,8 +24,11 @@ export default function HeaderBanner() {
             >
                 <h1 class="
                     text-white
-                    text-4xl
                     font-bold
+                    2xl:text-4xl
+                    3xl:text-6xl
+                    4xl:text-8xl
+                    
                     "
                 >Hey there, I'm Neil Louise</h1>
             </div>

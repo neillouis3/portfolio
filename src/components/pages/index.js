@@ -12,6 +12,8 @@ export default function Index() {
         <div
         class="
         container
+        h-screen
+        w-screen
 
         "
         >
@@ -20,19 +22,23 @@ export default function Index() {
                 class="
                 container
                 flex
-                w-8/12
-                gap-4
-
                 z-10
-                -mt-5
+
+                2xl:w-9/12
+                2xl:gap-3
+                2xl:-mt-5
+
+                3xl:w-8/12
+                3xl:gap-4
+                3xl:-mt-8
                 "
             >
                 <div
                     class="
                     container
 
-                    w-80
-
+                    2xl:w-80
+                    3xl:w-96
 
                     "
                 >
