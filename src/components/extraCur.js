@@ -6,9 +6,16 @@ export default function ExtraCur() {
             <div
                 class="
                     container
+                    bg-white
+                    border-2
+                    border-black
+                    rounded-lg
+                    p-4
                 "
             >
-
+                <h1>
+                    Extra Curriculars
+                </h1>
             </div>
 
 

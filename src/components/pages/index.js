@@ -8,6 +8,7 @@ import ProgLang from '../progLang';
 import EducationBody from '../educationBody';
 import ProjectBody from '../projectBody';
 import ExtraCur from '../extraCur';
+import Certification from '../certification';
 
 export default function Index() {
     return (
@@ -39,6 +40,9 @@ export default function Index() {
                 <div
                     class="
                     container
+                    flex
+                    flex-col
+                    gap-4
 
                     2xl:w-80
                     3xl:w-144
@@ -48,6 +52,7 @@ export default function Index() {
                     <Profile/>
                     <Social/>
                     <ProgLang/>
+                    <Certification/>
                     <ExtraCur/>
                 </div>
                 <div

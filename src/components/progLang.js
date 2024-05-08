@@ -11,8 +11,6 @@ export default function ProgLang() {
                     border-black
                     rounded-lg
 
-                    mt-4
-
                     h-32
 
                     p-4

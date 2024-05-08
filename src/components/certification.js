@@ -1,4 +1,5 @@
 import React from 'react';
+import CertificatonItem from './certificationItem';
 
 export default function Certification() {
     return (
@@ -6,6 +7,12 @@ export default function Certification() {
             <div 
                 class="'
                     certificationContainer
+                    container
+                    bg-white
+                    border-2
+                    border-black
+                    rounded-lg
+                    p-4
                 "
             >
                 <div
@@ -39,26 +46,17 @@ export default function Certification() {
                             container
                         "
                     >
-                        <div 
-                            class="
-                                reactContainer
-                                container
-                            "
-                        >
-                            <p>DEC 2023</p>
-                            <p>React JS</p>
-                            <p>Udemy</p>
-                        </div>
-                        <div
-                            class="
-                                onshapeContainer
-                                container
-                            "
-                        >
-                            <p>AUG 2022</p>
-                            <p>Onshape Fundamentals: CAD</p>
-                            <p>Onshape</p>
-                        </div>
+                        <CertificatonItem
+                            certification = "React JS"
+                            date = "DEC 2023"
+                            issuer = "Udemy"
+                        />
+                        
+                        <CertificatonItem
+                            certification = "Onshape Fundamentals: CAD"
+                            date = "AUG 2022"
+                            issuer = "Onshape"
+                        />
                     </div>
                     
                 </div>

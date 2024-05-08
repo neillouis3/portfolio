@@ -21,8 +21,6 @@ export default function Social() {
 				rounded-lg
 				border-2
 				border-black
-
-				mt-4
             "
 			>
 				<ReactSocialMediaIcons
