@@ -5,6 +5,9 @@ import Social from '../social';
 import Footer from '../footer';
 import ExperienceBody from '../experienceBody';
 import ProgLang from '../progLang';
+import EducationBody from '../educationBody';
+import ProjectBody from '../projectBody';
+import ExtraCur from '../extraCur';
 
 export default function Index() {
     return (
@@ -38,22 +41,26 @@ export default function Index() {
                     container
 
                     2xl:w-80
-                    3xl:w-96
+                    3xl:w-144
 
                     "
                 >
                     <Profile/>
                     <Social/>
                     <ProgLang/>
+                    <ExtraCur/>
                 </div>
                 <div
                     class="
-                    container
+                        container
+                        flex
+                        flex-col
+                        gap-4
                     "
                 >
-                    <ExperienceBody
-                        height="screen"
-                    />
+                    <ExperienceBody/>
+                    <EducationBody/>
+                    <ProjectBody/>
                 </div>
             
 

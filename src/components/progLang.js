@@ -14,10 +14,79 @@ export default function ProgLang() {
                     mt-4
 
                     h-32
+
+                    p-4
+
+                    flex
                 "
             
             >
-                <h1>Index</h1>
+                <div
+                    class="
+                        container
+                        p-2
+                        bg-gray
+                        w-auto
+                        h-10
+                        rounded-lg
+
+                        justify-center
+                        items-center
+                        text-center
+
+                        inline-block
+
+                    "
+                >
+                    <p
+                        class="
+                        
+                        "
+                    >C#</p>
+                </div>
+                <div
+                    class="
+                        container
+                        p-2
+                        bg-gray
+                        w-32
+                        h-10
+                        rounded-lg
+
+                        justify-center
+                        items-center
+                        text-center
+
+                    "
+                >
+                    <p
+                        class="
+                        
+                        "
+                    >Python</p>
+                </div>
+                <div
+                    class="
+                        container
+                        p-2
+                        bg-gray
+                        w-32
+                        h-10
+                        rounded-lg
+
+                        justify-center
+                        items-center
+                        text-center
+
+                    "
+                >
+                    <p
+                        class="
+                        
+                        "
+                    >React JS</p>
+                </div>
+
             </div>
         
         

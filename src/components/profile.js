@@ -9,21 +9,20 @@ function Profile() {
 				class="
 					container 
 
-
 					justify-center
 					items-center
 					text-center
-					w-full
-					h-60
-
-
-					p-4
 
 					bg-white
 					rounded-lg
 					border-2
 					border-black
 
+					w-full
+					2xl:h-60
+					2xl:p-4
+
+					3xl:h-80
 				"
 			>
 				<div 
@@ -35,10 +34,14 @@ function Profile() {
 				>
 					<img
 						class="
-							w-24
-							h-24
 							rounded-lg
 							mx-auto
+
+							2xl:w-24
+							2xl:h-24
+
+							3xl:w-32
+							3xl:h-32
 						"
 
 						src="../../images/profilePhoto.png"
@@ -59,9 +62,10 @@ function Profile() {
 					"
 				>
 					<h1 class="
-							text-md
-							mt-4
-							mb-0
+							2xl:text-md
+							3xl:text-3xl
+							2xl:mt-4
+
 							font-bold
 						"
 					>Neil Louise A. Castillon</h1>
