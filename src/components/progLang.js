@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgLangItem from './progLangItem';
 
 export default function ProgLang() {
     return (
@@ -11,83 +12,37 @@ export default function ProgLang() {
                     border-black
                     rounded-lg
 
-                    h-32
+                    h-auto
 
                     p-4
 
                     flex
+                    flex-wrap
+                    gap-4
                 "
             
             >
-                <div
-                    class="
-                        container
-                        p-2
-                        bg-gray
-                        w-auto
-                        h-10
-                        rounded-lg
+                <ProgLangItem lang="Python"/>
+                <ProgLangItem lang="Java"/>
+                <ProgLangItem lang="C"/>
+                <ProgLangItem lang="JavaScript"/>
+                <ProgLangItem lang="HTML"/>
+                <ProgLangItem lang="CSS"/>
+                <ProgLangItem lang="React"/>
+                <ProgLangItem lang="Tailwind"/>
+                <ProgLangItem lang="Bootstrap"/>
+                <ProgLangItem lang="Django"/>
+                <ProgLangItem lang="Flask"/>
+                <ProgLangItem lang="SQL"/>
+                <ProgLangItem lang="MongoDB"/>
+                <ProgLangItem lang="Git"/>
+                <ProgLangItem lang="GitHub"/>
+                <ProgLangItem lang="VS Code"/>
 
-                        justify-center
-                        items-center
-                        text-center
-
-                        inline-block
-
-                    "
-                >
-                    <p
-                        class="
-                        
-                        "
-                    >C#</p>
-                </div>
-                <div
-                    class="
-                        container
-                        p-2
-                        bg-gray
-                        w-32
-                        h-10
-                        rounded-lg
-
-                        justify-center
-                        items-center
-                        text-center
-
-                    "
-                >
-                    <p
-                        class="
-                        
-                        "
-                    >Python</p>
-                </div>
-                <div
-                    class="
-                        container
-                        p-2
-                        bg-gray
-                        w-32
-                        h-10
-                        rounded-lg
-
-                        justify-center
-                        items-center
-                        text-center
-
-                    "
-                >
-                    <p
-                        class="
-                        
-                        "
-                    >React JS</p>
-                </div>
 
             </div>
         
-        
+
         </>
 
     );

@@ -26,7 +26,7 @@ export default function ExperienceBody() {
                 >
                     <h1
                         class="
-                            font-bold
+                            font-extrabold
                             
                             2xl:text-xl
                             3xl:text-3xl

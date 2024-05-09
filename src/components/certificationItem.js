@@ -9,18 +9,18 @@ export default function CertificatonItem ({certification, date, issuer, isBottom
             >
                 <p
                     class="
-                        font-bold
+                        font-black
                         text-gray
                     "
                 >{date}</p>
                 <p
                     class="
-                        font-bold
+                        font-extrabold
                     "
                 >{certification}</p>
                 <p
                     class="
-                        font-bold
+                        font-semibold
                     "
                 >{issuer}</p>
             </div>

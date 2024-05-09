@@ -62,6 +62,7 @@ export default function EducationBody() {
                             university="Jeddah International School"
                             grade="4.0"
                             transcriptLink=""
+                            isBottom={true}
                         />
                     </div>
                 </div>
