@@ -14,7 +14,7 @@ export default function ExtraCur() {
                 "
             >
                 <h1>
-                    Extra Curriculars
+                    About Me
                 </h1>
             </div>
 
