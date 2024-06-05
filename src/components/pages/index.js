@@ -17,7 +17,7 @@ export default function Index() {
         class="
         container
         h-full
-        w-screen
+        w-full
         bg-gray-dark
 
         "

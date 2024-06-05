@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "es6",
+      "baseUrl": ".", // This sets the base directory for relative path calculations
+      "paths": {
+        "@/*": ["src/*"] // This tells TypeScript that anything starting with "@" should be mapped to the "src" directory
+      },
+      "jsx": "react", // If you are using React
+      "strict": true, // Enables a wide range of type checking behavior
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+      "src/**/*" // This includes all files in the src directory for compilation
+    ]
+  }
