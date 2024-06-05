@@ -8,7 +8,7 @@ export default function ExperienceBody() {
                     container
 
                     bg-white
-
+                    
                     2xl:h-102
                     3xl:h-144
 
