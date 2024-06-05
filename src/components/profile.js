@@ -13,10 +13,10 @@ function Profile() {
 					items-center
 					text-center
 
-					bg-white
+					bg-gray-dark
 					rounded-lg
 					border-2
-					border-black
+					border-gray
 
 					w-full
 					2xl:h-60
@@ -67,6 +67,7 @@ function Profile() {
 							2xl:mt-4
 
 							font-bold
+							text-white
 						"
 					>Neil Louise A. Castillon</h1>
 
@@ -74,12 +75,13 @@ function Profile() {
 						class="
 							-mt-1
 							text-xs
+							text-white
 						"
 					>Software Engineer</p>
                     <p class="
 							text-xs
 							mt-3
-							text-slate-500
+							text-gray-light
 						"
 					>3rd Year Computer Engineering Student at Memorial University</p>
 				</div>

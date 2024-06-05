@@ -8,26 +8,28 @@ export default function EducationItem({date, major, university, grade, transcrip
             <p
                 class="
                     font-black
-                    text-gray
+                    text-gray-light
                 "
             >{date}</p>
 
             <p
                 class="
                     font-extrabold
+                    text-white
                 "           
             >{major}</p>
 
             <p
                 class="
                     font-bold
+                    text-white
                 "              
             >{university}</p>
 
             <p
                 class="
                     mt-1
-                    text-gray
+                    text-gray-light
                 "              
             >Grade: {grade}</p>
 
@@ -35,7 +37,7 @@ export default function EducationItem({date, major, university, grade, transcrip
                 class="
                     font-bold
                     mt-2
-                    text-gray
+                    text-gray-light
                 "              
             >Transcript: 
                 <a 

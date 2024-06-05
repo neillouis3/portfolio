@@ -7,9 +7,9 @@ export default function EducationBody() {
             <div
                 class="
                     container
-                    bg-white
+                    bg-gray-drak
                     border-2
-                    border-black
+                    border-gray
                     rounded-lg
 
                     p-8
@@ -23,7 +23,7 @@ export default function EducationBody() {
                     <h1
                         class="
                             font-bold
-                                
+                            text-orange
                             2xl:text-xl
                             3xl:text-3xl
                         "
@@ -56,14 +56,7 @@ export default function EducationBody() {
                             grade="3.9"
                             transcriptLink=""
                         />
-                        <EducationItem
-                            date="SEP 2021 - APR 2026"
-                            major="Highschool Education"
-                            university="Jeddah International School"
-                            grade="4.0"
-                            transcriptLink=""
-                            isBottom={true}
-                        />
+
                     </div>
                 </div>
             </div>

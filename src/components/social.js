@@ -17,40 +17,40 @@ export default function Social() {
                 h-auto
                 items-center
 				
-				bg-white
+				bg-gray-dark
 				rounded-lg
 				border-2
-				border-black
+				border-gray
             "
 			>
 				<ReactSocialMediaIcons
-					borderWith="1"
+					borderWith="0"
 					borderColor="#FFFFFF"
-					borderStyle="solid"
+					borderStyle="none"
 					roundness="50%"
-					backgroundColor="black"
+					backgroundColor="#282C34"
 					target="_blank"
 					icon="github"
 					url="https://github.com/neillouis3"
 				/>
 
 				<ReactSocialMediaIcons
-					borderWith="1"
+					borderWith="0"
 					borderColor="#FFFFFF"
-					borderStyle="solid"
+					borderStyle="none"
 					roundness="50%"
-					backgroundColor="black"
+					backgroundColor="#282C34"
 					target="_blank"
 					icon="linkedin"
 					url="https://www.linkedin.com/in/neillouis3/"
 				/>
 
 				<ReactSocialMediaIcons
-					borderWith="1"
+					borderWith="0"
 					borderColor="#FFFFFF"
-					borderStyle="solid"
+					borderStyle="none"
 					roundness="50%"
-					backgroundColor="black"
+					backgroundColor="#282C34"
 					target="_blank"
 					icon="instagram"
 					url="https://www.instagram.com/neillouis3/"

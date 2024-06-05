@@ -16,8 +16,9 @@ export default function Index() {
         <div
         class="
         container
-        h-screen
+        h-full
         w-screen
+        bg-gray-dark
 
         "
         >

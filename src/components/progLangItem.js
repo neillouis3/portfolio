@@ -6,7 +6,7 @@ export default function ProgLangItem({lang}) {
             class="
                 container
                 p-2
-                bg-gray
+                bg-orange
                 w-auto
                 h-10
                 rounded-lg
@@ -21,7 +21,7 @@ export default function ProgLangItem({lang}) {
         >
             <p
                 class="
-                
+                    text-white
                 "
             >{lang}</p>
         </div>

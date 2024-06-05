@@ -13,6 +13,8 @@ export default function HeaderBanner() {
 
                   w-full
                   3xl:h-64
+                  2xl:h-64
+                  xl:h-64
 
                   items-center
                   justify-center
@@ -25,6 +27,7 @@ export default function HeaderBanner() {
                 <h1 class="
                     text-white
                     font-bold
+                    xl:text-4xl
                     2xl:text-4xl
                     3xl:text-6xl
                     4xl:text-8xl

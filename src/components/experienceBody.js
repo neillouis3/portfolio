@@ -7,13 +7,13 @@ export default function ExperienceBody() {
                 class="
                     container
 
-                    bg-white
+                    bg-gray-dark
                     
                     2xl:h-102
                     3xl:h-144
 
                     border-2
-                    border-black
+                    border-gray
                     rounded-lg
 
                     p-8
@@ -30,7 +30,7 @@ export default function ExperienceBody() {
                             
                             2xl:text-xl
                             3xl:text-3xl
-                            
+                            text-orange
                         "
                     >Experience</h1>
                 </div>
@@ -66,7 +66,7 @@ export default function ExperienceBody() {
                         >
                             <p
                                 class="
-                                    text-gray
+                                    text-gray-light
                                     font-bold
                                     
                                     2xl:text-xs
@@ -77,7 +77,7 @@ export default function ExperienceBody() {
                             <p
                                 class="
                                     font-bold
-                                    
+                                    text-white
                                     2xl:text-xs
 
 
@@ -87,6 +87,8 @@ export default function ExperienceBody() {
                             >Software Engineer (Coop)</p>
                             <p
                                 class="
+
+                                    text-white
                                     2xl:text-xs
 
                                     3xl:text-lg
@@ -95,7 +97,7 @@ export default function ExperienceBody() {
                             >NL Eats</p>
                             <p
                                 class="
-                                    text-gray
+                                    text-gray-light
                                     
                                     2xl:text-xs
                                     2xl:mt-2

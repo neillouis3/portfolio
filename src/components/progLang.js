@@ -7,9 +7,9 @@ export default function ProgLang() {
             <div
                 class="
                     container
-                    bg-white
+                    bg-gray-dark
                     border-2
-                    border-black
+                    border-gray
                     rounded-lg
 
                     h-auto
