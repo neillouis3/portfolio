@@ -29,6 +29,9 @@ export default function Index() {
                 z-10
 
                 xl:w-9/12
+                xl:gap-3
+                xl:-mt-5
+
 
                 2xl:w-9/12
                 2xl:gap-3
@@ -46,6 +49,7 @@ export default function Index() {
                     flex-col
                     gap-4
 
+                    xl:w-96
                     2xl:w-80
                     3xl:w-144
 
