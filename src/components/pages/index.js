@@ -30,6 +30,7 @@ export default function Index() {
 
                 xl:w-9/12
 
+                
                 2xl:w-9/12
                 2xl:gap-3
                 2xl:-mt-5
