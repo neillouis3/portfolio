@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "moduleResolution": "node",
       "target": "es5",
       "module": "es6",
       "baseUrl": ".", // This sets the base directory for relative path calculations

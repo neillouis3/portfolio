@@ -16,11 +16,15 @@ export default function ProgLang() {
 
                     p-4
 
-                    flex
-                    flex-wrap
+                    grid 
+                    grid-flow-row-dense
                     gap-4
-                "
-            
+ 
+                
+                
+                    "
+
+           
             >
                 <ProgLangItem lang="Python"/>
                 <ProgLangItem lang="Java"/>
