@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function ProjectItem({title, description, imageLink, githubLink, demoLink}) {
     const  [isHovered, setIsHovered] = useState(false);
