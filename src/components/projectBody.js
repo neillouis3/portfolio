@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import ProjectItem from "./projectItem";
 
 
 export default function ProjectBody() {
+    const  [isHovered, setIsHovered] = useState(false);
+
     return (
         <>
             <div 
@@ -23,7 +25,10 @@ export default function ProjectBody() {
                     rounded-lg
 
                     p-8
-                "          
+                "   
+                
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
             >
 
                 <div
@@ -62,7 +67,7 @@ export default function ProjectBody() {
 
                     <ProjectItem 
                         title="TIC TAC TOE"
-                        description="Mobile game of TIC TACT TOE"
+                        description="Redefines the classic game with new modes and minigames."
                         techStack="Tech Stack 1"
                         githubLink="https://github.com"
                         demoLink="https://github.com"
