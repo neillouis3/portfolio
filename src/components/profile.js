@@ -14,12 +14,12 @@ function Profile() {
 					text-center
 
 					bg-gray-dark
-					rounded-lg
+					rounded-2xl
 					border-2
 					border-gray
 
 					w-full
-					xl:h-full
+					xl:h-fit
 					xl:pb-10
 					xl:pt-10
 					xl:pl-4

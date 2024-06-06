@@ -10,21 +10,17 @@ export default function ProgLang() {
                     bg-gray-dark
                     border-2
                     border-gray
-                    rounded-lg
+                    rounded-2xl
 
                     h-auto
 
                     p-4
 
-                    grid 
-                    grid-flow-row-dense
+                    flex
+                    flex-wrap
                     gap-4
- 
-                
-                
-                    "
-
-           
+                "
+            
             >
                 <ProgLangItem lang="Python"/>
                 <ProgLangItem lang="Java"/>

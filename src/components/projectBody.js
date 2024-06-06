@@ -21,7 +21,7 @@ export default function ProjectBody() {
 
                     border-2
                     border-gray
-                    rounded-lg
+                    rounded-2xl
 
                     p-8
                 "   

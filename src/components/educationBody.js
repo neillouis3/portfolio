@@ -10,7 +10,7 @@ export default function EducationBody() {
                     bg-gray-drak
                     border-2
                     border-gray
-                    rounded-lg
+                    rounded-2xl
 
                     p-8
                 "

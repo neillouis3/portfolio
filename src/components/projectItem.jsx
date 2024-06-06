@@ -5,119 +5,132 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
 
     return (
         <div
-            class="
-                container
-
-                border-2
-                border-gray
-                rounded-lg
-
-                p-4
-            "
-
+        
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+        
         >
             <div
                 class="
                     container
-                    justify-center
 
-                    bg-gray-light
-                    rounded-md
+                    border-2
+                    border-gray
+                    rounded-lg
 
+                    p-4
                 "
             >
-                <img 
-                    src={imageLink}
-                    alt={title}
+                <div
                     class="
-                        w-40
-                        h-40
-                        rounded-lg
-                    "
-                
-                />
-            </div>
-            <div
-                class="
-                    container
-                "
-            >
-                <p
-                    class="
-                        font-extrabold
-                        text-white
-
-                        xl:text-m
-
-                        2xl:text-xs
-
-
-                        3xl:text-lg
-
-                        mt-4    
-                    "
-                >{title}</p>
-                
-                <p
-                    class="
-                        text-gray-light
-                        
-                        xl: text-s
-                        xl:mt-2
-
-                        2xl:text-xs
-                        2xl:mt-2
-
-                        3xl:text-lg
-                    "
-                >{description}</p>
-
-                {/* <div
-                    class="
-                    
                         container
-                        flex
-                        gap-4
-                    "
-                
-                >
-                    
-                    <div
-                        class="
-                            border-2
-                            border-black
-                            rounded-lg
-                            p-2
-                        
-                        "
-                    >
-                        <a
-                            href={githubLink}
-                            class="
+                        justify-center
 
-                            "
-                        >Github</a>
-                    </div>
-                    <div
+                        bg-gray-light
+                        rounded-md
+
+                    "
+                >
+                    <img 
+                        src={imageLink}
+                        alt={title}
                         class="
-                            border-2
-                            border-black
+                            w-40
+                            h-40
                             rounded-lg
-                            p-2
                         "
+                    
+                    />
+                </div>
+                <div
+                    class="
+                        container
+                    "
+                >
+                    <p
+                        class="
+                            font-extrabold
+                            text-white
+
+                            xl:text-m
+
+                            2xl:text-xs
+
+
+                            3xl:text-lg
+
+                            mt-4    
+                        "
+                    >{title}</p>
+                    
+                    <p
+                        class="
+                            text-gray-light
+                            
+                            xl: text-s
+                            xl:mt-2
+
+                            2xl:text-xs
+                            2xl:mt-2
+
+                            3xl:text-lg
+                        "
+                    >{description}</p>
+
+                    {/* <div
+                        class="
+                        
+                            container
+                            flex
+                            gap-4
+                        "
+                    
                     >
-                        <a
-                            href={demoLink}
+                        
+                        <div
                             class="
+                                border-2
+                                border-black
+                                rounded-lg
+                                p-2
+                            
                             "
-                        >Demo</a>
-                    </div>
-                </div> */}
+                        >
+                            <a
+                                href={githubLink}
+                                class="
+
+                                "
+                            >Github</a>
+                        </div>
+                        <div
+                            class="
+                                border-2
+                                border-black
+                                rounded-lg
+                                p-2
+                            "
+                        >
+                            <a
+                                href={demoLink}
+                                class="
+                                "
+                            >Demo</a>
+                        </div>
+                    </div> */}
+                </div>
+
+
             </div>
 
-
+            {isHovered && (
+            <div className="absolute top-full mt-2 p-4 bg-red-500 text-white">
+                This div appears on hover
+            </div>
+            )}
         </div>
+
+    
+
     );
 }

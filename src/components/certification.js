@@ -15,7 +15,7 @@ export default function Certification() {
 
                     border-2
                     border-gray
-                    rounded-lg
+                    rounded-2xl
 
                     p-8
                 "
