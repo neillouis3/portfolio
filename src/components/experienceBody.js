@@ -1,4 +1,5 @@
 import React from 'react';
+import ExperienceItem from './experienceItem';
 
 export default function ExperienceBody() {
     return (
@@ -22,12 +23,14 @@ export default function ExperienceBody() {
                 <div 
                     class="
                         2xl:pl-11
+                        xl:pl-11
                     "
                 >
                     <h1
                         class="
                             font-extrabold
                             
+                            xl:text-2xl
                             2xl:text-xl
                             3xl:text-3xl
                             text-orange
@@ -40,6 +43,7 @@ export default function ExperienceBody() {
                         container
                         flex
                         2xl:mt-8
+                        xl:mt-8
                     "
                 >
                     <div 
@@ -52,86 +56,30 @@ export default function ExperienceBody() {
 
 
                     </div>
-
                     <div
                         class="
                             container
                         "
                     >
-                        <div
-                            class="
-                                nLEatsContainer
-                                container
-                            "
-                        >
-                            <p
-                                class="
-                                    text-gray-light
-                                    font-bold
-                                    
-                                    2xl:text-xs
-
-                                    3xl:text-lg
-                                "
-                            >SEP 2023 - DEC 2023</p>
-                            <p
-                                class="
-                                    font-bold
-                                    text-white
-                                    2xl:text-xs
-
-
-                                    3xl:text-lg
-
-                                "
-                            >Software Engineer (Coop)</p>
-                            <p
-                                class="
-
-                                    text-white
-                                    2xl:text-xs
-
-                                    3xl:text-lg
-
-                                "
-                            >NL Eats</p>
-                            <p
-                                class="
-                                    text-gray-light
-                                    
-                                    2xl:text-xs
-                                    2xl:mt-2
-
-                                    3xl:text-lg
-                                "
-                            >Developed robust mobile applications with React Native, delivering cross-platform solutions with high performance and responsiveness.</p>
-                            <p
-                                class="
-                                    font-bold
-                                    text-gray
-
-                                    2xl:text-xs
-                                    2xl:mt-1
-
-                                    3xl:text-lg
-                                "
-                            >Skills:</p>
-                        </div>
+                        <ExperienceItem 
+                            date="JUN 2024 - PRESENT"
+                            position="Software Developer (Internship)"
+                            company="Jeddah International School"
+                            companyURL="https://www.jischool.org/"
+                            description="Report and document in existing codebase"
+                            skills="JS"
+                        />
+                        <ExperienceItem 
+                            date="SEP 2023 - DEC 2023"
+                            position="Software Engineer (Co-op)"
+                            company="NLEats"
+                            companyURL="https://nleats.com/"
+                            description="Report and document in existing codebase"
+                            skills="JS"
+                        />                    
                     </div>
-
                 </div>
-
-
             </div>
-        
-        
-        
-        
-
-
-
-
-        
         </>
     );
 

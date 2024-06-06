@@ -17,6 +17,7 @@ export default function EducationBody() {
             >
                 <div
                     class="
+                        xl:pl-11
                         2xl:pl-11
                     "
                 >
@@ -24,6 +25,7 @@ export default function EducationBody() {
                         class="
                             font-bold
                             text-orange
+                            xl:text-2xl
                             2xl:text-xl
                             3xl:text-3xl
                         "
@@ -34,6 +36,7 @@ export default function EducationBody() {
                         container
                         flex
                         2xl:mt-8
+                        xl:mt-8
                     "
                 >
                     <div

@@ -50,7 +50,7 @@ export default function Index() {
                     flex-col
                     gap-4
 
-                    xl:w-96
+                    xl:w-2/4
                     2xl:w-80
                     3xl:w-144
 
