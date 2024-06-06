@@ -3,7 +3,6 @@ import ProjectItem from "./projectItem";
 
 
 export default function ProjectBody() {
-    const  [isHovered, setIsHovered] = useState(false);
 
     return (
         <>
@@ -27,8 +26,7 @@ export default function ProjectBody() {
                     p-8
                 "   
                 
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+
             >
 
                 <div

@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function ProjectItem({title, description, imageLink, githubLink, demoLink}) {
+    const  [isHovered, setIsHovered] = useState(false);
+
     return (
         <div
             class="
@@ -12,6 +14,9 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
 
                 p-4
             "
+
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
             <div
                 class="
