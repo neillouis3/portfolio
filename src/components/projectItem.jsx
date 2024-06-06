@@ -5,11 +5,11 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
         <div
             class="
                 container
-                bg-white
+
                 border-2
-                border-black
+                border-gray
                 rounded-lg
-                w-1/3
+
                 p-4
             "
         >
@@ -18,7 +18,8 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
                     container
                     justify-center
 
-                    bg-gray
+                    bg-gray-light
+                    rounded-md
 
                 "
             >
@@ -40,19 +41,35 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
             >
                 <p
                     class="
-                        font-bold
-                        text-xl
+                        font-extrabold
+                        text-white
+
+                        xl:text-m
+
+                        2xl:text-xs
+
+
+                        3xl:text-lg
+
                         mt-4    
                     "
                 >{title}</p>
                 
                 <p
                     class="
-                    
+                        text-gray-light
+                        
+                        xl: text-s
+                        xl:mt-2
+
+                        2xl:text-xs
+                        2xl:mt-2
+
+                        3xl:text-lg
                     "
                 >{description}</p>
 
-                <div
+                {/* <div
                     class="
                     
                         container
@@ -92,7 +109,7 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
                             "
                         >Demo</a>
                     </div>
-                </div>
+                </div> */}
             </div>
 
 

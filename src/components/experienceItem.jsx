@@ -36,6 +36,7 @@ export default function ExperienceItem({date, position, company, companyURL, des
             <p
                 class="
 
+                    font-bold
                     text-white
 
                     xl:text-s

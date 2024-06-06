@@ -9,15 +9,17 @@ export default function ProjectBody() {
                 class="
                     mainContainer
                     container 
-                    justify-center
-                    items-center
 
-                    w-full
-                    h-auto
 
-                    bg-white
+
+
+                    bg-gray-dark
+                    
+                    2xl:h-102
+                    3xl:h-144
+
                     border-2
-                    border-black
+                    border-gray
                     rounded-lg
 
                     p-8
@@ -29,13 +31,17 @@ export default function ProjectBody() {
                         titleContainer
                         container
                         2xl:pl-11
+                        xl:pl-11
                     "
                 >
                     <h1
                         class="
                             font-extrabold
+                                
+                            xl:text-2xl
                             2xl:text-xl
                             3xl:text-3xl
+                            text-orange
                         "
                     >Projects</h1>
 
@@ -46,16 +52,17 @@ export default function ProjectBody() {
                         itemContainer
                         container
                         2xl:mt-8
+                        xl:mt-8
                         w-full
-                        flex
-                        flex-wrap
+                        grid
+                        grid-cols-2
                         gap-4
                     "
                 >
 
                     <ProjectItem 
-                        title="Quest"
-                        description="Gamify the learning experience"
+                        title="TIC TAC TOE"
+                        description="Mobile game of TIC TACT TOE"
                         techStack="Tech Stack 1"
                         githubLink="https://github.com"
                         demoLink="https://github.com"
