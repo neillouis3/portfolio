@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
+        "moduleResolution": "nodenext",
       "target": "es5",
-      "module": "es6",
+      "module": "nodenext",
       "baseUrl": ".", // This sets the base directory for relative path calculations
       "paths": {
         "@/*": ["src/*"] // This tells TypeScript that anything starting with "@" should be mapped to the "src" directory
