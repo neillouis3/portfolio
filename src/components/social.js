@@ -18,7 +18,7 @@ export default function Social() {
                 items-center
 				
 				bg-gray-dark
-				rounded-lg
+				rounded-2xl
 				border-2
 				border-gray
             "

@@ -10,7 +10,7 @@ export default function ProgLang() {
                     bg-gray-dark
                     border-2
                     border-gray
-                    rounded-lg
+                    rounded-2xl
 
                     h-auto
 

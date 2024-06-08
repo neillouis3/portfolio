@@ -14,11 +14,16 @@ function Profile() {
 					text-center
 
 					bg-gray-dark
-					rounded-lg
+					rounded-2xl
 					border-2
 					border-gray
 
 					w-full
+					xl:h-fit
+					xl:pb-10
+					xl:pt-10
+					xl:pl-4
+					xl:pr-4
 					2xl:h-60
 					2xl:p-4
 
@@ -36,6 +41,10 @@ function Profile() {
 						class="
 							rounded-lg
 							mx-auto
+
+							xl:w-24
+							xl:h-24
+							xl:mb-5
 
 							2xl:w-24
 							2xl:h-24
@@ -65,6 +74,7 @@ function Profile() {
 							2xl:text-md
 							3xl:text-3xl
 							2xl:mt-4
+							xl:text-2xl
 
 							font-bold
 							text-white
@@ -74,12 +84,12 @@ function Profile() {
 					<p
 						class="
 							-mt-1
-							text-xs
+							text-s
 							text-white
 						"
 					>Software Engineer</p>
                     <p class="
-							text-xs
+							text-s
 							mt-3
 							text-gray-light
 						"

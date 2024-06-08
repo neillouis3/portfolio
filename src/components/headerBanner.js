@@ -14,24 +14,24 @@ export default function HeaderBanner() {
                   w-full
                   3xl:h-64
                   2xl:h-64
-                  xl:h-64
+                  xl:h-72
 
                   items-center
                   justify-center
 
                   bg-bannerBG
-                  bg-cover
+
                   bg-center
                 " 
             >
                 <h1 class="
-                    text-white
-                    font-bold
-                    xl:text-4xl
-                    2xl:text-4xl
-                    3xl:text-6xl
-                    4xl:text-8xl
-                    
+                        text-white
+                        font-black
+                        xl:text-6xl
+                        2xl:text-4xl
+                        3xl:text-6xl
+                        4xl:text-8xl
+                        
                     "
                 >Hey there, I'm Neil Louise</h1>
             </div>

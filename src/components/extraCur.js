@@ -6,16 +6,34 @@ export default function ExtraCur() {
             <div
                 class="
                     container
-                    bg-white
+                    bg-gray-dark
                     border-2
-                    border-black
-                    rounded-lg
+                    border-gray
+                    rounded-2xl
                     p-4
                 "
             >
-                <h1>
-                    About Me
-                </h1>
+
+                <div
+                    class="
+                        2xl:pl-11
+                        xl:pl-11
+                    "
+                >
+                    <h1
+                        class="
+                            font-extrabold
+                            
+                            xl:text-2xl
+                            2xl:text-xl
+                            3xl:text-3xl
+                            text-orange
+                        "
+                    >
+                        About Me
+                    </h1>
+                </div>
+                
             </div>
 
 

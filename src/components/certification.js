@@ -8,10 +8,14 @@ export default function Certification() {
                 class="'
                     certificationContainer
                     container
-                    bg-white
+                    bg-gray-dark
+                    
+                    2xl:h-102
+                    3xl:h-144
+
                     border-2
-                    border-black
-                    rounded-lg
+                    border-gray
+                    rounded-2xl
 
                     p-8
                 "
@@ -20,14 +24,19 @@ export default function Certification() {
                     class="
                         titleContainer
                         container
+
+                        2xl:pl-11
+                        xl:pl-11
                     "
                 >
                     <h1
                         class="
-                            font-bold
+                            font-extrabold
                                 
+                            xl:text-2xl
                             2xl:text-xl
                             3xl:text-3xl
+                            text-orange
                         "
                     >Certifications</h1>
                 </div>
@@ -35,10 +44,9 @@ export default function Certification() {
                     class="
                         listBodyContainer
                         container
-
                         flex
                         2xl:mt-8
-
+                        xl:mt-8
                     "
                 >
                     <div
@@ -46,7 +54,7 @@ export default function Certification() {
                             sideContainer
                             container
 
-                            w-1/8
+                            w-3/8
                             h-full
                         "
                     >
@@ -57,6 +65,14 @@ export default function Certification() {
                             container
                         "
                     >
+
+                        <CertificatonItem
+                            certification = "Computer Hardware"
+                            date = "JUN 2024"
+                            issuer = "Cisco"
+                            isBottom = {false}
+                        />
+
                         <CertificatonItem
                             certification = "React JS"
                             date = "DEC 2023"

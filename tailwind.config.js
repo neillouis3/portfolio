@@ -78,6 +78,17 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/container-queries'),
+    function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hidden': {
+          '-ms-overflow-style': 'none',  /* IE and Edge */
+          'scrollbar-width': 'none',  /* Firefox */
+        },
+        '.scrollbar-hidden::-webkit-scrollbar': {
+          'display': 'none',  /* Chrome, Safari, and Opera */
+        },
+      });
+    },
   ],
 }
 

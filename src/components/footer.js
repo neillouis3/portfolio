@@ -7,13 +7,16 @@ export default function Footer() {
         <footer 
             class="
                 container 
+                w-full
+                mt-20
+                p-10
             "
         >
             <p 
                 class="
                     text-center
                     bg-transparent
-                    text-gray
+                    text-white
                 "
             >Designed & built by Neil Louise</p>
         </footer>

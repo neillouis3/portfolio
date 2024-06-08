@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "moduleResolution": "nodenext",
       "target": "es5",
       "module": "nodenext",
       "baseUrl": ".", // This sets the base directory for relative path calculations
