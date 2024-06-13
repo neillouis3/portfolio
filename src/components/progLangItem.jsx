@@ -22,7 +22,7 @@ export default function ProgLangItem({lang}) {
             "
         >
             <Tooltip showArrow={true} content="I am a tooltip">
-                {props}
+                Hello
             </Tooltip>
         </div>
     );
