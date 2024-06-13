@@ -113,7 +113,6 @@ export default function EducationBody() {
 
                     </div>
                 </div>
-                
             </div>
         </>
     );

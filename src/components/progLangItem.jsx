@@ -1,5 +1,5 @@
 import React from "react";
-import {Tooltip} from "@nextui-org/react";
+import {Tooltip} from "@nextui-org/tooltip";
 
 export default function ProgLangItem({lang, svg}) {
     return (
@@ -8,7 +8,7 @@ export default function ProgLangItem({lang, svg}) {
                 container
                 p-1
                 bg-orange
-                w-16
+                w-1/3
                 
                 rounded-full
 
@@ -19,11 +19,10 @@ export default function ProgLangItem({lang, svg}) {
                 inline-block
 
 
-
             "
         >
-            <Tooltip showArrow={true} content={lang}>
-                Hello
+            <Tooltip showArrow={true} content="I am a tooltip">
+                {props}
             </Tooltip>
         </div>
     );

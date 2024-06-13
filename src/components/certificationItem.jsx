@@ -45,7 +45,21 @@ export default function CertificatonItem ({certification, date, issuer, ID, url,
                         3xl:text-lg
                     "
                 >{issuer}</p>
+                <p
+                    class="
+                        font-bold
+                        text-gray
 
+                        xl:text-s
+                        xl:mt-1
+
+                        2xl:text-xs
+                        2xl:mt-1
+
+                        3xl:text-lg
+                    "  
+                >Credentials ID: {ID}
+                </p>
             </div>
         </>
     );
