@@ -62,6 +62,7 @@ export default function Index() {
                     <Profile/>
                     <Social/>
                     <ProgLang/>
+                    <Certification/>
                     <ExtraCur/>
                 </div>
                 <div
@@ -75,6 +76,7 @@ export default function Index() {
                     <ExperienceBody/>
                     <EducationBody/>
                     <ProjectBody/>
+                    
                 </div>
             
 

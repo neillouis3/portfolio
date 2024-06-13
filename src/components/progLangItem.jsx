@@ -1,4 +1,5 @@
 import React from "react";
+import {Tooltip} from "@nextui-org/tooltip";
 
 export default function ProgLangItem({lang}) {
     return (
@@ -7,7 +8,7 @@ export default function ProgLangItem({lang}) {
                 container
                 p-1
                 bg-orange
-                w-1/3
+                w-16
                 
                 rounded-full
 
@@ -18,14 +19,12 @@ export default function ProgLangItem({lang}) {
                 inline-block
                 bg-opacity-50
 
+
             "
         >
-            <p
-                class="
-                    text-orange
-                    opacity-100
-                "
-            >{lang}</p>
+            <Tooltip showArrow={true} content="I am a tooltip">
+                {props}
+            </Tooltip>
         </div>
     );
 
