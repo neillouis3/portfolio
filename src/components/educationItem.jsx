@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EducationItem({date, major, university, grade, transcriptLink="", isBottom = false}) {
+export default function EducationItem({date, major, university, grade, course, transcriptLink="", isBottom = false}) {
     return (
         <div
             class={isBottom ? "container" : "container mb-10"}
@@ -80,6 +80,22 @@ export default function EducationItem({date, major, university, grade, transcrip
                 >View
                 </a>
             </p>
+
+            <p
+                class="
+                    font-bold
+                    text-gray
+
+                    xl:text-s
+                    xl:mt-1
+
+                    2xl:text-xs
+                    2xl:mt-1
+
+                    3xl:text-lg
+                "              
+            >Courses: {course}</p>
+
         </div>
     );
 }

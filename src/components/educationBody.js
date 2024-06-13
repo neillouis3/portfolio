@@ -108,6 +108,7 @@ export default function EducationBody() {
                             university="Memorial University of Newfoundland"
                             grade="3.9"
                             transcriptLink=""
+                            courses="ECE 4400: Circuits,"
                         />
 
                     </div>
