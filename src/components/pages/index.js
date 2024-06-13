@@ -62,7 +62,6 @@ export default function Index() {
                     <Profile/>
                     <Social/>
                     <ProgLang/>
-                    <Certification/>
                     <ExtraCur/>
                 </div>
                 <div
