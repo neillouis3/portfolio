@@ -1,7 +1,7 @@
 import React from "react";
 import {Tooltip} from "@nextui-org/tooltip";
 
-export default function ProgLangItem({lang, svg}) {
+export default function ProgLangItem({lang}) {
     return (
         <div
             class="
@@ -17,7 +17,7 @@ export default function ProgLangItem({lang, svg}) {
                 text-center
 
                 inline-block
-
+                bg-opacity-50
 
             "
         >

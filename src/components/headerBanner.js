@@ -35,7 +35,7 @@ export default function HeaderBanner() {
                         4xl:text-8xl
                         
                     "
-                >welcome...</h1>
+                >Welcome...</h1>
             </div>
         </>
 
