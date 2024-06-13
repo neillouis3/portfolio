@@ -18,7 +18,7 @@ export default function ProgLang() {
 
                     flex
                     flex-wrap
-                    gap-4
+                    gap-2
                 "
             
             >
@@ -36,8 +36,7 @@ export default function ProgLang() {
                 <ProgLangItem lang="SQL"/>
                 <ProgLangItem lang="MongoDB"/>
                 <ProgLangItem lang="Git"/>
-                <ProgLangItem lang="GitHub"/>
-                <ProgLangItem lang="VS Code"/>
+
 
 
             </div>

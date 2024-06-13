@@ -11,7 +11,7 @@ export default function HeaderBanner() {
                   container
                   flex
 
-                  w-full
+                  xl:w-9/12
                   3xl:h-64
                   2xl:h-64
                   xl:h-72
@@ -22,6 +22,8 @@ export default function HeaderBanner() {
                   bg-bannerBG
 
                   bg-center
+
+                  rounded-xl
                 " 
             >
                 <h1 class="
@@ -33,7 +35,7 @@ export default function HeaderBanner() {
                         4xl:text-8xl
                         
                     "
-                >Hey there, I'm Neil Louise</h1>
+                >Welcome...</h1>
             </div>
         </>
 

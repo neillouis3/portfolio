@@ -20,8 +20,11 @@ export default function Index() {
         w-full
         bg-gray-dark
 
+        pt-10
+
         "
         >
+            
             <HeaderBanner/>
             <div
                 class="
@@ -31,16 +34,16 @@ export default function Index() {
 
                 xl:w-9/12
                 xl:gap-3
-                xl:-mt-10
+                xl:mt-5
 
 
                 2xl:w-9/12
                 2xl:gap-3
-                2xl:-mt-5
+                2xl:mt-5
 
                 3xl:w-8/12
                 3xl:gap-4
-                3xl:-mt-16
+                3xl:mt-5
                 "
             >
                 <div
