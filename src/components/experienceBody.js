@@ -34,8 +34,7 @@ export default function ExperienceBody() {
                 className="
                     container
                     bg-gray-dark
-                    2xl:h-102
-                    3xl:h-144
+
                     border-2
                     border-gray
                     rounded-2xl
