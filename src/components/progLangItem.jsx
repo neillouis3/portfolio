@@ -1,5 +1,5 @@
 import React from "react";
-import {Tooltip} from "@nextui-org/tooltip";
+
 
 export default function ProgLangItem({lang}) {
     return (
@@ -21,9 +21,7 @@ export default function ProgLangItem({lang}) {
 
             "
         >
-            <Tooltip showArrow={true} content="I am a tooltip">
-                Hello
-            </Tooltip>
+
         </div>
     );
 

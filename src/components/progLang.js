@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgLangItem from './progLangItem';
-import {Tooltip} from "@nextui-org/tooltip";
+
 export default function ProgLang() {
     return (
         <>

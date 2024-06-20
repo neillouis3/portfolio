@@ -1,9 +1,6 @@
 import React from "react";
 
- 
 export default function HeaderBanner() {
-
-
     return (
         <>
             <div 
@@ -12,9 +9,12 @@ export default function HeaderBanner() {
                   flex
 
                   xl:w-9/12
-                  3xl:h-64
-                  2xl:h-64
+                  2xl:w-8/12
+                  3xl:w-8/12
+
                   xl:h-72
+                  2xl:h-80
+                  3xl:h-80
 
                   items-center
                   justify-center
@@ -33,14 +33,9 @@ export default function HeaderBanner() {
                         2xl:text-4xl
                         3xl:text-6xl
                         4xl:text-8xl
-                        
                     "
                 >Welcome...</h1>
             </div>
         </>
-
-);
-
+    );
 }
-
-
