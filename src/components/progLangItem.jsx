@@ -1,7 +1,7 @@
 import React from "react";
+import {AnimatedTooltip} from "./ui/animatedTooltip";
 
-
-export default function ProgLangItem({lang}) {
+export default function ProgLangItem({items}) {
     return (
         <div
             class="
@@ -21,7 +21,10 @@ export default function ProgLangItem({lang}) {
 
             "
         >
-
+            <AnimatedTooltip 
+                items= {items}
+        
+            />
         </div>
     );
 
