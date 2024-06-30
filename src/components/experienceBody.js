@@ -132,23 +132,25 @@ export default function ExperienceBody() {
                             position="Software Developer (Internship)"
                             company="Jeddah International School"
                             companyURL="https://www.jischool.org/"
-                            description="
-                            - Developed comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.
-                            "
-                            skills="JS"
+                            description={[
+                                "- Developed comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.",
+                                "- Debugging and troubleshooting computer hardware and software, involving network server environments."
+                            ]}
+                            skills={["React JS", "Computer Networking" ]}
                         />
                         <ExperienceItem 
                             date="SEP 2023 - DEC 2023"
                             position="Software Engineer (Co-op)"
                             company="NLEats"
                             companyURL="https://nleats.com/"
-                            description="
-                            - Developed robust mobile applications with React Native and Expo Router, delivering cross-platform solutions with high performance and responsiveness.
-- Integrated APIs into applications, leveraging databases and Azure cloud computing.
-- Implemented seamless communication between applications and physical devices, specializing in connecting, accessing, and controlling Arduino devices.
-- Designed cutting-edge websites and mobile applications using Figma, ensuring a user-centric and visually appealing interface.
-                            "
-                            skills="JS"
+                            description={[
+                                "- Developed robust mobile applications with React Native and Expo Router, delivering cross-platform solutions with high performance and responsiveness.",
+                                "- Integrated APIs into applications, leveraging databases and Azure cloud computing.",
+                                "- Implemented seamless communication between applications and physical devices, specializing in connecting, accessing, and controlling Arduino devices.",
+                                "- Designed cutting-edge websites and mobile applications using Figma, ensuring a user-centric and visually appealing interface."
+                            ]}
+                            
+                            skills={["React JS, React Native, Expo Router"]}
                         />                    
                     </div>
                 </div>

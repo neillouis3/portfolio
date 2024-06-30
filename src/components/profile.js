@@ -1,4 +1,5 @@
 import React from "react";
+import HorizontalDivider from "./ui/horizontalDivider";
 
 
 
@@ -95,6 +96,10 @@ function Profile() {
 						"
 					>3rd Year Computer Engineering Student at Memorial University</p>
 				</div>
+				
+				<HorizontalDivider 
+					color="gray"
+				/>
 			</div>
 		</>
 	);
