@@ -17,7 +17,7 @@ export default function Certification() {
                     border-gray
                     rounded-2xl
 
-                    p-8
+                    p-4
                 "
             >
                 <div 
@@ -70,10 +70,39 @@ export default function Certification() {
                             sideContainer
                             container
 
-                            w-3/8
+                            w-2/8
                             h-full
                         "
                     >
+                        <div
+                            class="
+                                z-1
+                            "
+                        >
+                            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
+                            </svg>
+                        </div>
+                        <div
+                            class="
+                                z-1
+                                mt-30
+                            "
+                        >
+                            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
+                            </svg>
+                        </div>
+                        <div
+                            class="
+                                z-1
+                                mt-30
+                            "
+                        >
+                            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
+                            </svg>
+                        </div>
                     </div>
                     <div
                         class="

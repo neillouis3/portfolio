@@ -83,6 +83,7 @@ export default function ProjectBody() {
                         techStack="Tech Stack 1"
                         githubLink="https://github.com"
                         demoLink="https://github.com"
+                        imageLink="@/public/images/tictactoe"
                     />
 
                     <ProjectItem 

@@ -14,15 +14,15 @@ export default function Index() {
     return (
     <>
         <div
-        class="
-        container
-        h-full
-        w-full
-        bg-gray-dark
+            class="
+                container
+                h-full
+                w-full
+                bg-gray-dark
 
-        pt-10
+                pt-10
 
-        "
+            "
         >
             
             <HeaderBanner/>
@@ -48,14 +48,14 @@ export default function Index() {
             >
                 <div
                     class="
-                    container
-                    flex
-                    flex-col
-                    gap-4
+                        container
+                        flex
+                        flex-col
+                        gap-4
 
-                    xl:w-2/4
-                    2xl:w-80
-                    3xl:w-144
+                        xl:w-2/4
+                        2xl:w-80
+                        3xl:w-144
 
                     "
                 >

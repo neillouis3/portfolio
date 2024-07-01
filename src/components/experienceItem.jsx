@@ -14,12 +14,10 @@ const formatDescription = (description) => {
 // Helper function to format skills list
 const formatSkills = (skills) => {
     return skills.map((skill, index) => (
-    <React.Fragment key={index}>
-      <SkillItem 
-        skill={skill}
-      />
-      
-    </React.Fragment>
+      <div
+        class="flex flex-row">
+        <SkillItem key={index} skill={skill} />
+      </div>
   ));
 };
 

@@ -95,7 +95,11 @@ export default function ExperienceBody() {
                             h-full
                         "
                     >
-                        <div>
+                        <div
+                            class="
+                                z-1
+                            "
+                        >
                             <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
                             </svg>
@@ -119,6 +123,16 @@ export default function ExperienceBody() {
                                     height="100%"
                                     fill="#E06C75"
                                 />
+                            </svg>
+                        </div>
+                        <div
+                            class="
+                                z-1
+                                mt-96
+                            "
+                        >
+                            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
                             </svg>
                         </div>
                     </div>
@@ -150,7 +164,7 @@ export default function ExperienceBody() {
                                 "- Designed cutting-edge websites and mobile applications using Figma, ensuring a user-centric and visually appealing interface."
                             ]}
                             
-                            skills={["React JS, React Native, Expo Router"]}
+                            skills={["Mobile Development", "Web Design & Development" ]}
                         />                    
                     </div>
                 </div>

@@ -1,12 +1,12 @@
 import React from "react";
-import {AnimatedTooltip} from "./ui/animatedTooltip";
+import AnimatedTooltip from "./ui/animatedTooltip";
 
-export default function ProgLangItem({items}) {
+export default function ProgLangItem(name, svg) {
     return (
         <div
             class="
                 container
-                p-1
+                p-1s
                 bg-orange
                 w-1/3
                 
@@ -21,10 +21,7 @@ export default function ProgLangItem({items}) {
 
             "
         >
-            <AnimatedTooltip 
-                items= {items}
         
-            />
         </div>
     );
 
