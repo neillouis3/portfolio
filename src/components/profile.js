@@ -42,12 +42,12 @@ function Profile() {
 							rounded-lg
 							mx-auto
 
-							xl:w-24
-							xl:h-24
+							xl:w-40
+							xl:h-40
 							xl:mb-5
 
-							2xl:w-24
-							2xl:h-24
+							2xl:w-40
+							2xl:h-40
 
 							3xl:w-32
 							3xl:h-32
@@ -95,8 +95,6 @@ function Profile() {
 						"
 					>3rd Year Computer Engineering Student at Memorial University</p>
 				</div>
-
-				<HorizontalDivider />
 			</div>
 
 		</>

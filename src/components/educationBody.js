@@ -14,7 +14,7 @@ export default function EducationBody() {
                     rounded-2xl
 
                     p-8
-
+                    h-144
                 "
             >
                 <div
@@ -106,7 +106,7 @@ export default function EducationBody() {
                             date="SEP 2021 - APR 2026"
                             major="Computer Engineering"
                             university="Memorial University of Newfoundland"
-                            grade="3.9"
+                            courses={["Circuit", "Programming"]}
                             transcriptLink=""
                         />
 
