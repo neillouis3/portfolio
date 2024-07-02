@@ -5,12 +5,9 @@ export default function SkillItem({ skill }) {
         <div
             class="
                 bg-white
-                pl-2
-                pr-2
-                pt-1
-                pb-1
+                px-2
 
-                rounded-md
+                rounded-full
             "
         >
             <p

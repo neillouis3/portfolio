@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ExperienceItem from './experienceItem';
 
 export default function ExperienceBody() {
-    const [rectHeight, setRectHeight] = useState(0); // Initial height set to 0
+    const [rectHeight, setRectHeight] = useState(0);
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -10,7 +10,7 @@ export default function ExperienceBody() {
             if (containerRef.current) {
                 const { scrollHeight, clientHeight, scrollTop } = containerRef.current;
                 const maxScrollableHeight = scrollHeight - clientHeight;
-                const newHeight = (scrollTop / maxScrollableHeight) * 500; // Adjust 500 to desired max height
+                const newHeight = (scrollTop / maxScrollableHeight) * 425; // Adjust 500 to desired max height
                 setRectHeight(newHeight);
             }
         };
@@ -34,12 +34,13 @@ export default function ExperienceBody() {
                 className="
                     container
                     bg-gray-dark
-
                     border-2
                     border-gray
                     rounded-2xl
                     p-8
-                    h-fill
+                    h-exph
+                    overflow-y-scroll
+                    max-h-screen
                 "
             >
                 <div 
@@ -56,8 +57,7 @@ export default function ExperienceBody() {
                     "
                 >
                     <div
-                        class="
-                           
+                        className="
                             mt-0.5
                         "
                     >
@@ -74,7 +74,6 @@ export default function ExperienceBody() {
                             2xl:text-xl
                             3xl:text-3xl
                             text-white
-                            
                         "
                     >Experience</h1>
                 </div>
@@ -96,7 +95,7 @@ export default function ExperienceBody() {
                         "
                     >
                         <div
-                            class="
+                            className="
                                 z-1
                             "
                         >
@@ -107,8 +106,18 @@ export default function ExperienceBody() {
 
                         <div
                             className="
+                                z-2
+                                mt-exp
+                            "
+                        >
+                            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
+                            </svg>
+                        </div>
+                        <div
+                            className="
                                 -z-10
-                                -mt-3
+                                -mt-exp3
                             "
                         >
                             <svg
@@ -125,16 +134,10 @@ export default function ExperienceBody() {
                                 />
                             </svg>
                         </div>
-                        <div
-                            class="
-                                z-1
-                                mt-96
-                            "
-                        >
-                            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="7.5" cy="7.5" r="7.5" fill="#E06C75" />
-                            </svg>
-                        </div>
+
+                       
+
+                        
                     </div>
                     <div
                         className="
@@ -142,6 +145,7 @@ export default function ExperienceBody() {
                         "
                     >
                         <ExperienceItem 
+                            isBottom = {false}
                             date="JUN 2024 - PRESENT"
                             position="Software Developer (Internship)"
                             company="Jeddah International School"
@@ -150,9 +154,10 @@ export default function ExperienceBody() {
                                 "- Developed comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.",
                                 "- Debugging and troubleshooting computer hardware and software, involving network server environments."
                             ]}
-                            skills={["React JS", "Computer Networking" ]}
+                            skills={["React JS", "PHP", "Documenting and Reporting", "Computer Networking", "Web Design & Development" ]}
                         />
                         <ExperienceItem 
+                            isBottom = {true}
                             date="SEP 2023 - DEC 2023"
                             position="Software Engineer (Co-op)"
                             company="NLEats"
@@ -163,8 +168,7 @@ export default function ExperienceBody() {
                                 "- Implemented seamless communication between applications and physical devices, specializing in connecting, accessing, and controlling Arduino devices.",
                                 "- Designed cutting-edge websites and mobile applications using Figma, ensuring a user-centric and visually appealing interface."
                             ]}
-                            
-                            skills={["Mobile Development", "Web Design & Development" ]}
+                            skills={["React JS", "React Native", "Expo Router", "Mobile Design & Development", "Web Design & Development" ]}
                         />                    
                     </div>
                 </div>

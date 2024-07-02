@@ -14,14 +14,24 @@ const formatDescription = (description) => {
 // Helper function to format skills list
 const formatSkills = (skills) => {
     return skills.map((skill, index) => (
-      <div
-        class="flex flex-row">
-        <SkillItem key={index} skill={skill} />
-      </div>
+      <p
+        className="
+          font-bold 
+          text-gray 
+          xl:text-s 
+          xl:mt-1 
+          2xl:text-xs 
+          2xl:mt-1 
+          3xl:text-lg
+        "
+        key={index}
+      >
+        <SkillItem skill={skill} />
+      </p>
   ));
 };
 
-export default function ExperienceItem({ date, position, company, companyURL, description, skills }) {
+export default function ExperienceItem({ date, position, company, companyURL, description, skills, isBottom }) {
   return (
     <div className="container">
       <p className="text-gray-light font-black xl:text-xs 2xl:text-xs 3xl:text-lg">
@@ -35,13 +45,48 @@ export default function ExperienceItem({ date, position, company, companyURL, de
           {company}
         </a>
       </p>
-      <p className="text-gray-light xl:text-s xl:mt-2 2xl:text-xs 2xl:mt-2 3xl:text-lg">
-        {formatDescription(description)}
-      </p>
-      <p className="font-bold text-gray xl:text-s xl:mt-1 2xl:text-xs 2xl:mt-1 3xl:text-lg">
-        Skills: {formatSkills(skills)}
-      </p>
-      <p className="font-bold text-gray xl:text-s xl:mt-1 xl:mb-20 2xl:text-xs 2xl:mt-1 3xl:text-lg">
+      <div
+        className="
+          container
+          mb-8
+        "
+      >
+        <p className="text-gray-light xl:text-s xl:mt-2 2xl:text-xs 2xl:mt-2 3xl:text-lg">
+          {formatDescription(description)}
+        </p>
+      </div>
+
+      <div 
+        className="
+          flex
+          flex-wrap
+        "
+      >
+        <div
+          className="
+            font-bold 
+            text-gray 
+            xl:text-s 
+            xl:mt-1 
+            2xl:text-xs 
+            2xl:mt-1 
+            3xl:text-lg
+            mr-2
+          "
+        >
+          Skills:
+        </div>
+        <div
+          className="
+            flex
+            flex-wrap
+            gap-2
+          "
+        >
+          {formatSkills(skills)}
+        </div>
+      </div>
+      <p className={`font-bold text-gray xl:text-s xl:mt-1 ${!isBottom ? "xl:mb-20" : ""} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
         Reference: Saif Ahmed
       </p>
     </div>
