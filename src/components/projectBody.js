@@ -78,7 +78,7 @@ export default function ProjectBody() {
                 >
 
                     <ProjectItem 
-                        title="TIC TAC TOE"
+                        title="Tic-Tac Legends"
                         description="Redefines the classic game with new modes and minigames."
                         techStack="Tech Stack 1"
                         githubLink="https://github.com"
