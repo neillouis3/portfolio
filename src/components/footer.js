@@ -16,7 +16,7 @@ export default function Footer() {
                 class="
                     text-center
                     bg-transparent
-                    text-white
+                    text-gray-light
                 "
             >Designed & built by Neil Louise</p>
         </footer>
