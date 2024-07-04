@@ -15,7 +15,7 @@ export default function ProgLangItem({children, title}) {
 
                 bg-opacity-50
                 px-2
-                py-1
+                py-0.5
 
                 flex
                 flex-wrap
@@ -24,14 +24,16 @@ export default function ProgLangItem({children, title}) {
         >
             <div
                 className="
-                
+                    pr-2
+                    
                 "
             >
                 {children}
             </div>
             <div
                 className="
-                
+                    text-orange
+                    xl:text-s
                 "
             >
                 {title}
