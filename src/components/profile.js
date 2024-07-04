@@ -14,7 +14,7 @@ function Profile() {
 					text-center
 
 					bg-gray-dark
-					rounded-2xl
+					rounded-xl
 					border-2
 					border-gray
 

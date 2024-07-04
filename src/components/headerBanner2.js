@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HeaderBanner() {
+export default function  HeaderBanner() {
     return (
         <>
             <div 
@@ -11,7 +11,9 @@ export default function HeaderBanner() {
                   w-full
 
 
-                  h-80
+                  xl:h-72
+                  2xl:h-80
+                  3xl:h-80
 
 
                   items-center

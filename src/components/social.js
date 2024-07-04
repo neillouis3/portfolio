@@ -18,7 +18,7 @@ export default function Social() {
                 items-center
 				
 				bg-orange
-				rounded-2xl
+				rounded-xl
 				border-2
 				border-orange
             "

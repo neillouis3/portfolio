@@ -10,7 +10,7 @@ export default function ExperienceBody() {
             if (containerRef.current) {
                 const { scrollHeight, clientHeight, scrollTop } = containerRef.current;
                 const maxScrollableHeight = scrollHeight - clientHeight;
-                const newHeight = (scrollTop / maxScrollableHeight) * 425; // Adjust 500 to desired max height
+                const newHeight = (scrollTop / maxScrollableHeight) * 450; // Adjust 500 to desired max height
                 setRectHeight(newHeight);
             }
         };
@@ -36,11 +36,13 @@ export default function ExperienceBody() {
                     bg-gray-dark
                     border-2
                     border-gray
-                    rounded-2xl
+                    rounded-xl
                     p-8
-                    h-exph
+                    xl:h-exph
+                    3xl:h-144
                     overflow-y-scroll
                     max-h-screen
+
                 "
             >
                 <div 
@@ -97,6 +99,7 @@ export default function ExperienceBody() {
                         <div
                             className="
                                 z-1
+                                xl:mt-1
                             "
                         >
                             <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">

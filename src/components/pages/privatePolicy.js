@@ -13,11 +13,11 @@ export default function PrivatePolicyPage() {
                     w-full
                     bg-gray-dark
     
-                    pt-16
+                    pt-10
                 "
             >
                 <div
-                    class="container w-3/4 pb-32"
+                    class="container w-8/12 pb-32"
                 >
                     <HeaderBanner />
                     <div

@@ -19,7 +19,7 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
                         rounded-lg
 
                         p-4
-                        h-72
+                        h-96
                     "
                 >
                     <div
@@ -90,7 +90,7 @@ export default function ProjectItem({title, description, imageLink, githubLink, 
                         rounded-lg
 
                         p-4
-                        h-72
+                        h-96
                     "
                 >
                     <div

@@ -74,7 +74,7 @@ export default function ExperienceItem({ date, position, company, companyURL, de
           {formatSkills(skills)}
         </div>
       </div>
-      <p className={`font-bold text-gray-light xl:text-s xl:mt-4 ${!isBottom ? "xl:mb-16" : ""} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
+      <p className={`font-bold text-gray-light xl:text-s xl:mt-4 ${!isBottom ? "xl:mb-16" : "xl:mb-4"} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
         Reference: Saif Ahmed
       </p>
     </div>

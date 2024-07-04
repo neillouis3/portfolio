@@ -9,8 +9,10 @@ export default function ExtraCur() {
                     bg-gray-dark
                     border-2
                     border-gray
-                    rounded-2xl
+                    rounded-xl
                     p-4
+
+                    h-144
                 "
             >
 

@@ -14,7 +14,7 @@ export default function HeaderBanner() {
 
                   xl:h-72
                   2xl:h-80
-                  3xl:h-80
+                  3xl:h-90
 
                   items-center
                   justify-center

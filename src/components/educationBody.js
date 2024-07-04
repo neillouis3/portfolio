@@ -37,7 +37,7 @@ export default function EducationBody() {
                     bg-gray-drak
                     border-2
                     border-gray
-                    rounded-2xl
+                    rounded-xl
 
                     p-8
                     h-exph

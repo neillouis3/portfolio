@@ -17,11 +17,11 @@ export default function ProjectBody() {
                     bg-gray-dark
                     
                     2xl:h-102
-                    3xl:h-144
+                    3xl:h-fit
 
                     border-2
                     border-gray
-                    rounded-2xl
+                    rounded-xl
 
                     p-8
                 "   
