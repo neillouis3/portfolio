@@ -34,16 +34,16 @@ export default function Index() {
 
                 xl:w-9/12
                 xl:gap-3
-                xl:mt-5
+                xl:mt-4
 
 
                 2xl:w-9/12
                 2xl:gap-3
-                2xl:mt-5
+                2xl:mt-4
 
                 3xl:w-8/12
                 3xl:gap-4
-                3xl:mt-5
+                3xl:mt-4
                 "
             >
                 <div

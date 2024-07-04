@@ -1,7 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import EducationItem from './educationItem';
 
 export default function EducationBody() {
+    const [rectHeight, setRectHeight] = useState(0);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (containerRef.current) {
+                const { scrollHeight, clientHeight, scrollTop } = containerRef.current;
+                const maxScrollableHeight = scrollHeight - clientHeight;
+                const newHeight = (scrollTop / maxScrollableHeight) * 425; // Adjust 500 to desired max height
+                setRectHeight(newHeight);
+            }
+        };
+
+        const container = containerRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll);
+        }
+
+        return () => {
+            if (container) {
+                container.removeEventListener('scroll', handleScroll);
+            }
+        };
+    }, []);
+    
+    
     return (
         <>
             <div
@@ -14,19 +40,24 @@ export default function EducationBody() {
                     rounded-2xl
 
                     p-8
-                    h-144
+                    h-exph
+                    overflow-y-scroll
+                    max-h-screen
                 "
             >
                 <div
                     class="
-                        xl:pt-2.5
-                        xl:pb-2.5
-                        xl:pl-5
-                        xl:pr-5
-                        bg-orange
-                        rounded-lg
-                        flex
-                        gap-5
+                    2xl:pl-11
+                    xl:pt-2.5
+                    xl:pb-2.5
+                    xl:pl-5
+                    xl:pr-5
+                    bg-orange
+                    rounded-lg
+                    flex
+                    gap-5
+
+                    
                     "
                 >
 
@@ -100,13 +131,14 @@ export default function EducationBody() {
                     <div
                         class="
                             container
+                            -ml-8
                         "
                     >
                         <EducationItem
                             date="SEP 2021 - APR 2026"
                             major="Computer Engineering"
                             university="Memorial University of Newfoundland"
-                            courses={["Circuit", "Programming"]}
+                            courses={["Digital Systems","Control Systems","Software Design","Intro to Systems and Signals","Microprocessors","Data Structures","Electric Circuits","Digital Logics","Foundations of Programming","Circuit Analysis","Mechanisms & Electric Circuit", "Engineering Mechanics"]}
                             transcriptLink=""
                         />
 

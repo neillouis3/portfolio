@@ -1,14 +1,11 @@
 import React from "react";
 import AnimatedTooltip from "./ui/animatedTooltip";
 
-export default function ProgLangItem(name, svg) {
+export default function ProgLangItem({children, title}) {
     return (
         <div
             class="
-                container
-                p-1s
                 bg-orange
-                w-1/3
                 
                 rounded-full
 
@@ -16,12 +13,30 @@ export default function ProgLangItem(name, svg) {
                 items-center
                 text-center
 
-                inline-block
                 bg-opacity-50
+                px-2
+                py-1
+
+                flex
+                flex-wrap
 
             "
         >
-        
+            <div
+                className="
+                
+                "
+            >
+                {children}
+            </div>
+            <div
+                className="
+                
+                "
+            >
+                {title}
+            </div>
+            
         </div>
     );
 
