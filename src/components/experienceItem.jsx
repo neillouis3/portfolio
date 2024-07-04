@@ -14,20 +14,8 @@ const formatDescription = (description) => {
 // Helper function to format skills list
 const formatSkills = (skills) => {
     return skills.map((skill, index) => (
-      <p
-        className="
-          font-bold 
-          text-gray 
-          xl:text-s 
-          xl:mt-1 
-          2xl:text-xs 
-          2xl:mt-1 
-          3xl:text-lg
-        "
-        key={index}
-      >
-        <SkillItem skill={skill} />
-      </p>
+
+      <SkillItem skill={skill} />
   ));
 };
 
@@ -51,9 +39,9 @@ export default function ExperienceItem({ date, position, company, companyURL, de
           mb-8
         "
       >
-        <p className="text-gray-light xl:text-s xl:mt-2 2xl:text-xs 2xl:mt-2 3xl:text-lg">
+        <div className="bg-black2 bg-opacity-15 w-full p-4 rounded-lg text-gray-light xl:text-s xl:mt-2 2xl:text-xs 2xl:mt-2 3xl:text-lg">
           {formatDescription(description)}
-        </p>
+        </div>
       </div>
 
       <div 
@@ -62,20 +50,20 @@ export default function ExperienceItem({ date, position, company, companyURL, de
           flex-wrap
         "
       >
-        <div
+        <span
           className="
-            font-bold 
-            text-gray 
+            text-gray-light
             xl:text-s 
             xl:mt-1 
             2xl:text-xs 
             2xl:mt-1 
             3xl:text-lg
             mr-2
+            w-fit
           "
         >
           Skills:
-        </div>
+        </span>
         <div
           className="
             flex
@@ -86,7 +74,7 @@ export default function ExperienceItem({ date, position, company, companyURL, de
           {formatSkills(skills)}
         </div>
       </div>
-      <p className={`font-bold text-gray xl:text-s xl:mt-1 ${!isBottom ? "xl:mb-20" : ""} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
+      <p className={`font-bold text-gray-light xl:text-s xl:mt-4 ${!isBottom ? "xl:mb-16" : ""} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
         Reference: Saif Ahmed
       </p>
     </div>

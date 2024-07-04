@@ -41,7 +41,7 @@ export default function EducationBody() {
 
                     p-8
                     h-exph
-                    overflow-y-scroll
+
                     max-h-screen
                 "
             >

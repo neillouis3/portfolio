@@ -3,19 +3,9 @@ import SkillItem from "./ui/skillItem";
 
 const formatCourses = (courses) => {
   return courses.map((course, index) => (
-    <p
-        class="
-            font-bold 
-            text-gray 
-            xl:text-s 
-            xl:mt-1 
-            2xl:text-xs 
-            2xl:mt-1 
-            3xl:text-lg
-        "
-    >
+
         <SkillItem skill={course} key={index} />
-    </p>
+
   ));
 };
 
@@ -78,9 +68,8 @@ export default function EducationItem({
 
       <div className="flex flex-wrap">
         <div
-          className="
-            font-bold 
-            text-gray 
+          className=" 
+            text-gray-light
             xl:text-s 
             xl:mt-8
             2xl:text-xs 

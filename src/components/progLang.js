@@ -12,7 +12,7 @@ export default function ProgLang() {
                     border-2
                     border-gray
                     rounded-2xl
-                    py-4
+                    
 
 
                     

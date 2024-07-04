@@ -6,14 +6,14 @@ export default function ProgLangItem({children, title}) {
         <div
             class="
                 bg-orange
-                
+                bg-opacity-50
                 rounded-full
 
                 justify-center
                 items-center
                 text-center
 
-                bg-opacity-50
+                
                 px-2
                 py-0.5
 
