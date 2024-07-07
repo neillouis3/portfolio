@@ -38,10 +38,11 @@ export default function ExperienceBody() {
                     border-gray
                     rounded-xl
                     p-8
-                    xl:h-exph
-                    3xl:h-144
+                    xl:h-xlexph
+                    3xl:h-exph
                     overflow-y-scroll
                     max-h-screen
+
 
                 "
             >
@@ -99,7 +100,7 @@ export default function ExperienceBody() {
                         <div
                             className="
                                 z-1
-                                xl:mt-1
+                                3xl:mt-1
                             "
                         >
                             <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +111,8 @@ export default function ExperienceBody() {
                         <div
                             className="
                                 z-2
-                                mt-exp
+                                3xl:mt-exp
+                                xl:mt-xlexp
                             "
                         >
                             <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +122,9 @@ export default function ExperienceBody() {
                         <div
                             className="
                                 -z-10
-                                -mt-exp3
+                                3xl:-mt-exp3
+                                xl:-mt-xlexp3
+
                             "
                         >
                             <svg

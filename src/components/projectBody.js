@@ -65,6 +65,53 @@ export default function ProjectBody() {
                 </div>
 
                 <div
+                    class="flex gap-4 my-4"
+                >
+                    <div
+                        class="
+                            text-white
+                            px-4
+                            py-0.5
+                            bg-orange
+                            
+                            rounded-full
+                        "
+                    >
+
+                        Software
+
+                    </div>
+                    <div
+                        class="
+                            text-orange
+                            px-4
+                            py-0.5
+                            bg-orange
+                            bg-opacity-50
+                            rounded-full
+                        "
+                    >
+
+                        Hardware
+
+                    </div>
+                    <div
+                        class="
+                            text-orange
+                            px-4
+                            py-0.5
+                            bg-orange
+                            bg-opacity-50
+                            rounded-full
+                        "
+                    >
+
+                        Design
+
+                    </div>
+                </div>
+
+                <div
                     class="
                         itemContainer
                         container
@@ -76,31 +123,27 @@ export default function ProjectBody() {
                         gap-4
                     "
                 >
+                    <div
+                        class="
+                            softwareContainer
+                        "
+                    >
+                        <ProjectItem 
+                            title="Tic-Tac Legends"
+                            description="Redefines the classic game with new modes and minigames."
+                            techStack="Tech Stack 1"
+                            githubLink="https://github.com"
+                            demoLink="https://github.com"
+                            imageLink="../../images/ttlegends/title.png"
+                            lang={["React Native", "Swift", "Python"]}
 
-                    <ProjectItem 
-                        title="Tic-Tac Legends"
-                        description="Redefines the classic game with new modes and minigames."
-                        techStack="Tech Stack 1"
-                        githubLink="https://github.com"
-                        demoLink="https://github.com"
-                        imageLink="@/public/images/tictactoe"
-                    />
+                        />
+                    </div>
+                    
 
-                    <ProjectItem 
-                        title="Quest"
-                        description="Gamify the learning experience"
-                        techStack="Tech Stack 1"
-                        githubLink="https://github.com"
-                        demoLink="https://github.com"
-                    />
 
-                    <ProjectItem 
-                        title="Quest"
-                        description="Gamify the learning experience"
-                        techStack="Tech Stack 1"
-                        githubLink="https://github.com"
-                        demoLink="https://github.com"
-                    />
+
+
 
                 </div>
 

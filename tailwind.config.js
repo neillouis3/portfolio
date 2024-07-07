@@ -58,6 +58,7 @@ module.exports = {
       },
 
       spacing: {
+        '18': '4.5rem',
         '30': '7.25rem',
         '80': '20rem', /* 320px */
         '82': '20.5rem', /* 328px */
@@ -74,6 +75,11 @@ module.exports = {
         'exp': '27.85rem',
         'exph': '33rem',
         'exp3': '29rem',
+        'xlexp': '27.85rem',
+        'xlexph': '35rem',
+        'xlexp3': '29rem',
+        'xleduh': '32.25rem',
+        
       },
       borderRadius: {
         '4xl': '2rem',

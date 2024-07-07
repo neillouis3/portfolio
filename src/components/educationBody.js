@@ -40,7 +40,7 @@ export default function EducationBody() {
                     rounded-xl
 
                     p-8
-                    h-exph
+                    xl:h-xleduh
 
                     max-h-screen
                 "

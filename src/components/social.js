@@ -17,10 +17,10 @@ export default function Social() {
                 h-auto
                 items-center
 				
-				bg-orange
+
 				rounded-xl
 				border-2
-				border-orange
+				border-gray
             "
 			>
 				<ReactSocialMediaIcons
@@ -28,7 +28,7 @@ export default function Social() {
 					borderColor="#FFFFFF"
 					borderStyle="none"
 					roundness="50%"
-					backgroundColor="#E06C75"
+					backgroundColor="#282C34"
 					target="_blank"
 					icon="github"
 					url="https://github.com/neillouis3"
@@ -39,7 +39,7 @@ export default function Social() {
 					borderColor="#FFFFFF"
 					borderStyle="none"
 					roundness="50%"
-					backgroundColor="#E06C75"
+					backgroundColor="#282C34"
 					target="_blank"
 					icon="linkedin"
 					url="https://www.linkedin.com/in/neillouis3/"
@@ -50,7 +50,7 @@ export default function Social() {
 					borderColor="#FFFFFF"
 					borderStyle="none"
 					roundness="50%"
-					backgroundColor="#E06C75"
+					backgroundColor="#282C34"
 					target="_blank"
 					icon="instagram"
 					url="https://www.instagram.com/neillouis3/"

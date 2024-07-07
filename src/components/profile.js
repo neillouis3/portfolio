@@ -20,8 +20,8 @@ function Profile() {
 
 					w-full
 					xl:h-fit
-					xl:pb-10
-					xl:pt-10
+					xl:pb-6
+					xl:pt-6
 					xl:pl-4
 					xl:pr-4
 					2xl:h-60

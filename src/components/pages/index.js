@@ -11,6 +11,12 @@ import ExtraCur from '../extraCur';
 import Certification from '../certification';
 
 export default function Index() {
+    const backToTop = () => {
+        document.documentElement.style.scrollBehavior = "smooth";
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      };
+    
     return (
     <>
         <div
@@ -62,7 +68,6 @@ export default function Index() {
                     <Profile/>
                     <Social/>
                     <ProgLang/>
-                    <ExtraCur/>
                 </div>
                 <div
                     class="
@@ -74,11 +79,16 @@ export default function Index() {
                 >
                     <ExperienceBody/>
                     <EducationBody/>
-                    <ProjectBody/>
+                    
                 </div>
             
 
 
+            </div>
+            <div
+                class="mt-4 container xl:w-9/12 "
+            >
+                <ProjectBody/>
             </div>
         
             <Footer/>   
