@@ -69,6 +69,7 @@ module.exports = {
         '92': '23rem', /* 368px */
         '94': '23.5rem', /* 376px */
         '96': '24rem', /* 384px */
+        'prow': '27rem', /* 384px */
         '102': '28.25rem',
         '128': '32rem',
         '144': '36rem',
@@ -79,6 +80,7 @@ module.exports = {
         'xlexph': '35rem',
         'xlexp3': '29rem',
         'xleduh': '32.25rem',
+
         
       },
       borderRadius: {

@@ -13,13 +13,12 @@ const formatDescription = (description) => {
 
 // Helper function to format skills list
 const formatSkills = (skills) => {
-    return skills.map((skill, index) => (
-
-      <SkillItem skill={skill} />
+  return skills.map((skill, index) => (
+    <SkillItem key={index} skill={skill} />
   ));
 };
 
-export default function ExperienceItem({ date, position, company, companyURL, description, skills, isBottom }) {
+export default function ExperienceItem({ date, position, company, companyURL, description, skills, referenceName="Saif", referenceEmailLink="nei03.castillon@gmail.com", isBottom }) {
   return (
     <div className="container">
       <p className="text-gray-light font-black xl:text-xs 2xl:text-xs 3xl:text-lg">
@@ -74,9 +73,19 @@ export default function ExperienceItem({ date, position, company, companyURL, de
           {formatSkills(skills)}
         </div>
       </div>
-      <p className={`font-bold text-gray-light xl:text-s xl:mt-4 ${!isBottom ? "xl:mb-18" : ""} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
-        Reference: Saif Ahmed
-      </p>
+      <div className={`font-bold text-gray-light xl:text-s xl:mt-4 ${!isBottom ? "xl:mb-18" : ""} 2xl:text-xs 2xl:mt-1 3xl:text-lg`}>
+        <div className="flex">
+          Reference: 
+        </div>
+        <div className="relative group">
+          <a href={referenceEmailLink} target="_blank" rel="noopener noreferrer">
+            {referenceName}
+          </a>
+          <div className="absolute left-0 mt-1 w-48 p-2 bg-gray-700 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {referenceEmailLink}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
