@@ -10,7 +10,7 @@ export default function PrivatePolicyPage() {
 
                     container
                     h-full
-                    w-full
+                    w-screen
                     bg-gray-dark
     
                     pt-10
