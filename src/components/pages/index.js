@@ -22,8 +22,8 @@ export default function Index() {
         <div
             class="
                 container
-                h-full
-                w-full
+                h-max
+                w-max
                 bg-gray-dark
 
                 pt-10

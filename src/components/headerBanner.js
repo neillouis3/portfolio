@@ -5,25 +5,25 @@ export default function HeaderBanner() {
         <>
             <div 
                 class="
-                  container
-                  flex
+                container
+                flex
 
-                  xl:w-9/12
-                  2xl:w-8/12
-                  3xl:w-8/12
+                w-full
 
-                  xl:h-72
-                  2xl:h-80
-                  3xl:h-90
 
-                  items-center
-                  justify-center
+                xl:h-72
+                2xl:h-80
+                3xl:h-80
 
-                  bg-bannerBG
 
-                  bg-center
+                items-center
+                justify-center
 
-                  rounded-xl
+                bg-bannerBG
+
+                bg-center
+
+                rounded-lg
                 " 
             >
                 <h1 class="
