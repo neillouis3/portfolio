@@ -18,12 +18,11 @@ export default function Index() {
       };
     
     return (
-    <>
         <div
             class="
                 container
                 h-max
-                w-max
+                w-screen
                 bg-gray-dark
 
                 pt-10
@@ -95,9 +94,6 @@ export default function Index() {
 
     
         </div>
-
-    </>
-
     );
 
 
