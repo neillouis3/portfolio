@@ -7,8 +7,7 @@ import ExperienceBody from '../experienceBody';
 import ProgLang from '../progLang';
 import EducationBody from '../educationBody';
 import ProjectBody from '../projectBody';
-import ExtraCur from '../extraCur';
-import Certification from '../certification';
+
 
 export default function Index() {
     const backToTop = () => {
@@ -21,10 +20,8 @@ export default function Index() {
         <div
             class="
                 container
-                h-max
-                w-screen
+                w-full
                 bg-gray-dark
-
                 pt-10
 
             "
