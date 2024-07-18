@@ -7,8 +7,6 @@ export default function PrivatePolicyPage() {
     return (
             <div
                 class="
-
-                    container
                     h-full
                     w-screen
                     bg-gray-dark
@@ -16,7 +14,9 @@ export default function PrivatePolicyPage() {
                     pt-10
                 "
             >
-                
+                <div
+                    class="container w-8/12 pb-32"
+                >
                     <HeaderBanner />
                     <div
                         class="rounded-lg bg-white px-8 pt-8 pb-16 mt-4"
@@ -259,7 +259,7 @@ export default function PrivatePolicyPage() {
                         </div> 
                     </div>
                     
-                
+                </div>
                 <Footer />
                     
             </div>
