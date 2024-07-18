@@ -92,7 +92,7 @@ export default function ProjectBody() {
                                 description="Notify you when it's time to drink your medication."
                                 githubLink="https://github.com"
                                 demoLink="https://github.com"
-                                imageLinks={["../../images/ttlegends/title.png"]}
+                                imageLinks={["../../images/ttlegends/title.png", "../../images/ttlegends/title.png"]}
                                 lang={["React Native", "Swift", "Python"]}
                             />
 
@@ -101,7 +101,7 @@ export default function ProjectBody() {
                                 description="Showcases multiple design pages in one."
                                 githubLink="https://github.com"
                                 demoLink="https://github.com"
-                                imageLinks={["../../images/ttlegends/title.png"]}
+                                imageLinks={["../../images/ttlegends/title.png", "../../images/ttlegends/title.png"]}
                                 lang={["React JS", "REST API", "Python"]}
                             />
                         </div>
