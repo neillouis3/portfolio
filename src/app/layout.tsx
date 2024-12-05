@@ -34,7 +34,7 @@ export default function RootLayout({
        <Providers>
           <div className="relative flex flex-col h-screen w-screen">
             <NavBar />
-            <main className="h-full w-screen flex flex-col justify-center items-center">
+            <main className="h-screen w-screen flex flex-col justify-center items-center">
               {children}
             </main>
             <Footer />

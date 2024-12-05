@@ -26,7 +26,7 @@ const ThemeSwitch: React.FC<any> = (props) => {
     };
 
     return (
-        <div className="text-black">
+        <div className="text-black -mr-2">
             <Component {...getBaseProps()} onClick={handleChange}>
                 <VisuallyHidden>
                     <input {...getInputProps()} />

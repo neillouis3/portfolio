@@ -7,7 +7,7 @@ import React from "react";
 export default function NavBar () {
     const [currentPage, setCurrentPage] = React.useState<React.Key>("about");
     return (
-        <div className="bg-white dark:bg-darkback_ground w-full h-fit top-0 z-9999 fixed flex justify-center items-center pt-8 pb-4">
+        <div className="bg-white dark:bg-darkback_ground w-full h-fit top-0 z-9999 fixed justify-center items-center flex pb-4 pt-8">
             <div className="w-[75%] flex flex-row justify-between items-center">
                 <div className="flex flex-row justify-between items-center">
                     
