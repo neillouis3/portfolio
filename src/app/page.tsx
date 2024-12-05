@@ -20,7 +20,7 @@ export default function Home() {
 
 
   return (
-    <div className="h-full mt-16 mb-24 py-16 w-[75%] h-full relative">
+    <div className="h-full mt-16 mb-24 py-16 w-[75%] relative">
 
       <div className="w-full h-full flex flex-row">
         <div className="flex-3 flex flex-col gap-8 w-full h-full">
