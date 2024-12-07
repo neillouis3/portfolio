@@ -1,82 +1,142 @@
 "use client"
 import React from "react";
-import {Chip} from "@nextui-org/chip";
-import {Button} from "@nextui-org/react";
+import ReferenceModal from "./referenceModal";
+import {Link} from "@nextui-org/link";
 
 import {Accordion, AccordionItem, Avatar} from "@nextui-org/react";
+import type {Selection} from "@nextui-org/react";
 
 
 export default function EducationContent() {
 
-    const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
+    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
 
     
     const itemClasses = {
-        base: "py-0 w-full",
-        title: "font-normal text-medium",
+        base: "py-0 w-full my-2",
+        title: "text-small",
         trigger: "px-2 py-0 data-[hover=true]:bg-default-100 rounded-lg h-14 flex items-center",
-        indicator: "text-medium",
+        indicator: "text-large ml-auto",
         content: "text-small px-2",
     };
     return (
-        <div className="w-full bg-default-100 h-[60vh] rounded-xl -mt-16 p-8 flex flex-row">
+        <div className="w-full h-[60vh] rounded-xl -mt-16 p-8 flex flex-row">
                 
-                <Accordion selectionMode="multiple">
+                <Accordion 
+                    itemClasses={itemClasses} 
+                    selectedKeys={selectedKeys}
+                    onSelectionChange={setSelectedKeys}
+                >
                     <AccordionItem
                         key="1"
-                        aria-label="Chung Miller"
+                        aria-label="Janelle Lenard"
                         startContent={
                         <Avatar
-                            isBordered
-                            color="primary"
+                            size="lg"
                             radius="lg"
-                            src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                            src="/analogLogo.png"
                         />
+                        
                         }
-                        subtitle="4 unread messages"
-                        title="Chung Miller"
+                        subtitle={<p className="text-primary">Ongoing</p>}
+                        title={
+                            <div className="flex flex-row">
+                                <p className="text-sm">QOET Enginer Intern @ <Link size="sm" href="#" underline="always" color="foreground"> Analog Devices</Link></p>
+                                
+                            </div>
+                        }
+                            
                     >
-                        {defaultContent}
+                        <div className="pl-16 flex flex-col gap-4">
+                            <div>
+                                <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
+                                <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
+                                address identified problems.</p>
+                                <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
+                            </div>
+                            <div>
+                                <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
+                            </div>
+                            
+                            <div className="flex flex-row gap-2">
+                                <p>References: </p> <ReferenceModal />
+                            </div>
+                            
+                        </div>
+                        
                     </AccordionItem>
                     <AccordionItem
                         key="2"
                         aria-label="Janelle Lenard"
                         startContent={
+
                         <Avatar
-                            isBordered
-                            color="success"
+                            size="lg"
                             radius="lg"
-                            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                            src="/jisLogo.png"
                         />
+                        
                         }
-                        subtitle="3 incompleted steps"
-                        title="Janelle Lenard"
+                        subtitle="May 2024 - Dec 2024"
+                        title={
+                            <div className="flex flex-row gap-1">
+                                <p className="text-sm">Software Developer @ <Link size="sm" href="#" underline="always" color="foreground"> Jeddah International School</Link></p>
+                                
+                            </div>
+                        }
+                            
                     >
-                        {defaultContent}
+                        <div className="pl-16 flex flex-col gap-4">
+                            <div>
+                                <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
+                                <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
+                                address identified problems.</p>
+                                <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
+                            </div>
+                            <div>
+                                <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
+                            </div>
+                            
+                            <ReferenceModal />
+                        </div>
                     </AccordionItem>
                     <AccordionItem
                         key="3"
-                        aria-label="Zoey Lang"
+                        aria-label="Janelle Lenard"
                         startContent={
+
                         <Avatar
-                            isBordered
-                            color="warning"
+                            size="lg"
                             radius="lg"
-                            src="https://i.pravatar.cc/150?u=a04258114e29026702d"
+                            src="/nleatsLogo.png"
                         />
+                        
                         }
-                        subtitle={
-                        <p className="flex">
-                            2 issues to<span className="text-primary ml-1">fix now</span>
-                        </p>
+                        subtitle="May 2024 - Dec 2024"
+                        title={
+                            <div className="flex flex-row gap-1">
+                                <p className="text-sm">Software Developer @ <Link size="sm" href="#" underline="always" color="foreground"> NLEats</Link></p>
+                                
+                            </div>
                         }
-                        title="Zoey Lang"
+                            
                     >
-                        {defaultContent}
+                        <div className="pl-16 flex flex-col gap-4">
+                            <div>
+                                <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
+                                <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
+                                address identified problems.</p>
+                                <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
+                            </div>
+                            <div>
+                                <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
+                            </div>
+                            
+                            <ReferenceModal />
+                        </div>
                     </AccordionItem>
-                    </Accordion>
+                    
+                </Accordion>
             
         </div>
     )
