@@ -4,7 +4,7 @@
 import {useTheme} from "next-themes";
 import { useEffect, useState } from "react";
 import React from "react";
-import {Switch, VisuallyHidden, useSwitch} from "@nextui-org/react";
+import {VisuallyHidden, useSwitch} from "@nextui-org/react";
 
 const ThemeSwitch: React.FC<any> = (props) => {
     const {
