@@ -1,41 +1,156 @@
-"use client"
-import React from "react";
-import { Chip } from "@nextui-org/react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { Image, Link } from "@nextui-org/react";
+import ProjectDetails from "./projectDetails";
+
 
 export default function ProjectContent() {
+    const [currentLanguages, setCurrentLanguages] = useState<string[]>(["Python"]);
+    const [showDetails, setShowDetails] = useState(false);
+
+    const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+    const projectContentRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.target === projectContentRef.current) {
+                        setShowDetails(entry.isIntersecting);
+                    }
+                });
+            },
+            { threshold: 0.5 } // Trigger when 50% of the container is visible
+        );
+
+        if (projectContentRef.current) {
+            observer.observe(projectContentRef.current);
+        }
+
+        return () => {
+            if (projectContentRef.current) {
+                observer.unobserve(projectContentRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionIndex = sectionRefs.current.findIndex(
+                            (section) => section === entry.target
+                        );
+
+                        // Update languages based on the section index
+                        if (sectionIndex === 0) {
+                            setCurrentLanguages([
+                                "Python",
+                                "Typescript",
+                                "Next.js",
+                                "Firebase",
+                                "Tailwind CSS",
+                            ]);
+                        } else if (sectionIndex === 1) {
+                            setCurrentLanguages(["Java"]);
+                        } else if (sectionIndex === 2) {
+                            setCurrentLanguages(["Typescript", "React.js"]);
+                        }
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        sectionRefs.current.forEach((section) => {
+            if (section) observer.observe(section);
+        });
+
+        return () => {
+            sectionRefs.current.forEach((section) => {
+                if (section) observer.unobserve(section);
+            });
+        };
+    }, []);
+
     return (
-        <div className="w-full h-fit flex-row flex gap-4 items-center ">
-            <div className="h-screen">
-
-            </div>
-            <div className="h-screen w-[25vw] bg-default-500 flex flex-col justify-center z-40 fixed right-[12.5vw] top-0">
-                <h1 className="text-base">Technologies</h1>
-                <div className="flex flex-wrap gap-1">
-                    <Chip key="Python" variant="faded" size="sm">Python</Chip>
-                    <Chip key="JavaScript" variant="faded" size="sm">JavaScript</Chip>
-                    <Chip key="TypeScript" variant="faded" size="sm">TypeScript</Chip>
-                    <Chip key="Java" variant="faded" size="sm">Java</Chip>
-                    <Chip key="CSharp" variant="faded" size="sm">C#</Chip>
-                    <Chip key="Ruby" variant="faded" size="sm">Ruby</Chip>
-                    <Chip key="Go" variant="faded" size="sm">Go</Chip>
-                    <Chip key="PHP" variant="faded" size="sm">PHP</Chip>
-                    <Chip key="Swift" variant="faded" size="sm">Swift</Chip>
-                    <Chip key="Kotlin" variant="faded" size="sm">Kotlin</Chip>
-                    <Chip key="Rust" variant="faded" size="sm">Rust</Chip>
-                    <Chip key="Dart" variant="faded" size="sm">Dart</Chip>
-                    <Chip key="Scala" variant="faded" size="sm">Scala</Chip>
-                    <Chip key="Elixir" variant="faded" size="sm">Elixir</Chip>
-                    <Chip key="HTML" variant="faded" size="sm">HTML</Chip>
-                    <Chip key="CSS" variant="faded" size="sm">CSS</Chip>
-                    <Chip key="SQL" variant="faded" size="sm">SQL</Chip>
-                    <Chip key="R" variant="faded" size="sm">R</Chip>
-                    <Chip key="Shell" variant="faded" size="sm">Shell</Chip>
-                    <Chip key="Haskell" variant="faded" size="sm">Haskell</Chip>
+        <div ref={projectContentRef} className="w-full flex flex-col -mt-16 h-full overflow-y-scroll no-scrollbar">
+            {/* Section 1 */}
+            <section
+                ref={(el) => el && (sectionRefs.current[0] = el)}
+                className="h-screen shrink-0 flex items-center"
+            >
+                <div className="h-[60vh] w-[50vw] pr-32">
+                    <h1 className="text-3xl">JCHEKIM</h1>
+                    <h2 className="text-sm text-default-500 mb-4">Web development</h2>
+                    <Image
+                        alt="Card background"
+                        className="object-cover rounded-xl h-full"
+                        src="https://nextui.org/images/hero-card-complete.jpeg"
+                    />
+                    
+                    <div className="flex flex-col mt-4">
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                            Demo
+                        </Link>
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                            Github Repo
+                        </Link>
+                    </div>
                 </div>
-                
-            </div>
+            </section>
 
-                
+            {/* Section 2 */}
+            <section
+                ref={(el) => el && (sectionRefs.current[1] = el)}
+                className="h-screen shrink-0  flex items-center bg-back_ground dark:bg-darkback_ground"
+            >
+                <div className="h-[60vh] w-[50vw] pr-32">
+                    <h1 className="text-3xl">JCHEKIM</h1>
+                    <h2 className="text-sm text-default-500 mb-4">Web development</h2>
+                    <Image
+                        alt="Card background"
+                        className="object-cover rounded-xl h-full"
+                        src="https://nextui.org/images/hero-card-complete.jpeg"
+                    />
+                    <div className="flex flex-col mt-4">
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                            Demo
+                        </Link>
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                            Github Repo
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 3 */}
+            <section
+                ref={(el) => el && (sectionRefs.current[2] = el)}
+                className="h-screen shrink-0  flex items-center bg-back_ground dark:bg-darkback_ground"
+            >
+                <div className="h-[60vh] w-[50vw] pr-32">
+                    <h1 className="text-3xl">JCHEKIM</h1>
+                    <h2 className="text-sm text-default-500 mb-4">Web development</h2>
+                    <Image
+                        alt="Card background"
+                        className="object-cover rounded-xl h-full"
+                        src="https://nextui.org/images/hero-card-complete.jpeg"
+                    />
+                    <div className="flex flex-col mt-4">
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                            Demo
+                        </Link>
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                            Github Repo
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Conditionally Render Project Details */}
+            {showDetails && <ProjectDetails languages={currentLanguages} />}
         </div>
-    )
+    );
 }

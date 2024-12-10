@@ -1,4 +1,4 @@
-import {Card, CardHeader, CardBody, CardFooter, Image, Chip} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, Image, Chip} from "@nextui-org/react";
 
 export default function CustomCard() {
   return (

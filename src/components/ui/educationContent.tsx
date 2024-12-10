@@ -7,7 +7,7 @@ import { Link } from "@nextui-org/react";
 
 export default function EducationContent() {
     return (
-        <div className="w-full h-[60vh] rounded-xl -mt-16 py-8 flex flex-row gap-1">
+        <div className="w-full h-[60vh] -mt-16 flex flex-row gap-1">
             <div className=" flex-2 h-full w-full">
                 <div className="flex flex-col gap-4">
                     <CustomAlert

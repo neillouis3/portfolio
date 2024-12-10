@@ -3,7 +3,7 @@ import React from "react";
 import ReferenceModal from "./referenceModal";
 import {Link} from "@nextui-org/link";
 
-import {Accordion, AccordionItem, Avatar, Chip} from "@nextui-org/react";
+import {Accordion, AccordionItem, Avatar} from "@nextui-org/react";
 import type {Selection} from "@nextui-org/react";
 
 
@@ -20,7 +20,7 @@ export default function ExperienceContent() {
         content: "text-small px-2",
     };
     return (
-        <div className="w-full h-[60vh] rounded-xl -mt-16 py-8 flex flex-row">
+        <div className="w-full h-[60vh] -mt-16 flex flex-row">
                 
                 <Accordion 
                     itemClasses={itemClasses} 
