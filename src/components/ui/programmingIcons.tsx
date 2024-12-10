@@ -5,7 +5,7 @@ export const Python: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             stroke={fill}
@@ -30,7 +30,7 @@ export const NextJS: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({size, height, width }) => {
     return (
         <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height={size || height || 16}
         
@@ -45,7 +45,7 @@ export const ReactJS: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             stroke={fill}
@@ -70,7 +70,7 @@ export const TypeScript: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             stroke={fill}
@@ -94,7 +94,7 @@ export const TailwindCSS: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             stroke={fill}
@@ -118,7 +118,7 @@ export const Java: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             height={size || height || 16}
@@ -140,7 +140,7 @@ export const Firebase: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             height={size || height || 16}
@@ -166,7 +166,7 @@ export const Laravel: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             height={size || height || 16}
@@ -188,7 +188,7 @@ export const MySQL: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             height={size || height || 16}
@@ -210,7 +210,7 @@ export const C: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             height={size || height || 16}
@@ -232,7 +232,7 @@ export const Cplusplus: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             height={size || height || 16}
@@ -254,7 +254,7 @@ export const Csharp: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             fill={fill}
@@ -278,7 +278,7 @@ export const Php: React.FC<{
     height?: number;
     width?: number;
   [key: string]: string | number | undefined;
-}> = ({ fill = "currentColor", filled, size, height, width, ...props }) => {
+}> = ({ fill = "currentColor",  size, height, width, ...props }) => {
     return (
         <svg 
             fill={fill}

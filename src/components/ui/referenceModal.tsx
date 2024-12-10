@@ -3,8 +3,8 @@ import React from "react";
 
 
 
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar, User, Link, DropdownSection} from "@nextui-org/react";
-import { isExternal } from "util/types";
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Link, DropdownSection} from "@nextui-org/react";
+
 
 export default function ReferenceModal ({name, role, position, company, companyLink, linkedin}: {name:string; role:string; position:string, company:string; companyLink:string; linkedin:string;}) {
     return (
