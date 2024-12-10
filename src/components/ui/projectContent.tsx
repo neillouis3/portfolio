@@ -20,7 +20,7 @@ export default function ProjectContent() {
                     }
                 });
             },
-            { threshold: 0.5 } // Trigger when 50% of the container is visible
+            { threshold: 0.8 } // Trigger when 50% of the container is visible
         );
 
         if (projectContentRef.current) {
@@ -60,7 +60,7 @@ export default function ProjectContent() {
                     }
                 });
             },
-            { threshold: 0.5 }
+            { threshold: 0.8 }
         );
 
         sectionRefs.current.forEach((section) => {
