@@ -1,18 +1,24 @@
-import {Chip, Link} from "@nextui-org/react";
+import {Chip, Link, Button, Modal} from "@nextui-org/react";
 
 export default function AboutContent() {
   return (
-      <div className="w-full h-[60vh] -mt-16 flex flex-row justify-center gap-4 items-center">
-        <div className="flex-3 flex flex-col gap-8 w-full h-full">
+      <div className="w-full h-[60vh]  flex flex-row justify-center gap-4 items-center">
+        <div className="flex-3 flex flex-col gap-8 w-full h-full pb-8">
           <div className="flex flex-col">
             <h1 className="text-3xl">Neil Louise A. Castillon</h1>
-            <Chip size="sm" radius="md" color="primary">Software Developer</Chip>
+            <Chip size="sm" radius="sm" color="primary">Software Developer</Chip>
           </div>
           <div className="flex-3 flex-col flex gap-4 text-sm">
             <p className="">Hi! I&apos;m Louise and I&apos;m a 3rd year computer engineering student @ <Link underline="always" href="https://www.mun.ca" size="sm" isExternal>Memorial University</Link> who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.</p>
             <p>My interests extend to robotics, centralized automation systems, and AI&apos;s application to electrical systems.</p>
             <p>Beyond tech, I enjoy playing instruments especially the guitar, and I&apos;m also a big fan of photography.</p>
           </div>
+          <div className="flex gap-2">
+            <Button color="primary" size="sm">Get to know me</Button>
+            <Button color="primary" size="sm" variant="ghost">View resume</Button>
+            
+          </div>
+          
         </div>
         <div className="flex-2 h-full w-full relative">
             <svg className="w-full h-full text-primary transition-colors" id="visual" viewBox="0 0 900 900" width="900" height="900" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -21,6 +27,8 @@ export default function AboutContent() {
               </g>
             </svg>
         </div>
+
+        <Modal />
       </div>
 
   );
