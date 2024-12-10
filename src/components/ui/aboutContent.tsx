@@ -9,9 +9,9 @@ export default function AboutContent() {
             <Chip size="sm" radius="md" color="primary">Software Developer</Chip>
           </div>
           <div className="flex-3 flex-col flex gap-4 text-sm">
-            <p className="">Hi! I'm Louise and I'm a 3rd year computer engineering student @ <Link underline="always" href="https://www.mun.ca" size="sm" isExternal>Memorial University</Link> who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.</p>
-            <p>My interests extend to robotics, centralized automation systems, and AI's application to electrical systems.</p>
-            <p>Beyond tech, I enjoy playing instruments especially the guitar, and I'm also a big fan of photography.</p>
+            <p className="">Hi! I&apos;m Louise and I&apos;m a 3rd year computer engineering student @ <Link underline="always" href="https://www.mun.ca" size="sm" isExternal>Memorial University</Link> who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.</p>
+            <p>My interests extend to robotics, centralized automation systems, and AI&apos;s application to electrical systems.</p>
+            <p>Beyond tech, I enjoy playing instruments especially the guitar, and I&apos;m also a big fan of photography.</p>
           </div>
         </div>
         <div className="flex-2 h-full w-full relative">

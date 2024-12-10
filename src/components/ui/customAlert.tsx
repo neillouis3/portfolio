@@ -21,7 +21,7 @@ export const CustomAlert = ({children, variant, color, className, classNames, ..
       default:
         return "before:bg-default-200";
     }
-  }, []);
+  }, [color]);
 
   return (
     <Alert
