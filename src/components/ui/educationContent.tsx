@@ -8,8 +8,8 @@ import { Link } from "@nextui-org/react";
 export default function EducationContent() {
     return (
         <div className="w-full h-[60vh] -mt-16 flex flex-row gap-1">
-            <div className=" flex-2 h-full w-full">
-                <div className="flex flex-col gap-4">
+            <div className="h-full w-full flex flex-col gap-4">
+                <div className="w-[50vw] max-lg:w-full mr-auto">
                     <CustomAlert
                         hideIcon
                         key="primary"
@@ -33,11 +33,46 @@ export default function EducationContent() {
                         </div>
 
                     </CustomAlert>
+                </div>
+                <div className="w-[50vw] max-lg:w-full ml-auto">
                     <CustomAlert
                         hideIcon
                         key="primary2"
                         color="primary"
                         title="Certifications"
+                        description=""
+                        direction="right"
+                    >
+                        <div className="flex flex-col gap-1 mt-2">
+                            <div>
+                                <p className="text-sm text-default-500">2024</p>
+                                <div className="-mt-1">
+                                    <Link color="foreground" href="https://www.mun.ca" size="sm" isExternal showAnchorIcon>Computer Hardware @ Cisco</Link>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-sm text-default-500">2023</p>
+                                <div className="-mt-1">
+                                    <Link color="foreground" href="https://www.mun.ca" size="sm" isExternal showAnchorIcon>React - The Complete Guide (incl. React Router & Redux) @ Udemy</Link>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-sm text-default-500">2022</p>
+                                <div className="-mt-1">
+                                    <Link color="foreground" href="https://www.mun.ca" size="sm" isExternal showAnchorIcon>Onshape Fundamentals: CAD @ Onshape</Link>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </CustomAlert>
+                </div>
+                <div className="w-[50vw] max-lg:w-full">
+                    <CustomAlert
+                        hideIcon
+                        key="primary3"
+                        color="primary"
+                        title="Skills"
                         description=""
                     >
                         <div className="flex flex-col gap-1 mt-2">
@@ -64,12 +99,10 @@ export default function EducationContent() {
 
                     </CustomAlert>
                 </div>
+                    
+         
                 
-            </div>
-            <div className="flex-1  h-full w-full">
-
-            </div>
-                
+            </div>        
         </div>
     )
 }

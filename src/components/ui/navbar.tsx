@@ -33,7 +33,7 @@ export default function NavBar({ currentPage, onBreadcrumbClick }: NavBarProps) 
               isCurrent={currentPage === "about"}
               onClick={() => onBreadcrumbClick("about")}
             >
-              About Me
+              About
             </BreadcrumbItem>
             <BreadcrumbItem
               key="work"

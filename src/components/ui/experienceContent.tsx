@@ -11,20 +11,14 @@ export default function ExperienceContent() {
 
     const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
 
-    
-    const itemClasses = {
-        base: "py-0 w-full my-2",
-        title: "text-small",
-        trigger: "px-2 py-0 data-[hover=true]:bg-default-100 rounded-lg h-14 flex items-center",
-        indicator: "text-large ml-auto",
-        content: "text-small px-2",
-    };
+
     return (
         <div className="w-full h-[60vh] -mt-16 flex flex-row">
                 
                 <Accordion 
-                    itemClasses={itemClasses} 
+
                     selectedKeys={selectedKeys}
+                    variant="light"
                     onSelectionChange={setSelectedKeys}
                 >
                     <AccordionItem
@@ -35,6 +29,7 @@ export default function ExperienceContent() {
                             size="lg"
                             radius="lg"
                             src="/analogLogo.png"
+                            
                         />
                         
                         }
@@ -47,14 +42,14 @@ export default function ExperienceContent() {
                         }
                             
                     >
-                        <div className="pl-16 flex flex-col gap-4">
+                        <div className="lg:pl-16 flex flex-col gap-4 text-sm">
                             <div>
                                 <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
                                 <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
                                 address identified problems.</p>
                                 <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
                             </div>
-                            <div>
+                            <div className="max-lg:hidden">
                                 <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
                             </div>
                             
@@ -94,14 +89,14 @@ export default function ExperienceContent() {
                         }
                             
                     >
-                        <div className="pl-16 flex flex-col gap-4">
+                        <div className="lg:pl-16 flex flex-col gap-4 text-sm">
                             <div>
                                 <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
                                 <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
                                 address identified problems.</p>
                                 <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
                             </div>
-                            <div>
+                            <div className="max-lg:hidden">
                                 <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
                             </div>
                             
@@ -139,14 +134,14 @@ export default function ExperienceContent() {
                         }
                             
                     >
-                        <div className="pl-16 flex flex-col gap-4">
+                        <div className="lg:pl-16 flex flex-col gap-4 text-sm">
                             <div>
                                 <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
                                 <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
                                 address identified problems.</p>
                                 <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
                             </div>
-                            <div>
+                            <div className="max-lg:hidden">
                                 <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
                             </div>
                             

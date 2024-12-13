@@ -3,7 +3,7 @@ import type {AlertProps} from "@nextui-org/react";
 import React from "react";
 import {Alert, cn} from "@nextui-org/react";
 
-export const CustomAlert = ({children, variant, color, className, classNames, ...props}: AlertProps) => {
+export const CustomAlert = ({children, variant, color, className, classNames, direction = "left", ...props}: AlertProps) => {
   const colorClass = React.useMemo(() => {
     switch (color) {
       case "default":
@@ -23,18 +23,20 @@ export const CustomAlert = ({children, variant, color, className, classNames, ..
     }
   }, [color]);
 
+  const directionClass = direction === "right" ? "before:right-0 rounded-r-none" : "before:left-0 rounded-l-none border-l-0";
+
   return (
     <Alert
       classNames={{
         ...classNames,
         base: cn(
           [
-            "bg-default-50 dark:bg-background shadow-sm",
+            "bg-default-50 dark:bg-darkback_ground shadow-sm",
             "border-1 border-default-200 dark:border-default-100",
             "relative before:content-[''] before:absolute before:z-10",
-            "before:left-0 before:top-[-1px] before:bottom-[-1px] before:w-1",
-            "rounded-l-none border-l-0",
+            "before:top-[-1px] before:bottom-[-1px] before:w-1",
             colorClass,
+            directionClass,
           ],
           classNames?.base,
           className,

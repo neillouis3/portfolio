@@ -29,16 +29,19 @@ export default function ProjectDetails({ languages}: { languages: string[];}) {
     ];
 
     return (
-            <div className={`h-screen w-[25vw] flex flex-col justify-center z-40 fixed right-[12.5vw] top-0 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-                <div className="h-[60vh] flex flex-col justify-between pt-8 pb-12">
-                    <div className="flex flex-col gap-4">
+            <div className={`bg-back_ground dark:bg-darkback_ground max-lg:h-[26vh] lg:h-screen w-full max-lg:border-t-1 max-lg:border-t-default-300 lg:w-[25vw] flex flex-col items-center lg:justify-center z-40 max-lg:left-0  bottom-0 fixed lg:right-[12.5vw] lg:top-0 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                <div className="lg:h-[60vh] w-[75%] lg:w-full flex flex-col  lg:justify-between lg:pt-8 lg:pb-12">
+                    <div className="flex flex-col w-full max-lg:hidden">
                         <div className="w-full text-sm">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
-                            Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
-                            exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
+                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
+                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
+                            </p>
+                            
                         </div>
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-1 max-lg:pt-4 max-lg:pb-4 ">
                         <h1 className="text-sm">Technologies</h1>
                         <div className="flex flex-wrap gap-1">
                             {techStack.map((tech) => (

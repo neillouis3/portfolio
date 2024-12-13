@@ -11,7 +11,7 @@ export const metadata = layoutMetadata;
 export default function Home() {
 
   return (
-    <div className="h-screen w-[75%] flex flex-col snap-y snap-mandatory overflow-y-scroll no-scrollbar">
+    <div className="h-screen w-[75%] flex flex-col snap-y snap-mandatory overflow-y-scroll no-scrollbar relative">
       <section data-section="about" className="h-screen flex items-center shrink-0 snap-start relative">
         <AboutContent />
 

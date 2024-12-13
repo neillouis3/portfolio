@@ -79,16 +79,18 @@ export default function ProjectContent() {
             {/* Section 1 */}
             <section
                 ref={(el) => el && (sectionRefs.current[0] = el)}
-                className="h-screen shrink-0 flex items-center"
+                className="h-screen shrink-0 flex items-center overflow-hidden"
             >
-                <div className="h-[60vh] w-[50vw] pr-32">
+                <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
                     <h1 className="text-3xl">JCHEKIM</h1>
                     <h2 className="text-sm text-default-500 mb-4">Web development</h2>
+
                     <Image
                         alt="Card background"
-                        className="object-cover rounded-xl h-full"
+                        className="object-cover rounded-xl max-lg:h-[25vh] h-full"
                         src="https://nextui.org/images/hero-card-complete.jpeg"
                     />
+                    
                     
                     <div className="flex flex-col mt-4">
                         <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
@@ -98,20 +100,28 @@ export default function ProjectContent() {
                             Github Repo
                         </Link>
                     </div>
+                    <div className="w-full text-sm lg:hidden mt-4">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
+                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
+                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
+                            </p>
+                            
+                    </div>
                 </div>
             </section>
 
             {/* Section 2 */}
             <section
                 ref={(el) => el && (sectionRefs.current[1] = el)}
-                className="h-screen shrink-0  flex items-center bg-back_ground dark:bg-darkback_ground"
+                className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
-                <div className="h-[60vh] w-[50vw] pr-32">
+                <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
                     <h1 className="text-3xl">JCHEKIM</h1>
                     <h2 className="text-sm text-default-500 mb-4">Web development</h2>
                     <Image
                         alt="Card background"
-                        className="object-cover rounded-xl h-full"
+                        className="object-cover rounded-xl max-lg:h-[25vh] h-full"
                         src="https://nextui.org/images/hero-card-complete.jpeg"
                     />
                     <div className="flex flex-col mt-4">
@@ -121,6 +131,14 @@ export default function ProjectContent() {
                         <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
                             Github Repo
                         </Link>
+                    </div>
+                    <div className="w-full text-sm lg:hidden mt-4">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
+                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
+                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
+                            </p>
+                            
                     </div>
                 </div>
             </section>
@@ -128,14 +146,14 @@ export default function ProjectContent() {
             {/* Section 3 */}
             <section
                 ref={(el) => el && (sectionRefs.current[2] = el)}
-                className="h-screen shrink-0  flex items-center bg-back_ground dark:bg-darkback_ground"
+                className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
-                <div className="h-[60vh] w-[50vw] pr-32">
+                <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
                     <h1 className="text-3xl">JCHEKIM</h1>
                     <h2 className="text-sm text-default-500 mb-4">Web development</h2>
                     <Image
                         alt="Card background"
-                        className="object-cover rounded-xl h-full"
+                        className="object-cover rounded-xl max-lg:h-[25vh] h-full"
                         src="https://nextui.org/images/hero-card-complete.jpeg"
                     />
                     <div className="flex flex-col mt-4">
@@ -146,7 +164,20 @@ export default function ProjectContent() {
                             Github Repo
                         </Link>
                     </div>
+                    <div className="w-full text-sm lg:hidden mt-4">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
+                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
+                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
+                            </p>
+                            
+                    </div>
                 </div>
+            </section>
+            <section
+                ref={(el) => el && (sectionRefs.current[2] = el)}
+                className="h-[25vh] shrink-0  flex items-center bg-back_ground dark:bg-darkback_ground lg:hidden"
+            >
             </section>
 
             {/* Conditionally Render Project Details */}
