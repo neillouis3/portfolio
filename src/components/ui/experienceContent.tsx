@@ -22,53 +22,6 @@ export default function ExperienceContent() {
                     onSelectionChange={setSelectedKeys}
                 >
                     <AccordionItem
-                        key="1"
-                        aria-label="Janelle Lenard"
-                        startContent={
-                        <Avatar
-                            size="lg"
-                            radius="lg"
-                            src="/analogLogo.png"
-                            
-                        />
-                        
-                        }
-                        subtitle={<p className="text-primary">Ongoing</p>}
-                        title={
-                            <div className="flex flex-row">
-                                <p className="text-sm">QOET Enginer Intern @ <Link size="sm" href="https://www.analog.com/en/index.html" underline="always" color="foreground" isExternal> Analog Devices</Link></p>
-                                
-                            </div>
-                        }
-                            
-                    >
-                        <div className="lg:pl-16 flex flex-col gap-4 text-sm">
-                            <div>
-                                <p>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</p>
-                                <p>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to
-                                address identified problems.</p>
-                                <p>- Debugging and troubleshooting computer hardware and software, involving network server environments.</p>
-                            </div>
-                            <div className="max-lg:hidden">
-                                <p>Technologies: React, TypeScript, Node.js, Express, MongoDB, Git, GitHub, Heroku</p>
-                            </div>
-                            
-                            <div className="flex flex-row gap-2">
-                                <p>References: </p> 
-                                <ReferenceModal
-                                    name="Saif Khalid"
-                                    role="Supervisor"
-                                    position="IT Head"
-                                    company="Jeddah International School"
-                                    companyLink="jischool.org"
-                                    linkedin="linkedin.com/in/saifullahkhalid"
-                                />
-                            </div>
-                            
-                        </div>
-                        
-                    </AccordionItem>
-                    <AccordionItem
                         key="2"
                         aria-label="Janelle Lenard"
                         startContent={
