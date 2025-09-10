@@ -180,6 +180,7 @@ export default function ProjectContent() {
 
 
 
+
             {/* Conditionally Render Project Details */}
             {showDetails && <ProjectDetails languages={currentLanguages} />}
         </div>
