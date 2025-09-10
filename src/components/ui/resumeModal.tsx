@@ -27,43 +27,45 @@ export default function ResumeModal() {
   };
 
   return (
-    <>
+    <div>
       <div className="flex flex-wrap gap-3">
 
-          <Button
-            key="resume"
-            className="capitalize"
-            color="default" size="sm" variant="ghost"
-            onPress={() => handleOpen()}
-          >
-            View resume
-          </Button>
+        <Button
+          key="resume"
+          className="capitalize"
+          color="default" size="sm" variant="ghost"
+          onPress={() => handleOpen()}
+        >
+          View resume
+        </Button>
       </div>
       <Modal backdrop="blur" size="xl" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
-          {(onClose: () => void) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">Resume</ModalHeader>
-              <ModalBody>
-              <embed
-                src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                width="100%"
-                height="517.5"
-                style={{ border: 'none' }}
-              ></embed>
-              </ModalBody>
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={handleDownload}>
-                  Download
-                </Button>
-              </ModalFooter>
-            </>
-          )}
+        {(onClose: () => void) => (
+          <>
+            <ModalHeader className="flex flex-col gap-1">Resume</ModalHeader>
+            <ModalBody>
+            <embed
+              src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              width="100%"
+              height="517.5"
+              style={{ border: 'none' }}
+            ></embed>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="danger" variant="light" onPress={onClose}>
+                Close
+              </Button>
+              <Button color="primary" onPress={handleDownload}>
+                Download
+              </Button>
+            </ModalFooter>
+          </>
+        )}
         </ModalContent>
       </Modal>
-    </>
+    </div>
+      
+    
   );
 }

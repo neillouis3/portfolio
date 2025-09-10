@@ -26,6 +26,7 @@ export default function ProjectDetails({ languages}: { languages: string[];}) {
         { name: "MySQL", icon: <Icons.MySQL />, key: "MySQL" },
         { name: "C#", icon: <Icons.Csharp />, key: "C#" },
         { name: "Laravel", icon: <Icons.Laravel />, key: "Laravel" },
+        { name: "MongoDB", icon: <Icons.MongoDB />, key: "MongoDB" },
     ];
 
     return (

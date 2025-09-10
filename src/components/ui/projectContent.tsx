@@ -7,6 +7,7 @@ import ProjectDetails from "./projectDetails";
 export default function ProjectContent() {
     const [currentLanguages, setCurrentLanguages] = useState<string[]>(["Python"]);
     const [showDetails, setShowDetails] = useState(false);
+    const [currentElement, setCurrentElement] = useState<HTMLElement | null>(null);
 
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
     const projectContentRef = useRef<HTMLDivElement | null>(null);
@@ -49,8 +50,9 @@ export default function ProjectContent() {
                                 "Python",
                                 "Typescript",
                                 "Next.js",
-                                "Firebase",
+
                                 "Tailwind CSS",
+                                "MongoDB",
                             ]);
                         } else if (sectionIndex === 1) {
                             setCurrentLanguages(["Java"]);
@@ -78,17 +80,18 @@ export default function ProjectContent() {
         <div ref={projectContentRef} className="w-full flex flex-col -mt-16 h-full overflow-y-scroll no-scrollbar">
             {/* Section 1 */}
             <section
-                ref={(el) => el && (sectionRefs.current[0] = el)}
+                ref={(el) => { if (el) sectionRefs.current[0] = el; }}
                 className="h-screen shrink-0 flex items-center overflow-hidden"
             >
                 <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
-                    <h1 className="text-3xl">JCHEKIM</h1>
-                    <h2 className="text-sm text-default-500 mb-4">Web development</h2>
+                    <h1 className="text-3xl">milestones</h1>
+                    <h2 className="text-sm text-default-500 mb-4">Full-stack web development</h2>
 
                     <Image
                         alt="Card background"
-                        className="object-cover rounded-xl max-lg:h-[25vh] h-full"
-                        src="https://nextui.org/images/hero-card-complete.jpeg"
+                        className="object-cover rounded-xl max-lg:h-[25vh] h-full ml-1"
+                        src="/milestoneDemoIMG.png"
+                        style={{ filter: 'drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5))' }}
                     />
                     
                     
@@ -113,7 +116,7 @@ export default function ProjectContent() {
 
             {/* Section 2 */}
             <section
-                ref={(el) => el && (sectionRefs.current[1] = el)}
+                ref={(el) => { if (el) sectionRefs.current[1] = el; }}
                 className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
                 <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
@@ -145,7 +148,7 @@ export default function ProjectContent() {
 
             {/* Section 3 */}
             <section
-                ref={(el) => el && (sectionRefs.current[2] = el)}
+                ref={(el) => { if (el) sectionRefs.current[2] = el; }}
                 className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
                 <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
@@ -174,11 +177,8 @@ export default function ProjectContent() {
                     </div>
                 </div>
             </section>
-            <section
-                ref={(el) => el && (sectionRefs.current[2] = el)}
-                className="h-[25vh] shrink-0  flex items-center bg-back_ground dark:bg-darkback_ground lg:hidden"
-            >
-            </section>
+
+
 
             {/* Conditionally Render Project Details */}
             {showDetails && <ProjectDetails languages={currentLanguages} />}
