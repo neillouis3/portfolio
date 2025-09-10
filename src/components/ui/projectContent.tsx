@@ -7,7 +7,7 @@ import ProjectDetails from "./projectDetails";
 export default function ProjectContent() {
     const [currentLanguages, setCurrentLanguages] = useState<string[]>(["Python"]);
     const [showDetails, setShowDetails] = useState(false);
-    const [currentElement, setCurrentElement] = useState<HTMLElement | null>(null);
+    
 
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
     const projectContentRef = useRef<HTMLDivElement | null>(null);
