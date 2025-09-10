@@ -3,7 +3,11 @@ import type {AlertProps} from "@nextui-org/react";
 import React from "react";
 import {Alert, cn} from "@nextui-org/react";
 
-export const CustomAlert = ({children, variant, color, className, classNames, direction = "left", ...props}: AlertProps) => {
+interface CustomAlertProps extends AlertProps {
+  direction?: "left" | "right";
+}
+
+export const CustomAlert = ({children, variant, color, className, classNames, direction = "left", ...props}: CustomAlertProps) => {
   const colorClass = React.useMemo(() => {
     switch (color) {
       case "default":
