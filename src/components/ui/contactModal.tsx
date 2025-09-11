@@ -43,7 +43,7 @@ export default function ContactModal() {
       </div>
       <Modal backdrop="blur" size="md" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
-        {(onClose: () => void) => (
+        {() => (
           <>
             <ModalHeader className="flex flex-col gap-1">Connect with me</ModalHeader>
             <ModalBody>

@@ -36,7 +36,7 @@ export default function AboutContent() {
                 alt="Card background"
                 className="object-cover  aspect-square"
                 src="/1.JPG"
-                radius="none"
+                radius="sm"
                  
               />
               <Image
@@ -44,7 +44,7 @@ export default function AboutContent() {
                 alt="Card background"
                 className="object-cover  aspect-square"
                 src="/2.JPG"
-                radius="none"
+                radius="sm"
                 
 
               />
