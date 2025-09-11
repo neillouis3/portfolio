@@ -20,12 +20,6 @@ export default function ContactModal() {
     onOpen();
   };
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf"; // Path to your PDF
-    link.download = "resume.pdf"; // Optional: File name for download
-    link.click();
-  };
 
   return (
     <div>
