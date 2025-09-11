@@ -41,7 +41,7 @@ export default function ResumeModal() {
       </div>
       <Modal backdrop="blur" size="xl" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
-        {(onClose: () => void) => (
+        {() => (
           <>
             <ModalHeader className="flex flex-col gap-1">Resume</ModalHeader>
             <ModalBody>
