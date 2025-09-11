@@ -16,7 +16,7 @@ export default function EducationContent() {
                         color="primary"
                         description={
                             <div>
-                                <p className="text-sm text-default-500">Sep 2021 - May 2026</p>
+                                <p className="text-sm text-default-500">Sep 2021 - May 2027</p>
                                 <p className="text-sm text-foreground">Bachelor of Engineering of Computer Engineering @ <Link underline="always" href="https://www.mun.ca" size="sm" isExternal>Memorial University</Link></p>
                             </div>
                         }
@@ -75,24 +75,27 @@ export default function EducationContent() {
                         title="Skills"
                         description=""
                     >
-                        <div className="flex flex-col gap-1 mt-2">
-                            <div>
-                                <p className="text-sm text-default-500">2024</p>
-                                <div className="-mt-1">
-                                    <Link color="foreground" href="https://www.mun.ca" size="sm" isExternal showAnchorIcon>Computer Hardware @ Cisco</Link>
+                        <div className="flex flex-col gap-2 mt-2 text-sm text-foreground w-[80%]">
+                            <div className="flex flex-col">
+                                <h1 className="text-default-500">Technical</h1>
+                                <div className="flex flex-row  flex-wrap">
+                                    <p>Web Development, Mobile Development, Cybersecurity, Software Development, Machine Learning</p>
                                 </div>
                             </div>
-                            <div>
-                                <p className="text-sm text-default-500">2023</p>
-                                <div className="-mt-1">
-                                    <Link color="foreground" href="https://www.mun.ca" size="sm" isExternal showAnchorIcon>React - The Complete Guide (incl. React Router & Redux) @ Udemy</Link>
+                            <div className="flex flex-col">
+                                <h1 className=" text-default-500">Programming Languages</h1>
+                                <div className="flex flex-row flex-wrap">
+                                    <p>Python, JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, MySQL, MongoDB, Clerk</p>
+                                    
                                 </div>
                             </div>
-                            <div>
-                                <p className="text-sm text-default-500">2022</p>
-                                <div className="-mt-1">
-                                    <Link color="foreground" href="https://www.mun.ca" size="sm" isExternal showAnchorIcon>Onshape Fundamentals: CAD @ Onshape</Link>
+                            <div className="flex flex-col">
+                                <h1 className="text-default-500">Soft</h1>
+                                <div className="flex flex-row flex-wrap">
+                                    <p>Communication, Teamwork, Leadership, Problem Solving, Time Management, Adaptability </p>
                                 </div>
+                            
+                                 
                             </div>
 
                         </div>

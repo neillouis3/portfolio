@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Chip} from "@nextui-org/react";
 import * as Icons from "./programmingIcons";
 
-export default function ProjectDetails({ languages}: { languages: string[];}) {
+export default function ProjectDetails({ languages, description}: { languages: string[]; description: string;}) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -33,11 +33,9 @@ export default function ProjectDetails({ languages}: { languages: string[];}) {
             <div className={`bg-back_ground dark:bg-darkback_ground max-lg:h-[26vh] lg:h-screen w-full max-lg:border-t-1 max-lg:border-t-default-300 lg:w-[25vw] flex flex-col items-center lg:justify-center z-40 max-lg:left-0  bottom-0 fixed lg:right-[12.5vw] lg:top-0 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="lg:h-[60vh] w-[75%] lg:w-full flex flex-col  lg:justify-between lg:pt-8 lg:pb-12">
                     <div className="flex flex-col w-full max-lg:hidden">
-                        <div className="w-full text-sm">
+                        <div className="w-full text-sm transition-opacity duration-500">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
-                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
-                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
+                                {description}
                             </p>
                             
                         </div>

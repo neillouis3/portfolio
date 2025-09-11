@@ -47,15 +47,12 @@ export default function ResumeModal() {
             <ModalBody>
             <embed
               src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
-              width="100%"
-              height="517.5"
+              className="w-full h-[70vh]"
               style={{ border: 'none' }}
             ></embed>
             </ModalBody>
             <ModalFooter>
-              <Button color="danger" variant="light" onPress={onClose}>
-                Close
-              </Button>
+
               <Button color="primary" onPress={handleDownload}>
                 Download
               </Button>

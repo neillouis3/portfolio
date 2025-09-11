@@ -1,6 +1,9 @@
-import {Chip, Link, Button} from "@nextui-org/react";
+"use client"
+import {Chip, Link, Image} from "@nextui-org/react";
 import ResumeModal from "./resumeModal";
+import ContactModal from "./contactModal";
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function AboutContent() {
   return (
@@ -10,13 +13,46 @@ export default function AboutContent() {
             <h1 className="text-3xl">Neil Louise A. Castillon</h1>
             <Chip size="md" radius="sm" color="primary">Software Developer</Chip>
           </div>
-          <div className="flex-3 flex-col flex gap-4 text-sm">
-            <p className="">Hi! I&apos;m Louise and I&apos;m a 3rd year computer engineering student @ <Link underline="always" href="https://www.mun.ca" size="sm" isExternal>Memorial University</Link> who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.</p>
-            <p>My interests extend to robotics, centralized automation systems, and AI&apos;s application to electrical systems.</p>
-            <p>Beyond tech, I enjoy playing instruments especially the guitar, and I&apos;m also a big fan of photography.</p>
+          <div className="flex-3 flex-col flex gap-2 text-sm">
+            <p className="">Hi! I&apos;m Louise
+              <span className="mx-1">
+                <motion.span
+                  className="text-xl display: inline-block -mr-[45px] -mb-[20px] pr-[45px] pb-[20px]"
+                  animate={{ rotate: [0, 20, 0] }}
+                  transition={{
+                    duration: 1,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatDelay: 0,
+                  }}>👋 </motion.span>
+              </span> and I&apos;m a 3rd year computer engineering student @ <Link underline="always" href="https://www.mun.ca" size="sm" isExternal>Memorial University</Link> who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.</p>
+            <p className="mt-2">My interests extend to robotics, centralized automation systems, and AI&apos;s application to electrical systems.</p>
+            <p>Beyond tech, I enjoy music and playing the guitar, and I&apos;m also a big fan of photography.
+              I also love to travel and explore new places.
+            </p>
+             <div className="grid grid-cols-4 gap-2 mt-10">
+              <Image
+                isZoomed
+                alt="Card background"
+                className="object-cover  aspect-square"
+                src="/1.JPG"
+                radius="none"
+                 
+              />
+              <Image
+                isZoomed
+                alt="Card background"
+                className="object-cover  aspect-square"
+                src="/2.JPG"
+                radius="none"
+                
+
+              />
+
+             </div>
           </div>
           <div className="flex gap-2">
-            <Button color="primary" size="sm">Get to know me</Button>
+            <ContactModal />
             <ResumeModal />
             
           </div>

@@ -7,7 +7,7 @@ import ProjectDetails from "./projectDetails";
 export default function ProjectContent() {
     const [currentLanguages, setCurrentLanguages] = useState<string[]>(["Python"]);
     const [showDetails, setShowDetails] = useState(false);
-    
+    const [description, setDescription] = useState("");
 
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
     const projectContentRef = useRef<HTMLDivElement | null>(null);
@@ -54,10 +54,13 @@ export default function ProjectContent() {
                                 "Tailwind CSS",
                                 "MongoDB",
                             ]);
+                            setDescription("A full-stack social media app built with Next.js, TypeScript, and TailwindCSS, where users celebrate and share life achievements. Features Clerk authentication, UploadThing media uploads, and a MongoDB backend for scalable data storage. Clean, responsive design with a modern developer-first stack.");
                         } else if (sectionIndex === 1) {
                             setCurrentLanguages(["Java"]);
+                            setDescription("A desktop application built with Java, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.");
                         } else if (sectionIndex === 2) {
-                            setCurrentLanguages(["Typescript", "React.js"]);
+                            setCurrentLanguages(["Typescript", "React.js", "Tailwind CSS", "Next.js"]);
+                            setDescription("A full-stack web application built with Typescript and React.js, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.");
                         }
                     }
                 });
@@ -86,20 +89,22 @@ export default function ProjectContent() {
                 <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
                     <h1 className="text-3xl">milestones</h1>
                     <h2 className="text-sm text-default-500 mb-4">Full-stack web development</h2>
-
-                    <Image
-                        alt="Card background"
-                        className="object-cover rounded-xl max-lg:h-[25vh] h-full ml-1"
-                        src="/milestoneDemoIMG.png"
-                        style={{ filter: 'drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5))' }}
-                    />
+                    <div className="ml-0.5">  
+                        <Image
+                            alt="Card background"
+                            className="object-cover rounded-xl max-lg:h-[25vh] h-full"
+                            src="/milestoneDemoIMG.png"
+                            shadow="sm"
+                        />
+                    </div>
+                    
                     
                     
                     <div className="flex flex-col mt-4">
                         <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
                             Demo
                         </Link>
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
+                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="https://github.com/neillouis3/milestone-demo">
                             Github Repo
                         </Link>
                     </div>
@@ -152,13 +157,16 @@ export default function ProjectContent() {
                 className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
                 <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
-                    <h1 className="text-3xl">JCHEKIM</h1>
+                    <h1 className="text-3xl">Portfolio Website</h1>
                     <h2 className="text-sm text-default-500 mb-4">Web development</h2>
-                    <Image
-                        alt="Card background"
-                        className="object-cover rounded-xl max-lg:h-[25vh] h-full"
-                        src="https://nextui.org/images/hero-card-complete.jpeg"
-                    />
+                    <div className="ml-0.5">  
+                        <Image
+                            alt="Card background"
+                            className="object-cover rounded-xl max-lg:h-[25vh] h-full"
+                            src="/portfolio.png"
+                            shadow="sm"
+                        />
+                    </div>
                     <div className="flex flex-col mt-4">
                         <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
                             Demo
@@ -182,7 +190,7 @@ export default function ProjectContent() {
 
 
             {/* Conditionally Render Project Details */}
-            {showDetails && <ProjectDetails languages={currentLanguages} />}
+            {showDetails && <ProjectDetails languages={currentLanguages} description={description} />}
         </div>
     );
 }

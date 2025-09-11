@@ -9,7 +9,7 @@ import type {Selection} from "@nextui-org/react";
 
 export default function ExperienceContent() {
 
-    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
+    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["2"]));
 
 
     return (
@@ -78,7 +78,7 @@ export default function ExperienceContent() {
                         />
                         
                         }
-                        subtitle="May 2024 - Dec 2024"
+                        subtitle="Sep 2023 - Jan 2024"
                         title={
                             <div className="flex flex-row gap-1">
                                 <p className="text-sm">Software Developer @ <Link size="sm" href="https://www.nleats.com" underline="always" color="foreground" isExternal> NL Eats</Link></p>
