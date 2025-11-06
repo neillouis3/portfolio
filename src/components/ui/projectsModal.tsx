@@ -11,6 +11,21 @@ interface ProjectsModalProps {
 
 type Category = "all" | "software" | "design" | "hardware";
 
+interface Project {
+    title: string;
+    subtitle: string;
+    imageSrc: string;
+    imageAlt: string;
+    description: string;
+    languages: string[];
+    category: string;
+    liveLink: string;
+    githubLink: string;
+    delay: number;
+    duration: number;
+    rotatePattern: number[];
+}
+
 export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
     const [selectedCategory, setSelectedCategory] = useState<Category>("all");
 
@@ -18,7 +33,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
         if (selectedCategory === "all") {
             return projectsData;
         }
-        return projectsData.filter((project: any) => project.category === selectedCategory);
+        return projectsData.filter((project: Project) => project.category === selectedCategory);
     }, [selectedCategory]);
 
     return (
@@ -64,7 +79,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
                         <ModalBody className="px-8">
                             {filteredProjects.length > 0 ? (
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {filteredProjects.map((project: any, index: number) => (
+                                    {filteredProjects.map((project: Project, index: number) => (
                                         <ProjectCard
                                             key={index}
                                             title={project.title}
