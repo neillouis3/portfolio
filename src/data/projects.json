@@ -1,0 +1,134 @@
+[
+    {
+        "title": "milestones",
+        "subtitle": "Full-stack web development",
+        "imageSrc": "/milestoneDemoIMG.png",
+        "imageAlt": "Card background",
+        "description": "A full-stack social media app built with Next.js, TypeScript, and TailwindCSS, where users celebrate and share life achievements. Features Clerk authentication, UploadThing media uploads, and a MongoDB backend for scalable data storage. Clean, responsive design with a modern developer-first stack.",
+        "languages": ["Typescript", "Next.js", "Tailwind CSS", "MongoDB", "Clerk", "UploadThing", "Mongoose"],
+        "category": "software",
+        "liveLink": "https://github.com/neillouis3/milestone",
+        "githubLink": "https://github.com/neillouis3/milestone",
+        "delay": 0.5,
+        "duration": 2.5,
+        "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
+    },
+    {
+        "title": "crm",
+        "subtitle": "Full-stack web development",
+        "imageSrc": "/crm.png",
+        "imageAlt": "Card background",
+        "description": "A CRM system built with Laravel and PHP for managing customer relationships. Features include contact management, task tracking, and reporting capabilities.",
+        "languages": ["Typescript", "Next.js", "Tailwind CSS", "MongoDB"],
+        "category": "software",
+        "liveLink": "",
+        "githubLink": "",
+        "delay": 0.5,
+        "duration": 2.5,
+        "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
+    },
+    {
+        "title": "Teavie",
+        "subtitle": "Web development",
+        "imageSrc": "/teavie.png",
+        "imageAlt": "Card background",
+        "description": "A desktop application built with Java, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.",
+        "languages": ["Python", "Typescript", "Next.js", "Tailwind CSS", "MySQL"],
+        "category": "software",
+        "liveLink": "",
+        "githubLink": "",
+        "delay": 1,
+        "duration": 2.5,
+        "rotatePattern": [0, 2, -2, 1.5, -1.5, 1, -1, 0.5, -0.5, 0]
+    },
+    {
+        "title": "Portfolio Website",
+        "subtitle": "Web development",
+        "imageSrc": "/portfolio.png",
+        "imageAlt": "Card background",
+        "description": "A full-stack web application built with Typescript and React.js, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.",
+        "languages": ["Typescript", "React.js", "Tailwind CSS", "Next.js"],
+        "category": "software",
+        "liveLink": "",
+        "githubLink": "",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    },
+    {
+        "title": "sofey",
+        "subtitle": "Desktop Application",
+        "imageSrc": "/sofey.png",
+        "imageAlt": "Card background",
+        "description": "A desktop application built with Golang and Wails, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.",
+        "languages": ["Golang", "Wails", "Tailwind CSS", "TypeScript"],
+        "category": "software",
+        "liveLink": "",
+        "githubLink": "",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    },
+    {
+        "title": "crm",
+        "subtitle": "Figma Web App Design",
+        "imageSrc": "/crm.png",
+        "imageAlt": "Card background",
+        "description": "A CRM system built with Figma for managing customer relationships. Features include contact management, task tracking, and reporting capabilities.",
+        "languages": ["Figma"],
+        "category": "design",
+        "liveLink": "https://www.figma.com/design/sGkOu6hRT4icsrS1oTtIED/Untitled?t=51MjAO39GUZTIo4M-1",
+        "githubLink": "",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    },
+    {
+        "title": "Queue Management System",
+        "subtitle": "Figma Web App Design",
+        "imageSrc": "/queue.png",
+        "imageAlt": "Card background",
+        "description": "A Queue Management System designed for Jeddah International School for adminstraion purposes.",
+        "languages": ["Figma"],
+        "category": "design",
+        "liveLink": "https://www.figma.com/design/eNVtrHL7QzCsfW17Peek24/Untitled?t=51MjAO39GUZTIo4M-1",
+        "githubLink": "",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    },
+    {
+        "title": "Hydroponic System",
+        "subtitle": "Figma Mobile App Design",
+        "imageSrc": "/hydroponics.png",
+        "imageAlt": "Card background",
+        "description": "A Queue Management System designed for Jeddah International School for adminstraion purposes.",
+        "languages": ["Figma"],
+        "category": "design",
+        "liveLink": "    https://www.figma.com/design/5LcgJaoYYSUplqdxvq3CA3/Azure-Application?node-id=0-1&t=NdaEJbkPfIOfzn8w-1",
+        "githubLink": "",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    },
+    {
+        "title": "Quest",
+        "subtitle": "Figma Mobile App Design",
+        "imageSrc": "/quest.png",
+        "imageAlt": "Card background",
+        "description": "A Queue Management System designed for Jeddah International School for adminstraion purposes.",
+        "languages": ["Figma"],
+        "category": "design",
+        "liveLink": "https://www.figma.com/design/K8B3MN6Mcqq3j8OoPxiKgn/Draft--Copy-?node-id=5-31&t=xx4TBgjSnBgLbqjS-1",
+        "githubLink": "",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    }
+
+
+
+]
+
+
+

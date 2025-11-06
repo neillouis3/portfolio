@@ -1,66 +1,33 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Image, Link } from "@heroui/react";
 import ProjectDetails from "./projectDetails";
-
+import ProjectItem from "./ProjectItem";
+import projectsData from "@/data/projects.json";
+import { Button } from "@heroui/react";
+import ProjectsModal from "./projectsModal";
 
 export default function ProjectContent() {
-    const [currentLanguages, setCurrentLanguages] = useState<string[]>(["Python"]);
-    const [showDetails, setShowDetails] = useState(false);
-    const [description, setDescription] = useState("");
+    const [currentLanguages, setCurrentLanguages] = useState<string[]>(projectsData[0].languages);
+    const [description, setDescription] = useState(projectsData[0].description);
+    const [isProjectSectionVisible, setIsProjectSectionVisible] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const sectionRefs = useRef<(HTMLElement | null)[]>([]);
     const projectContentRef = useRef<HTMLDivElement | null>(null);
+    
+    // Project data imported from JSON
+    const projects = projectsData;
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.target === projectContentRef.current) {
-                        setShowDetails(entry.isIntersecting);
-                    }
-                });
-            },
-            { threshold: 0.8 } // Trigger when 50% of the container is visible
-        );
-
-        if (projectContentRef.current) {
-            observer.observe(projectContentRef.current);
-        }
-
-        return () => {
-            if (projectContentRef.current) {
-                observer.unobserve(projectContentRef.current);
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
+        // Observer for individual project sections
+        const projectObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        const sectionIndex = sectionRefs.current.findIndex(
-                            (section) => section === entry.target
-                        );
-
-                        // Update languages based on the section index
-                        if (sectionIndex === 0) {
-                            setCurrentLanguages([
-                                "Python",
-                                "Typescript",
-                                "Next.js",
-
-                                "Tailwind CSS",
-                                "MongoDB",
-                            ]);
-                            setDescription("A full-stack social media app built with Next.js, TypeScript, and TailwindCSS, where users celebrate and share life achievements. Features Clerk authentication, UploadThing media uploads, and a MongoDB backend for scalable data storage. Clean, responsive design with a modern developer-first stack.");
-                        } else if (sectionIndex === 1) {
-                            setCurrentLanguages(["Java"]);
-                            setDescription("A desktop application built with Java, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.");
-                        } else if (sectionIndex === 2) {
-                            setCurrentLanguages(["Typescript", "React.js", "Tailwind CSS", "Next.js"]);
-                            setDescription("A full-stack web application built with Typescript and React.js, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.");
+                        const sectionIndex = sectionRefs.current.indexOf(entry.target as HTMLElement);
+                        if (sectionIndex >= 0 && sectionIndex < projects.length) {
+                            setCurrentLanguages(projects[sectionIndex].languages);
+                            setDescription(projects[sectionIndex].description);
                         }
                     }
                 });
@@ -68,14 +35,31 @@ export default function ProjectContent() {
             { threshold: 0.8 }
         );
 
+        // Observer for the entire project content visibility
+        const visibilityObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsProjectSectionVisible(entry.isIntersecting);
+                });
+            },
+            { threshold: 0.3 }
+        );
+
         sectionRefs.current.forEach((section) => {
-            if (section) observer.observe(section);
+            if (section) projectObserver.observe(section);
         });
+
+        if (projectContentRef.current) {
+            visibilityObserver.observe(projectContentRef.current);
+        }
 
         return () => {
             sectionRefs.current.forEach((section) => {
-                if (section) observer.unobserve(section);
+                if (section) projectObserver.unobserve(section);
             });
+            if (projectContentRef.current) {
+                visibilityObserver.unobserve(projectContentRef.current);
+            }
         };
     }, []);
 
@@ -86,112 +70,56 @@ export default function ProjectContent() {
                 ref={(el) => { if (el) sectionRefs.current[0] = el; }}
                 className="h-screen shrink-0 flex items-center overflow-hidden"
             >
-                <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
-                    <h1 className="text-3xl">milestones</h1>
-                    <h2 className="text-sm text-default-500 mb-4">Full-stack web development</h2>
-                    <div className="ml-0.5">  
-                        <Image
-                            alt="Card background"
-                            className="object-cover rounded-xl max-lg:h-[25vh] h-full"
-                            src="/milestoneDemoIMG.png"
-                            shadow="sm"
-                        />
-                    </div>
-                    
-                    
-                    
-                    <div className="flex flex-col mt-4">
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
-                            Demo
-                        </Link>
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="https://github.com/neillouis3/milestone-demo">
-                            Github Repo
-                        </Link>
-                    </div>
-                    <div className="w-full text-sm lg:hidden mt-4">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
-                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
-                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
-                            </p>
-                            
-                    </div>
-                </div>
+                <ProjectItem {...projects[0]} />
             </section>
-
-            {/* Section 2 */}
             <section
                 ref={(el) => { if (el) sectionRefs.current[1] = el; }}
                 className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
-                <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
-                    <h1 className="text-3xl">Teavie</h1>
-                    <h2 className="text-sm text-default-500 mb-4">Web development</h2>
-                    <div className="ml-0.5">  
-                        <Image
-                            alt="Card background"
-                            className="object-cover rounded-xl max-lg:h-[25vh] h-full"
-                            src="/teavie.png"
-                            shadow="sm"
-                        />
-                    </div>
-                    <div className="flex flex-col mt-4">
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
-                            Demo
-                        </Link>
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
-                            Github Repo
-                        </Link>
-                    </div>
-                    <div className="w-full text-sm lg:hidden mt-4">
-                            <p>
-                                Teavie is a web application that allows users to search for movies and shows. It is built with Next.js, TypeScript, and TailwindCSS.
-                            </p>
-                            
-                    </div>
-                </div>
+                <ProjectItem {...projects[1]} />
             </section>
 
-            {/* Section 3 */}
+            {/* Section 2 */}
             <section
                 ref={(el) => { if (el) sectionRefs.current[2] = el; }}
                 className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
-                <div className="h-[60vh] lg:w-[50vw] lg:pr-56">
-                    <h1 className="text-3xl">Portfolio Website</h1>
-                    <h2 className="text-sm text-default-500 mb-4">Web development</h2>
-                    <div className="ml-0.5">  
-                        <Image
-                            alt="Card background"
-                            className="object-cover rounded-xl max-lg:h-[25vh] h-full"
-                            src="/portfolio.png"
-                            shadow="sm"
-                        />
-                    </div>
-                    <div className="flex flex-col mt-4">
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
-                            Demo
-                        </Link>
-                        <Link isExternal showAnchorIcon size="sm" underline="hover" href="">
-                            Github Repo
-                        </Link>
-                    </div>
-                    <div className="w-full text-sm lg:hidden mt-4">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ex molestiae quidem!
-                                Voluptatem minima, consequatur sequi soluta quisquam vitae aspernatur qui inventore
-                                exercitationem. Perspiciatis, cupiditate a nostrum pariatur laborum quas.
-                            </p>
-                            
-                    </div>
+                <ProjectItem {...projects[2]} />
+            </section>
+
+            {/* Section 3 */}
+            <section
+                ref={(el) => { if (el) sectionRefs.current[3] = el; }}
+                className="h-screen shrink-0  max-lg:-mt-32 flex flex-col bg-back_ground dark:bg-darkback_ground overflow-hidden"
+            >
+                <ProjectItem {...projects[3]} />
+                <div className="flex flex-col mt-32 w-fit">
+                     
+                    <Button 
+                        onClick={() => setIsModalOpen(true)}
+                        size="sm"
+                        
+                    >
+                        View all projects
+                    </Button>
                 </div>
             </section>
 
+            
 
+            {/* Conditionally Visible Project Details Sidebar */}
+            {isProjectSectionVisible && (
+                <ProjectDetails
+                    languages={currentLanguages}
+                    description={description}
+                />
+            )}
 
-
-            {/* Conditionally Render Project Details */}
-            {showDetails && <ProjectDetails languages={currentLanguages} description={description} />}
+            {/* Projects Modal */}
+            <ProjectsModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </div>
     );
 }

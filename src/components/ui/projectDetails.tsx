@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Chip} from "@heroui/react";
 import * as Icons from "./programmingIcons";
 
-export default function ProjectDetails({ languages, description}: { languages: string[]; description: string;}) {
+export default function ProjectDetails({ languages, description, onClose}: { languages: string[]; description: string; onClose?: () => void;}) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -30,7 +30,15 @@ export default function ProjectDetails({ languages, description}: { languages: s
     ];
 
     return (
-            <div className={`bg-back_ground dark:bg-darkback_ground max-lg:h-[26vh] lg:h-screen w-full max-lg:border-t-1 max-lg:border-t-default-300 lg:w-[25vw] flex flex-col items-center lg:justify-center z-40 max-lg:left-0  bottom-0 fixed lg:right-[12.5vw] lg:top-0 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`bg-back_ground dark:bg-darkback_ground max-lg:h-[26vh] lg:h-screen w-full max-lg:border-t-1 max-lg:border-t-default-300 lg:w-[25vw] flex flex-col items-center lg:justify-center z-13 max-lg:left-0  bottom-0 fixed lg:right-[12.5vw] lg:top-0 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                {onClose && (
+                    <button 
+                        onClick={onClose}
+                        className="absolute top-4 right-4 text-2xl hover:text-primary transition-colors z-50"
+                    >
+                        ×
+                    </button>
+                )}
                 <div className="lg:h-[60vh] w-[75%] lg:w-full flex flex-col  lg:justify-between lg:pt-8 lg:pb-12">
                     <div className="flex flex-col w-full max-lg:hidden">
                         <div className="w-full text-sm transition-opacity duration-500">

@@ -1,0 +1,95 @@
+"use client";
+import React, { useState, useMemo } from "react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Tabs, Tab } from "@heroui/react";
+import ProjectCard from "@/components/ui/projectCard";
+import projectsData from "@/data/projects.json";
+
+interface ProjectsModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+type Category = "all" | "software" | "design" | "hardware";
+
+export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
+    const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+
+    const filteredProjects = useMemo(() => {
+        if (selectedCategory === "all") {
+            return projectsData;
+        }
+        return projectsData.filter((project: any) => project.category === selectedCategory);
+    }, [selectedCategory]);
+
+    return (
+        <Modal 
+            isOpen={isOpen} 
+            onClose={onClose}
+            size="2xl"
+            scrollBehavior="inside"
+            backdrop="blur"
+            classNames={{
+                base: "max-w-7xl h-[90vh] m-4",
+                body: "py-6 overflow-y-auto",
+      
+            }}
+        >
+            <ModalContent>
+                {(onClose) => (
+                    <>
+                        <ModalHeader className="flex flex-col gap-3 px-8">
+                            <div>
+                                <h2 className="text-3xl font-normal">
+                                    Projects
+                                </h2>
+
+                            </div>
+                            
+                            {/* Tabs for filtering */}
+                            <Tabs
+                                aria-label="Project categories"
+                                selectedKey={selectedCategory}
+                                onSelectionChange={(key) => setSelectedCategory(key as Category)}
+                                classNames={{
+                                    tabContent: "font-normal"
+                                }}
+                                
+                            >
+                                <Tab key="all" title="All Projects" />
+                                <Tab key="software" title="Software" />
+                                <Tab key="design" title="Design" />
+                                <Tab key="hardware" title="Hardware" />
+                            </Tabs>
+                        </ModalHeader>
+                        <ModalBody className="px-8">
+                            {filteredProjects.length > 0 ? (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {filteredProjects.map((project: any, index: number) => (
+                                        <ProjectCard
+                                            key={index}
+                                            title={project.title}
+                                            subtitle={project.subtitle}
+                                            imageSrc={project.imageSrc}
+                                            imageAlt={project.imageAlt}
+                                            description={project.description}
+                                            languages={project.languages}
+                                            liveLink={project.liveLink}
+                                            githubLink={project.githubLink}
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="text-center py-12">
+                                    <p className="text-gray-500 dark:text-gray-400 text-lg">
+                                        No projects found in this category yet.
+                                    </p>
+                                </div>
+                            )}
+                        </ModalBody>
+                    </>
+                )}
+            </ModalContent>
+        </Modal>
+    );
+}
+

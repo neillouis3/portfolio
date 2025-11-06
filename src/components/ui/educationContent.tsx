@@ -1,15 +1,36 @@
 "use client"
-import React from "react";
+import React, { useRef } from "react";
 import { CustomAlert } from "./customAlert";
 import { Button } from "@heroui/react";
 import { Link } from "@heroui/react";
+import { motion, useInView } from "framer-motion";
 
 
 export default function EducationContent() {
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+    
+    const isInView1 = useInView(ref1, { once: true });
+    const isInView2 = useInView(ref2, { once: true });
+    const isInView3 = useInView(ref3, { once: true });
+
     return (
         <div className="w-full h-[60vh] -mt-16 flex flex-row gap-1">
             <div className="h-full w-full flex flex-col gap-4">
-                <div className="w-[50vw] max-lg:w-full mr-auto">
+                <motion.div 
+                    ref={ref1}
+                    className="w-[50vw] max-lg:w-full mr-auto"
+                    initial={{ x: -300, opacity: 0 }}
+                    animate={isInView1 ? { x: 0, opacity: 1 } : { x: -300, opacity: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 15,
+                        delay: 0.2
+                    }}
+                    layout
+                >
                     <CustomAlert
                         hideIcon
                         key="primary"
@@ -33,8 +54,20 @@ export default function EducationContent() {
                         </div>
 
                     </CustomAlert>
-                </div>
-                <div className="w-[50vw] max-lg:w-full ml-auto">
+                </motion.div>
+                <motion.div 
+                    ref={ref2}
+                    className="w-[50vw] max-lg:w-full ml-auto"
+                    initial={{ x: 300, opacity: 0 }}
+                    animate={isInView2 ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 15,
+                        delay: 0.4
+                    }}
+                    layout
+                >
                     <CustomAlert
                         hideIcon
                         key="primary2"
@@ -66,8 +99,20 @@ export default function EducationContent() {
                         </div>
 
                     </CustomAlert>
-                </div>
-                <div className="w-[50vw] max-lg:w-full">
+                </motion.div>
+                <motion.div 
+                    ref={ref3}
+                    className="w-[50vw] max-lg:w-full"
+                    initial={{ x: -300, opacity: 0 }}
+                    animate={isInView3 ? { x: 0, opacity: 1 } : { x: -300, opacity: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 15,
+                        delay: 0.6
+                    }}
+                    layout
+                >
                     <CustomAlert
                         hideIcon
                         key="primary3"
@@ -101,7 +146,7 @@ export default function EducationContent() {
                         </div>
 
                     </CustomAlert>
-                </div>
+                </motion.div>
                     
          
                 

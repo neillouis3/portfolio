@@ -9,7 +9,7 @@ import type {Selection} from "@heroui/react";
 
 export default function ExperienceContent() {
 
-    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["2"]));
+    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
 
 
     return (
@@ -21,6 +21,58 @@ export default function ExperienceContent() {
                     variant="light"
                     onSelectionChange={setSelectedKeys}
                 >
+                     <AccordionItem
+                        key="1"
+                        aria-label="Janelle Lenard"
+                        startContent={
+
+                        <Avatar
+                            size="lg"
+                            radius="lg"
+
+                            src="/orion.png"
+                            classNames={{
+                                base: "bg-white   "
+                            }}
+                        />
+                        
+                        }
+                        subtitle="Starting Jan 2026"
+                        title={
+                            <div className="flex flex-row gap-1">
+                                <p className="text-sm">Associate Implementation Consultant Intern @ <Link size="sm" href="https://orionhealth.com/ca/" underline="always" color="foreground" isExternal> Orion Health Limited</Link></p>
+                                
+                            </div>
+                        }
+                            
+                    >
+                        <div className="lg:pl-16 flex flex-col gap-4 text-sm">
+                            <div>
+                                <p>- Supporting design, configuration, testing, and documentation of healthcare software solutions based on project requirements and client specifications.</p>
+                                <p>- Learning and participating in multiple stages of testing including System, Integration, and Performance testing for implemented solutions.</p>
+                                <p>- Assisting with data extraction, conversion, and manipulation using RDBMS while maintaining technical documentation for project deliverables.</p>
+                                <p>- Providing remote and onsite troubleshooting support to clients, utilizing Issue Tracking systems to analyze and resolve technical problems.</p>
+                            </div>
+                            <div className="max-lg:hidden">
+                                <p><span className="text-default-500">Technologies:</span> Java, Python, JavaScript, HTML, REST/SOAP, XML, Linux, Bash</p>
+                                <p><span className="text-default-500">Tools:</span> Git, Issue Tracking Systems, RDBMS</p>
+                            </div>
+                            
+                            <div className="flex flex-row gap-2">
+                                <p>References: </p> 
+                                <ReferenceModal
+                                    name="Marcus de Leon"
+                                    role="Supervisor"
+                                    position="Solutions Architect"
+                                    company="Orion Health Limited "
+                                    companyLink="orionhealth.com/ca"
+                                    linkedin="linkedin.com/in/marcus-de-leon-6a214048/"
+                                />
+                                
+                                
+                            </div>
+                        </div>
+                    </AccordionItem>
                     <AccordionItem
                         key="2"
                         aria-label="Janelle Lenard"
@@ -30,6 +82,9 @@ export default function ExperienceContent() {
                             size="lg"
                             radius="lg"
                             src="/jisLogo.png"
+                            classNames={{
+                                base: "bg-white    "
+                            }}
                         />
                         
                         }
@@ -85,6 +140,9 @@ export default function ExperienceContent() {
                             size="lg"
                             radius="lg"
                             src="/nleatsLogo.png"
+                            classNames={{
+                                base: "bg-white   "
+                            }}
                         />
                         
                         }
