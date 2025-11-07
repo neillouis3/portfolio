@@ -16,7 +16,7 @@ export default function EducationContent() {
     const isInView3 = useInView(ref3, { once: true });
 
     return (
-        <div className="w-full h-[60vh] -mt-16 flex flex-row gap-1">
+        <div className="w-full h-fit -mt-16 flex flex-row gap-1">
             <div className="h-full w-full flex flex-col gap-4">
                 <motion.div 
                     ref={ref1}
@@ -24,10 +24,13 @@ export default function EducationContent() {
                     initial={{ x: -300, opacity: 0 }}
                     animate={isInView1 ? { x: 0, opacity: 1 } : { x: -300, opacity: 0 }}
                     transition={{
-                        type: "spring",
+                        
+
                         stiffness: 100,
                         damping: 15,
-                        delay: 0.2
+                        duration: 0.5,
+                        delay: 0.2,
+                        ease: [0, 0.71, 0.2, 1.01],
                     }}
                     layout
                 >
@@ -61,10 +64,13 @@ export default function EducationContent() {
                     initial={{ x: 300, opacity: 0 }}
                     animate={isInView2 ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
                     transition={{
-                        type: "spring",
+
+                
                         stiffness: 100,
                         damping: 15,
-                        delay: 0.4
+                        duration: 0.5,
+                        delay: 0.4,
+                        ease: [0, 0.71, 0.2, 1.01],
                     }}
                     layout
                 >
@@ -106,10 +112,12 @@ export default function EducationContent() {
                     initial={{ x: -300, opacity: 0 }}
                     animate={isInView3 ? { x: 0, opacity: 1 } : { x: -300, opacity: 0 }}
                     transition={{
-                        type: "spring",
+                 
                         stiffness: 100,
                         damping: 15,
-                        delay: 0.6
+                        duration: 0.5,
+                        delay: 0.6,
+                        ease: [0, 0.71, 0.2, 1.01],
                     }}
                     layout
                 >

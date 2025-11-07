@@ -1,5 +1,6 @@
 import { Image, Link } from "@heroui/react";
 import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface ProjectItemProps {
   title: string;
@@ -74,10 +75,12 @@ export default function ProjectItem({
       <h1 className="text-3xl">{title}</h1>
       <h2 className="text-sm text-default-500 mb-4 uppercase tracking-wide">{subtitle}</h2>
       <div className="ml-0.5">  
-        <div 
-          style={{ 
-            transform: `rotate(${rotation}deg)`,
-            transition: 'transform 0.1s ease-out'
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.7 }}
+          transition={{ 
+            opacity: { duration: 0.8, delay: 0.2, ease: [0, 0.71, 0.2, 1.01] },
           }}
         >
           <Image
@@ -86,7 +89,7 @@ export default function ProjectItem({
             src={imageSrc}
             shadow="sm"
           />
-        </div>
+        </motion.div>
         <div className="flex flex-col mt-4">
           <Link isExternal showAnchorIcon size="sm" underline="hover" href={liveLink}>
             Live Demo

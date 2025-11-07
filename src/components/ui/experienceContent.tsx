@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ReferenceModal from "./referenceModal";
 import {Link} from "@heroui/link";
 
@@ -8,12 +8,39 @@ import type {Selection} from "@heroui/react";
 
 
 export default function ExperienceContent() {
+    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set([]));
+    const [hasBeenInView, setHasBeenInView] = React.useState(false);
+    const contentRef = useRef<HTMLDivElement>(null);
 
-    const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set(["1"]));
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasBeenInView) {
+                        setHasBeenInView(true);
+                        setSelectedKeys(new Set(["1"]));
+                    }
+                });
+            },
+            { threshold: 0.7 }
+        );
+
+        const currentRef = contentRef.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
+        };
+    }, [hasBeenInView]);
 
 
     return (
-        <div className="w-full h-[60vh] -mt-16 flex flex-row">
+        <div ref={contentRef} className="w-full h-[60vh] -mt-16 flex flex-row">
                 
                 <Accordion 
 

@@ -12,22 +12,22 @@ export default function Home() {
 
   return (
     <div className="h-fit w-[75%] flex flex-col  no-scrollbar ">
-      <div  className="h-screen flex items-center ">
+      <div data-section="about" className="h-screen flex items-center ">
         <AboutContent />
 
         {/* <h1 className="absolute bottom-0 w-full z-40 text-center pt-8 pb-16 uppercase text-primary text-5xl font-bold">Experience</h1> */}
         
       </div>
       
-      <div  className="h-fit mt-64 mb-32 flex items-center ">
+      <div data-section="work" className="h-fit mt-64 mb-32 flex items-center ">
         <ExperienceContent />
       </div>
 
-      <div className="h-screen flex items-center ">
+      <div data-section="education" className="h-screen flex items-center ">
         <EducationContent />
       </div>
 
-      <div className="h-screen flex items-center ">
+      <div data-section="projects" className="h-fit flex items-center ">
         <ProjectContent />
       </div>
 

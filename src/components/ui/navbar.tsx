@@ -11,7 +11,7 @@ interface NavBarProps {
 
 export default function NavBar({ currentPage, onBreadcrumbClick }: NavBarProps) {
   return (
-    <div className="bg-white dark:bg-darkback_ground w-full h-fit top-0 z-50 fixed justify-center items-center flex pb-4 pt-8">
+    <div className="bg-white/70 dark:bg-darkback_ground/70 backdrop-blur-sm w-full h-fit top-0 z-50 fixed justify-center items-center flex pb-4 pt-8 ">
       <div className="w-[75%] flex flex-row justify-between items-center">
         <div className="flex flex-row justify-between items-center"></div>
         <div className="flex flex-row gap-8 items-center justify-center">

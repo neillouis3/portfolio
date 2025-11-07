@@ -32,7 +32,7 @@ export default function ProjectContent() {
                     }
                 });
             },
-            { threshold: 0.8 }
+            { threshold: 0.5 }
         );
 
         // Observer for the entire project content visibility
@@ -42,7 +42,7 @@ export default function ProjectContent() {
                     setIsProjectSectionVisible(entry.isIntersecting);
                 });
             },
-            { threshold: 0.3 }
+            { threshold: 0.01 }
         );
 
         sectionRefs.current.forEach((section) => {
@@ -64,11 +64,11 @@ export default function ProjectContent() {
     }, []);
 
     return (
-        <div ref={projectContentRef} className="w-full flex flex-col -mt-16 h-full overflow-y-scroll no-scrollbar">
+        <div ref={projectContentRef} className="w-full flex flex-col mt-192 h-fit no-scrollbar">
             {/* Section 1 */}
             <section
                 ref={(el) => { if (el) sectionRefs.current[0] = el; }}
-                className="h-screen shrink-0 flex items-center overflow-hidden"
+                className="h-screen shrink-0 flex items-center overflow-hidden -mt-124"
             >
                 <ProjectItem {...projects[0]} />
             </section>
@@ -79,7 +79,6 @@ export default function ProjectContent() {
                 <ProjectItem {...projects[1]} />
             </section>
 
-            {/* Section 2 */}
             <section
                 ref={(el) => { if (el) sectionRefs.current[2] = el; }}
                 className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
@@ -87,23 +86,23 @@ export default function ProjectContent() {
                 <ProjectItem {...projects[2]} />
             </section>
 
-            {/* Section 3 */}
             <section
                 ref={(el) => { if (el) sectionRefs.current[3] = el; }}
-                className="h-screen shrink-0  max-lg:-mt-32 flex flex-col bg-back_ground dark:bg-darkback_ground overflow-hidden"
+                className="h-screen shrink-0  max-lg:-mt-32 flex items-center bg-back_ground dark:bg-darkback_ground overflow-hidden"
             >
                 <ProjectItem {...projects[3]} />
-                <div className="flex flex-col mt-32 w-fit">
-                     
+
+            </section>
+                            <div className="flex flex-col mt-32 w-fit mb-32">
                     <Button 
                         onClick={() => setIsModalOpen(true)}
                         size="sm"
-                        
+                        color="primary"
+                        variant="flat"
                     >
                         View all projects
                     </Button>
                 </div>
-            </section>
 
             
 
