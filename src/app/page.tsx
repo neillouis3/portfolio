@@ -11,25 +11,25 @@ export const metadata = layoutMetadata;
 export default function Home() {
 
   return (
-    <div className="h-screen w-[75%] flex flex-col snap-y snap-mandatory overflow-y-scroll no-scrollbar relative">
-      <section data-section="about" className="h-screen flex items-center shrink-0 snap-start relative">
+    <div className="h-fit w-[75%] flex flex-col  no-scrollbar ">
+      <div  className="h-screen flex items-center ">
         <AboutContent />
 
         {/* <h1 className="absolute bottom-0 w-full z-40 text-center pt-8 pb-16 uppercase text-primary text-5xl font-bold">Experience</h1> */}
         
-      </section>
+      </div>
       
-      <section data-section="work" className="h-screen flex items-center shrink-0 snap-start">
+      <div  className="h-fit mt-64 mb-32 flex items-center ">
         <ExperienceContent />
-      </section>
+      </div>
 
-      <section data-section="education" className="h-screen flex items-center shrink-0 snap-start">
+      <div className="h-screen flex items-center ">
         <EducationContent />
-      </section>
+      </div>
 
-      <section data-section="projects" className="h-screen flex items-center shrink-0 snap-start">
+      <div className="h-screen flex items-center ">
         <ProjectContent />
-      </section>
+      </div>
 
     </div>
   );

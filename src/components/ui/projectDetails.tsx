@@ -30,11 +30,11 @@ export default function ProjectDetails({ languages, description, onClose}: { lan
     ];
 
     return (
-            <div className={`bg-back_ground dark:bg-darkback_ground max-lg:h-[26vh] lg:h-screen w-full max-lg:border-t-1 max-lg:border-t-default-300 lg:w-[25vw] flex flex-col items-center lg:justify-center z-13 max-lg:left-0  bottom-0 fixed lg:right-[12.5vw] lg:top-0 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`bg-back_ground dark:bg-darkback_ground max-lg:h-[26vh] lg:h-screen w-full max-lg:border-t-1 max-lg:border-t-default-300 lg:w-[25vw] flex flex-col items-center lg:justify-center z-13 max-lg:left-0  bottom-0 fixed lg:right-[12.5vw] lg:top-0 transition-opacity duration-500 pointer-events-none ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                 {onClose && (
                     <button 
                         onClick={onClose}
-                        className="absolute top-4 right-4 text-2xl hover:text-primary transition-colors z-50"
+                        className="absolute top-4 right-4 text-2xl hover:text-primary transition-colors z-50 pointer-events-auto"
                     >
                         ×
                     </button>
@@ -48,7 +48,7 @@ export default function ProjectDetails({ languages, description, onClose}: { lan
                             
                         </div>
                     </div>
-                    <div className="flex flex-col gap-1 max-lg:pt-4 max-lg:pb-4 ">
+                    <div className="flex flex-col gap-1 max-lg:pt-4 max-lg:pb-4 pointer-events-none">
                         <h1 className="text-sm">Technologies</h1>
                         <div className="flex flex-wrap gap-1">
                             {techStack.map((tech) => (

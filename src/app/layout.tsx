@@ -83,7 +83,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-back_ground dark:bg-darkback_ground color-fore_ground dark:color-darkfore_ground overflow-x-hidden`}
       >
         <Providers>
-          <div className="relative flex flex-col h-screen w-screen">
+          <div className=" flex flex-col w-screen">
             <NavBar
               currentPage={currentPage}
               onBreadcrumbClick={handleBreadcrumbClick}
