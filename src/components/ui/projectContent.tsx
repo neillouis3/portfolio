@@ -93,12 +93,12 @@ export default function ProjectContent() {
                 <ProjectItem {...projects[3]} />
 
             </section>
-                            <div className="flex flex-col mt-32 w-fit mb-32">
+                <div className="flex flex-col mt-32 w-fit mb-32">
                     <Button 
                         onClick={() => setIsModalOpen(true)}
                         size="sm"
                         color="primary"
-                        variant="flat"
+                        
                     >
                         View all projects
                     </Button>

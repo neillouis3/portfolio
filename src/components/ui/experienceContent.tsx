@@ -22,7 +22,7 @@ export default function ExperienceContent() {
                     }
                 });
             },
-            { threshold: 0.7 }
+            { threshold: 0.9 }
         );
 
         const currentRef = contentRef.current;

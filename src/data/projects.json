@@ -14,6 +14,20 @@
         "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
     },
     {
+        "title": "Navigate",
+        "subtitle": "Full-stack web development",
+        "imageSrc": "/navigate.png",
+        "imageAlt": "Card background",
+        "description": "An app that allows users to navigate through a map and find the shortest path to their destination.",
+        "languages": ["Typescript", "Next.js", "Tailwind CSS", "MySQL", "Clerk", "Google Maps"],
+        "category": "software",
+        "liveLink": "https://github.com/neillouis3/milestone",
+        "githubLink": "https://github.com/neillouis3/milestone",
+        "delay": 0.5,
+        "duration": 2.5,
+        "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
+    },
+    {
         "title": "crm",
         "subtitle": "Full-stack web development",
         "imageSrc": "/crm.png",
@@ -99,11 +113,11 @@
     },
     {
         "title": "Hydroponic System",
-        "subtitle": "Figma Mobile App Design",
+        "subtitle": "Mobile App Development",
         "imageSrc": "/hydroponics.png",
         "imageAlt": "Card background",
-        "description": "A Queue Management System designed for Jeddah International School for adminstraion purposes.",
-        "languages": ["Figma"],
+        "description": "A mobile application built with React Native and Expo, where users can control a hydroponic system. Features a clean, responsive design with a modern developer-first stack.",
+        "languages": ["React Native", "Expo", "TypeScript", "Tailwind CSS", "Arduino Uno", "Azure"],
         "category": "design",
         "liveLink": "    https://www.figma.com/design/5LcgJaoYYSUplqdxvq3CA3/Azure-Application?node-id=0-1&t=NdaEJbkPfIOfzn8w-1",
         "githubLink": "",

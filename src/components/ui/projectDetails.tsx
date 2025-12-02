@@ -59,7 +59,7 @@ export default function ProjectDetails({ languages, description, onClose}: { lan
                                     startContent={tech.icon}
                                     variant={languages.includes(tech.name) ? "solid" : "faded"}
                                     color={languages.includes(tech.name) ? "primary" : undefined}
-                                    size="md"
+                                    size="sm"
                                 >
                                     {tech.name}
                                 </Chip>
