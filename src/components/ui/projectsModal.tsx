@@ -49,6 +49,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
       
             }}
         >
+            
             <ModalContent>
                 {(onClose) => (
                     <>

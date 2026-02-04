@@ -1,14 +1,23 @@
 "use client"
-import {Chip, Link, Image} from "@heroui/react";
+import {Chip, Link} from "@heroui/react";
 import ResumeModal from "./resumeModal";
 import ContactModal from "./contactModal";
 import React from "react";
 import { motion } from "framer-motion";
+import { GitHubCalendar } from "react-github-calendar";
+import { useTheme } from "next-themes";
 
 export default function AboutContent() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
       <div className="w-full h-[60vh] -mt-16 flex flex-row justify-center gap-4 items-center">
-        <div className="flex-3 flex flex-col gap-4 w-full h-full py-8">
+        <div className="flex-5 flex flex-col gap-4 w-full h-full py-8">
           <div className="flex flex-col">
             <h1 className="text-3xl">Neil Louise A. Castillon</h1>
             <Chip size="md" radius="sm" color="primary" variant="flat" className="mt-1">Software Developer</Chip>
@@ -31,23 +40,15 @@ export default function AboutContent() {
               I also love to travel and explore new places.
             </p>
              <div className="grid grid-cols-4 gap-2 mt-10">
-              <Image
-                isZoomed
-                alt="Card background"
-                className="object-cover  aspect-square"
-                src="/1.JPG"
-                radius="sm"
-                 
-              />
-              <Image
-                isZoomed
-                alt="Card background"
-                className="object-cover  aspect-square"
-                src="/2.JPG"
-                radius="sm"
-                
-
-              />
+              <div className="col-span-4 rounded-md border border-default-200 w-fit  p-3 overflow-x-auto">
+                {mounted ? (
+                  <GitHubCalendar
+                    username="neillouis3"
+                    colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
+                    
+                  />
+                ) : null}
+              </div>
 
              </div>
           </div>
@@ -58,7 +59,7 @@ export default function AboutContent() {
           </div>
           
         </div>
-        <div className="flex-2 h-full w-full relative transition duration-200 max-lg:hidden">
+        <div className="flex-2 h-full w-full relative transition duration-200 ">
             <motion.svg 
               className="w-full h-full text-primary transition-colors" 
               id="visual" 

@@ -70,6 +70,21 @@
         "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
     },
     {
+        "title": "noted",
+        "subtitle": "Web development",
+        "imageSrc": "/noted.png",
+        "imageAlt": "Card background",
+        "description": "A note-taking app built with Typescript and React.js, where users can add, edit, and delete notes. Features a clean, responsive design with a modern developer-first stack.",
+        "languages": ["Typescript", "React.js", "Tailwind CSS", "Next.js", "Lexical"],
+        "category": "software",
+        "liveLink": "https://github.com/neillouis3/noted",
+        "githubLink": "https://github.com/neillouis3/noted",
+        "delay": 1.5,
+        "duration": 3,
+        "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
+    },
+
+    {
         "title": "sofey",
         "subtitle": "Desktop Application",
         "imageSrc": "/sofey.png",

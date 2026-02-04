@@ -64,7 +64,7 @@ export default function ExperienceContent() {
                         />
                         
                         }
-                        subtitle="Starting Jan 2026"
+                        subtitle="Jan 2026 - Present"
                         title={
                             <div className="flex flex-row gap-1">
                                 <p className="text-sm">Associate Implementation Consultant Intern @ <Link size="sm" href="https://orionhealth.com/ca/" underline="always" color="foreground" isExternal> Orion Health Limited</Link></p>
