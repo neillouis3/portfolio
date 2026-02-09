@@ -49,8 +49,8 @@
         "description": "A desktop application built with Java, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.",
         "languages": ["Python", "Typescript", "Next.js", "Tailwind CSS", "MySQL"],
         "category": "software",
-        "liveLink": "",
-        "githubLink": "",
+        "liveLink": "https://teavie.vercel.app/",
+        "githubLink": "https://github.com/neillouis3/teavie",
         "delay": 1,
         "duration": 2.5,
         "rotatePattern": [0, 2, -2, 1.5, -1.5, 1, -1, 0.5, -0.5, 0]
