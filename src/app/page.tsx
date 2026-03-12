@@ -4,6 +4,7 @@ import AboutContent from "@/components/ui/aboutContent";
 import ExperienceContent from "@/components/ui/experienceContent";
 import EducationContent from "@/components/ui/educationContent";
 import ProjectContent from "@/components/ui/projectContent";
+import LatestActivityContent from "@/components/ui/latestActivityContent";
 import { metadata as layoutMetadata } from "./layout-metadata";
 
 export const metadata = layoutMetadata;
@@ -18,6 +19,9 @@ export default function Home() {
         {/* <h1 className="absolute bottom-0 w-full z-40 text-center pt-8 pb-16 uppercase text-primary text-5xl font-bold">Experience</h1> */}
         
       </div>
+      <div data-section="activity" className="h-fit mt-64 mb-32 flex items-center ">
+        <LatestActivityContent />
+      </div>
       
       <div data-section="work" className="h-fit mt-64 mb-32 flex items-center ">
         <ExperienceContent />
@@ -30,6 +34,8 @@ export default function Home() {
       <div data-section="projects" className="h-fit flex items-center ">
         <ProjectContent />
       </div>
+
+
 
     </div>
   );
