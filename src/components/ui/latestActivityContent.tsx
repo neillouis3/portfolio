@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import { Link, Chip, Spinner } from "@heroui/react";
+import { Link, Chip, Spinner, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@heroui/react";
+import sampleCommits from "@/data/sampleCommits.json";
 
 interface GitHubCommit {
     sha: string;
@@ -22,6 +23,7 @@ export default function LatestActivityContent() {
     const [commits, setCommits] = useState<GitHubCommit[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [usingFallback, setUsingFallback] = useState(false);
 
     useEffect(() => {
         async function fetchLatestCommits() {
@@ -37,7 +39,7 @@ export default function LatestActivityContent() {
                 const events = await response.json();
                 
                 const pushEvents = events
-                    .filter((event: any) => event.type === 'PushEvent')
+                    .filter((event: any) => event.type === 'PushEvent' && event.payload?.commits)
                     .slice(0, 2)
                     .flatMap((event: any) => 
                         event.payload.commits.slice(0, 1).map((commit: any) => ({
@@ -57,9 +59,17 @@ export default function LatestActivityContent() {
                         }))
                     );
 
-                setCommits(pushEvents);
+                if (pushEvents.length === 0) {
+                    setCommits(sampleCommits as GitHubCommit[]);
+                    setUsingFallback(true);
+                } else {
+                    setCommits(pushEvents);
+                }
+                
                 setLoading(false);
             } catch (err) {
+                setCommits(sampleCommits as GitHubCommit[]);
+                setUsingFallback(true);
                 setError(err instanceof Error ? err.message : 'An error occurred');
                 setLoading(false);
             }
@@ -96,21 +106,23 @@ export default function LatestActivityContent() {
                 </div>
             )}
 
-            {error && (
-                <div className="text-danger text-sm">
-                    Failed to load activity: {error}
+            {error && !loading && (
+                <div className="text-warning text-xs mb-4">
+                    Using sample data (API: {error})
                 </div>
             )}
 
-            {!loading && !error && (
-                <ul className="space-y-4 text-sm">
-                    {commits.map((commit, index) => (
-                        <li key={commit.sha} className="flex gap-3 items-start">
-                            <div className="flex-shrink-0 mt-1">
-                                <div className="w-2 h-2 rounded-full bg-primary" />
-                            </div>
-                            <div className="flex-1">
-                                <div className="flex items-center gap-2 flex-wrap">
+            {!loading && commits.length > 0 && (
+                <Table aria-label="Latest GitHub commits" removeWrapper>
+                    <TableHeader>
+                        <TableColumn>COMMIT</TableColumn>
+                        <TableColumn>REPOSITORY</TableColumn>
+                        <TableColumn>TIME</TableColumn>
+                    </TableHeader>
+                    <TableBody>
+                        {commits.map((commit) => (
+                            <TableRow key={commit.sha}>
+                                <TableCell>
                                     <Link 
                                         href={commit.html_url}
                                         isExternal
@@ -119,22 +131,26 @@ export default function LatestActivityContent() {
                                     >
                                         {commit.commit.message.split('\n')[0]}
                                     </Link>
+                                </TableCell>
+                                <TableCell>
                                     {commit.repository && (
                                         <Chip size="sm" variant="flat" color="default">
                                             {commit.repository.name}
                                         </Chip>
                                     )}
-                                </div>
-                                <p className="text-default-400 text-xs mt-1">
-                                    Committed {formatDate(commit.commit.author.date)}
-                                </p>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                                </TableCell>
+                                <TableCell>
+                                    <span className="text-default-400 text-xs">
+                                        {formatDate(commit.commit.author.date)}
+                                    </span>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
             )}
 
-            {!loading && !error && commits.length === 0 && (
+            {!loading && commits.length === 0 && (
                 <p className="text-default-500 text-sm">No recent activity found.</p>
             )}
         </div>
