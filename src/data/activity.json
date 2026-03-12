@@ -28,5 +28,65 @@
             "name": "projects",
             "full_name": "neillouis3/projects"
         }
+    },
+    {
+        "sha": "abc123def456",
+        "commit": {
+            "message": "Updated portfolio layout and styling",
+            "author": {
+                "name": "neillouis3",
+                "date": "2024-02-20T10:30:00Z"
+            }
+        },
+        "html_url": "https://github.com/neillouis3/portfolio/commit/abc123",
+        "repository": {
+            "name": "portfolio",
+            "full_name": "neillouis3/portfolio"
+        }
+    },
+    {
+        "sha": "xyz789ghi012",
+        "commit": {
+            "message": "Fixed responsive design issues on mobile",
+            "author": {
+                "name": "neillouis3",
+                "date": "2024-02-19T15:45:00Z"
+            }
+        },
+        "html_url": "https://github.com/neillouis3/projects/commit/xyz789",
+        "repository": {
+            "name": "projects",
+            "full_name": "neillouis3/projects"
+        }
+    },
+    {
+        "sha": "abc123def456",
+        "commit": {
+            "message": "Updated portfolio layout and styling",
+            "author": {
+                "name": "neillouis3",
+                "date": "2024-02-20T10:30:00Z"
+            }
+        },
+        "html_url": "https://github.com/neillouis3/portfolio/commit/abc123",
+        "repository": {
+            "name": "portfolio",
+            "full_name": "neillouis3/portfolio"
+        }
+    },
+    {
+        "sha": "xyz789ghi012",
+        "commit": {
+            "message": "Fixed responsive design issues on mobile",
+            "author": {
+                "name": "neillouis3",
+                "date": "2024-02-19T15:45:00Z"
+            }
+        },
+        "html_url": "https://github.com/neillouis3/projects/commit/xyz789",
+        "repository": {
+            "name": "projects",
+            "full_name": "neillouis3/projects"
+        }
     }
 ]
