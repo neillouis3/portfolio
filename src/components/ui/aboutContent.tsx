@@ -39,18 +39,6 @@ export default function AboutContent() {
             <p>Beyond tech, I enjoy music and playing the guitar, and I&apos;m also a big fan of photography.
               I also love to travel and explore new places.
             </p>
-             <div className="grid grid-cols-4 gap-2 mt-10">
-              <div className="col-span-4 rounded-md border border-default-200 w-fit  p-3 overflow-x-auto">
-                {mounted ? (
-                  <GitHubCalendar
-                    username="neillouis3"
-                    colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
-                    
-                  />
-                ) : null}
-              </div>
-
-             </div>
           </div>
           <div className="flex gap-2">
             <ContactModal />

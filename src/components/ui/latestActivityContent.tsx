@@ -1,6 +1,9 @@
 "use client"
 import React from "react";
 import { Link, Chip, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@heroui/react";
+import { motion } from "framer-motion";
+import { GitHubCalendar } from "react-github-calendar";
+import { useTheme } from "next-themes";
 import activityData from "@/data/activity.json";
 
 interface GitHubCommit {
@@ -20,7 +23,13 @@ interface GitHubCommit {
 }
 
 export default function LatestActivityContent() {
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = React.useState(false);
     const commits = activityData as GitHubCommit[];
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
@@ -43,15 +52,34 @@ export default function LatestActivityContent() {
                 <p className="text-default-500 text-sm">Recent commits and updates</p>
             </div>
 
+            <div className="mb-8 rounded-md border border-default-200 w-fit p-3 overflow-x-auto">
+                {mounted ? (
+                    <GitHubCalendar
+                        username="neillouis3"
+                        colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
+                    />
+                ) : null}
+            </div>
+
             <Table aria-label="Latest GitHub commits" removeWrapper>
                 <TableHeader>
-                    <TableColumn>ACTIVITY</TableColumn>
-                    <TableColumn>TYPE</TableColumn>
+                    <TableColumn>COMMIT</TableColumn>
+                    <TableColumn>REPOSITORY</TableColumn>
                     <TableColumn>TIME</TableColumn>
                 </TableHeader>
                 <TableBody>
-                    {commits.map((commit) => (
-                        <TableRow key={commit.sha}>
+                    {commits.map((commit, index) => (
+                        <TableRow 
+                            key={commit.sha}
+                            as={motion.tr}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ 
+                                duration: 0.3,
+                                delay: index * 0.1,
+                                ease: "easeOut"
+                            }}
+                        >
                             <TableCell>
                                 <Link 
                                     href={commit.html_url}
