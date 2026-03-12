@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import { Link, Chip, Spinner } from "@heroui/react";
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
 interface GitHubCommit {
     sha: string;
@@ -112,7 +111,6 @@ export default function LatestActivityContent() {
                             </div>
                             <div className="flex-1">
                                 <div className="flex items-center gap-2 flex-wrap">
-                                    <CodeBracketIcon className="w-4 h-4 text-primary" />
                                     <Link 
                                         href={commit.html_url}
                                         isExternal
