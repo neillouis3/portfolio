@@ -69,18 +69,17 @@ export default function LatestActivityContent() {
                 </TableHeader>
                 <TableBody>
                     {commits.map((commit, index) => (
-                        <motion.div
-                            key={commit.sha}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ 
-                                duration: 0.3,
-                                delay: index * 0.1,
-                                ease: "easeOut"
-                            }}
-                        >
-                            <TableRow>
-                                <TableCell>
+                        <TableRow key={commit.sha}>
+                            <TableCell>
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ 
+                                        duration: 0.3,
+                                        delay: index * 0.1,
+                                        ease: "easeOut"
+                                    }}
+                                >
                                     <Link 
                                         href={commit.html_url}
                                         isExternal
@@ -89,21 +88,41 @@ export default function LatestActivityContent() {
                                     >
                                         {commit.commit.message.split('\n')[0]}
                                     </Link>
-                                </TableCell>
-                                <TableCell>
+                                </motion.div>
+                            </TableCell>
+                            <TableCell>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ 
+                                        duration: 0.3,
+                                        delay: index * 0.1 + 0.1,
+                                        ease: "easeOut"
+                                    }}
+                                >
                                     {commit.repository && (
                                         <Chip size="sm" variant="flat" color="default">
                                             {commit.repository.name}
                                         </Chip>
                                     )}
-                                </TableCell>
-                                <TableCell>
+                                </motion.div>
+                            </TableCell>
+                            <TableCell>
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ 
+                                        duration: 0.3,
+                                        delay: index * 0.1 + 0.2,
+                                        ease: "easeOut"
+                                    }}
+                                >
                                     <span className="text-default-400 text-xs">
                                         {formatDate(commit.commit.author.date)}
                                     </span>
-                                </TableCell>
-                            </TableRow>
-                        </motion.div>
+                                </motion.div>
+                            </TableCell>
+                        </TableRow>
                     ))}
                 </TableBody>
             </Table>
