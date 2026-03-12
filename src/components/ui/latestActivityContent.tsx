@@ -69,9 +69,8 @@ export default function LatestActivityContent() {
                 </TableHeader>
                 <TableBody>
                     {commits.map((commit, index) => (
-                        <TableRow 
+                        <motion.div
                             key={commit.sha}
-                            as={motion.tr}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ 
@@ -80,29 +79,31 @@ export default function LatestActivityContent() {
                                 ease: "easeOut"
                             }}
                         >
-                            <TableCell>
-                                <Link 
-                                    href={commit.html_url}
-                                    isExternal
-                                    size="sm"
-                                    className="font-medium"
-                                >
-                                    {commit.commit.message.split('\n')[0]}
-                                </Link>
-                            </TableCell>
-                            <TableCell>
-                                {commit.repository && (
-                                    <Chip size="sm" variant="flat" color="default">
-                                        {commit.repository.name}
-                                    </Chip>
-                                )}
-                            </TableCell>
-                            <TableCell>
-                                <span className="text-default-400 text-xs">
-                                    {formatDate(commit.commit.author.date)}
-                                </span>
-                            </TableCell>
-                        </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Link 
+                                        href={commit.html_url}
+                                        isExternal
+                                        size="sm"
+                                        className="font-medium"
+                                    >
+                                        {commit.commit.message.split('\n')[0]}
+                                    </Link>
+                                </TableCell>
+                                <TableCell>
+                                    {commit.repository && (
+                                        <Chip size="sm" variant="flat" color="default">
+                                            {commit.repository.name}
+                                        </Chip>
+                                    )}
+                                </TableCell>
+                                <TableCell>
+                                    <span className="text-default-400 text-xs">
+                                        {formatDate(commit.commit.author.date)}
+                                    </span>
+                                </TableCell>
+                            </TableRow>
+                        </motion.div>
                     ))}
                 </TableBody>
             </Table>
