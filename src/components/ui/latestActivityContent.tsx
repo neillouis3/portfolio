@@ -1,126 +1,144 @@
 "use client"
-import React from "react";
-import { Card, CardBody, CardHeader, Chip, Avatar, Link } from "@heroui/react";
-import { CalendarIcon, CodeBracketIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
+import React, { useState, useEffect } from "react";
+import { Link, Chip, Spinner } from "@heroui/react";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
-interface Activity {
-    id: string;
-    type: "commit" | "project" | "blog";
-    title: string;
-    description: string;
-    date: string;
-    link?: string;
-    repo?: string;
-    icon: React.ReactNode;
+interface GitHubCommit {
+    sha: string;
+    commit: {
+        message: string;
+        author: {
+            name: string;
+            date: string;
+        };
+    };
+    html_url: string;
+    repository?: {
+        name: string;
+        full_name: string;
+    };
 }
 
 export default function LatestActivityContent() {
-    const activities: Activity[] = [
-        {
-            id: "1",
-            type: "commit",
-            title: "Added dark mode toggle to portfolio",
-            description: "Implemented theme switching functionality with persistent state across sessions",
-            date: "2 days ago",
-            repo: "portfolio",
-            link: "https://github.com/neillouis3/portfolio",
-            icon: <CodeBracketIcon className="w-5 h-5" />
-        },
-        {
-            id: "2",
-            type: "project",
-            title: "Launched new side project: TaskFlow",
-            description: "Built a collaborative task management app with real-time updates",
-            date: "5 days ago",
-            link: "https://github.com/neillouis3/taskflow",
-            icon: <CodeBracketIcon className="w-5 h-5" />
-        },
-        {
-            id: "3",
-            type: "blog",
-            title: "Published: Building Scalable React Apps",
-            description: "A comprehensive guide on architecture patterns and best practices",
-            date: "1 week ago",
-            link: "#",
-            icon: <DocumentTextIcon className="w-5 h-5" />
-        },
-        {
-            id: "4",
-            type: "commit",
-            title: "Optimized database queries",
-            description: "Reduced API response time by 40% through query optimization",
-            date: "2 weeks ago",
-            repo: "backend-api",
-            link: "https://github.com/neillouis3/backend-api",
-            icon: <CodeBracketIcon className="w-5 h-5" />
-        }
-    ];
+    const [commits, setCommits] = useState<GitHubCommit[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    const getActivityColor = (type: Activity["type"]) => {
-        switch (type) {
-            case "commit":
-                return "primary";
-            case "project":
-                return "success";
-            case "blog":
-                return "warning";
-            default:
-                return "default";
+    useEffect(() => {
+        async function fetchLatestCommits() {
+            try {
+                const response = await fetch(
+                    'https://api.github.com/users/neillouis3/events/public?per_page=100'
+                );
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch commits');
+                }
+
+                const events = await response.json();
+                
+                const pushEvents = events
+                    .filter((event: any) => event.type === 'PushEvent')
+                    .slice(0, 2)
+                    .flatMap((event: any) => 
+                        event.payload.commits.slice(0, 1).map((commit: any) => ({
+                            sha: commit.sha,
+                            commit: {
+                                message: commit.message,
+                                author: {
+                                    name: event.actor.login,
+                                    date: event.created_at
+                                }
+                            },
+                            html_url: `https://github.com/${event.repo.name}/commit/${commit.sha}`,
+                            repository: {
+                                name: event.repo.name.split('/')[1],
+                                full_name: event.repo.name
+                            }
+                        }))
+                    );
+
+                setCommits(pushEvents);
+                setLoading(false);
+            } catch (err) {
+                setError(err instanceof Error ? err.message : 'An error occurred');
+                setLoading(false);
+            }
         }
+
+        fetchLatestCommits();
+    }, []);
+
+    const formatDate = (dateString: string) => {
+        const date = new Date(dateString);
+        const now = new Date();
+        const diffTime = Math.abs(now.getTime() - date.getTime());
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+        const diffMinutes = Math.floor(diffTime / (1000 * 60));
+
+        if (diffDays > 0) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+        if (diffHours > 0) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+        if (diffMinutes > 0) return `${diffMinutes} minute${diffMinutes > 1 ? 's' : ''} ago`;
+        return 'just now';
     };
 
     return (
         <div className="w-full h-fit min-h-[60vh] -mt-16 flex flex-col">
             <div className="mb-8">
                 <h2 className="text-2xl font-semibold mb-2">Latest Activity</h2>
-                <p className="text-default-500 text-sm">Recent work, commits, and updates</p>
+                <p className="text-default-500 text-sm">Recent commits and updates</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {activities.map((activity) => (
-                    <Card 
-                        key={activity.id} 
-                        className="hover:scale-[1.02] transition-transform cursor-pointer"
-                        isPressable
-                        as={activity.link ? Link : "div"}
-                        href={activity.link}
-                        isExternal={!!activity.link}
-                    >
-                        <CardHeader className="flex gap-3">
-                            <Avatar
-                                icon={activity.icon}
-                                classNames={{
-                                    base: `bg-${getActivityColor(activity.type)}/10`,
-                                    icon: `text-${getActivityColor(activity.type)}`
-                                }}
-                                radius="sm"
-                            />
-                            <div className="flex flex-col flex-1">
-                                <div className="flex items-center justify-between">
-                                    <p className="text-md font-semibold">{activity.title}</p>
-                                    <Chip 
-                                        size="sm" 
-                                        color={getActivityColor(activity.type)}
-                                        variant="flat"
+            {loading && (
+                <div className="flex items-center gap-2">
+                    <Spinner size="sm" />
+                    <span className="text-default-500 text-sm">Loading recent activity...</span>
+                </div>
+            )}
+
+            {error && (
+                <div className="text-danger text-sm">
+                    Failed to load activity: {error}
+                </div>
+            )}
+
+            {!loading && !error && (
+                <ul className="space-y-4 text-sm">
+                    {commits.map((commit, index) => (
+                        <li key={commit.sha} className="flex gap-3 items-start">
+                            <div className="flex-shrink-0 mt-1">
+                                <div className="w-2 h-2 rounded-full bg-primary" />
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    <CodeBracketIcon className="w-4 h-4 text-primary" />
+                                    <Link 
+                                        href={commit.html_url}
+                                        isExternal
+                                        size="sm"
+                                        className="font-medium"
                                     >
-                                        {activity.type}
-                                    </Chip>
+                                        {commit.commit.message.split('\n')[0]}
+                                    </Link>
+                                    {commit.repository && (
+                                        <Chip size="sm" variant="flat" color="default">
+                                            {commit.repository.name}
+                                        </Chip>
+                                    )}
                                 </div>
-                                {activity.repo && (
-                                    <p className="text-small text-default-400">@{activity.repo}</p>
-                                )}
+                                <p className="text-default-400 text-xs mt-1">
+                                    Committed {formatDate(commit.commit.author.date)}
+                                </p>
                             </div>
-                        </CardHeader>
-                        <CardBody className="pt-0">
-                            <p className="text-sm text-default-600">{activity.description}</p>
-                            <div className="flex items-center gap-2 mt-3 text-xs text-default-400">
-                                <CalendarIcon className="w-4 h-4" />
-                                <span>{activity.date}</span>
-                            </div>
-                        </CardBody>
-                    </Card>
-                ))}
-            </div>
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            {!loading && !error && commits.length === 0 && (
+                <p className="text-default-500 text-sm">No recent activity found.</p>
+            )}
         </div>
     );
 }
