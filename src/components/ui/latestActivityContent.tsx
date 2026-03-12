@@ -1,7 +1,7 @@
 "use client"
-import React from "react";
+import React, { useRef } from "react";
 import { Link, Chip, Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@heroui/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { GitHubCalendar } from "react-github-calendar";
 import { useTheme } from "next-themes";
 import activityData from "@/data/activity.json";
@@ -26,6 +26,8 @@ export default function LatestActivityContent() {
     const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = React.useState(false);
     const commits = activityData as GitHubCommit[];
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     React.useEffect(() => {
         setMounted(true);
@@ -46,11 +48,8 @@ export default function LatestActivityContent() {
     };
 
     return (
-        <div className="w-full h-fit min-h-[60vh] -mt-16 flex flex-col">
-            <div className="mb-8">
-                <h2 className="text-2xl font-semibold mb-2">Latest Activity</h2>
-                <p className="text-default-500 text-sm">Recent commits and updates</p>
-            </div>
+        <div ref={ref} className="w-full h-fit min-h-[60vh] -mt-16 flex flex-col">
+        
 
             <div className="mb-8 rounded-md border border-default-200 w-fit p-3 overflow-x-auto">
                 {mounted ? (
@@ -73,7 +72,7 @@ export default function LatestActivityContent() {
                             <TableCell>
                                 <motion.div
                                     initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                     transition={{ 
                                         duration: 0.3,
                                         delay: index * 0.1,
@@ -93,7 +92,7 @@ export default function LatestActivityContent() {
                             <TableCell>
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
+                                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                                     transition={{ 
                                         duration: 0.3,
                                         delay: index * 0.1 + 0.1,
@@ -110,7 +109,7 @@ export default function LatestActivityContent() {
                             <TableCell>
                                 <motion.div
                                     initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
                                     transition={{ 
                                         duration: 0.3,
                                         delay: index * 0.1 + 0.2,
