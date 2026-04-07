@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, Tabs, Tab } from "@heroui/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Tabs, Tab, Pagination } from "@heroui/react";
 import ProjectCard from "@/components/ui/projectCard";
 import projectsData from "@/data/projects.json";
 
@@ -28,6 +28,8 @@ interface Project {
 
 export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
     const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6;
 
     const filteredProjects = useMemo(() => {
         if (selectedCategory === "all") {
@@ -35,6 +37,19 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
         }
         return projectsData.filter((project: Project) => project.category === selectedCategory);
     }, [selectedCategory]);
+
+    const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+
+    const paginatedProjects = useMemo(() => {
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        return filteredProjects.slice(start, end);
+    }, [filteredProjects, currentPage]);
+
+    const handleCategoryChange = (key: any) => {
+        setSelectedCategory(key as Category);
+        setCurrentPage(1);
+    };
 
     return (
         <Modal 
@@ -61,11 +76,10 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
 
                             </div>
                             
-                            {/* Tabs for filtering */}
                             <Tabs
                                 aria-label="Project categories"
                                 selectedKey={selectedCategory}
-                                onSelectionChange={(key) => setSelectedCategory(key as Category)}
+                                onSelectionChange={handleCategoryChange}
                                 classNames={{
                                     tabContent: "font-normal"
                                 }}
@@ -77,23 +91,37 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
                                 <Tab key="hardware" title="Hardware" />
                             </Tabs>
                         </ModalHeader>
-                        <ModalBody className="px-8">
+                        <ModalBody className="px-8 flex flex-col">
                             {filteredProjects.length > 0 ? (
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {filteredProjects.map((project: Project, index: number) => (
-                                        <ProjectCard
-                                            key={index}
-                                            title={project.title}
-                                            subtitle={project.subtitle}
-                                            imageSrc={project.imageSrc}
-                                            imageAlt={project.imageAlt}
-                                            description={project.description}
-                                            languages={project.languages}
-                                            liveLink={project.liveLink}
-                                            githubLink={project.githubLink}
-                                        />
-                                    ))}
-                                </div>
+                                <>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                                        {paginatedProjects.map((project: Project, index: number) => (
+                                            <ProjectCard
+                                                key={index}
+                                                title={project.title}
+                                                subtitle={project.subtitle}
+                                                imageSrc={project.imageSrc}
+                                                imageAlt={project.imageAlt}
+                                                description={project.description}
+                                                languages={project.languages}
+                                                liveLink={project.liveLink}
+                                                githubLink={project.githubLink}
+                                            />
+                                        ))}
+                                    </div>
+                                    {totalPages > 1 && (
+                                        <div className="flex justify-center mt-auto pt-4">
+                                            <Pagination
+                                                total={totalPages}
+                                                page={currentPage}
+                                                onChange={setCurrentPage}
+                                                showControls
+                                                color="primary"
+                                                size="lg"
+                                            />
+                                        </div>
+                                    )}
+                                </>
                             ) : (
                                 <div className="text-center py-12">
                                     <p className="text-gray-500 dark:text-gray-400 text-lg">
