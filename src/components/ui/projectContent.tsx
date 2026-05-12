@@ -96,10 +96,9 @@ export default function ProjectContent() {
                 <div className="flex flex-col mt-32 w-fit mb-32 items-center">
                     <Button 
                         onClick={() => setIsModalOpen(true)}
-                        size="lg"
+                        size="sm"
                         color="primary"
-                        variant="shadow"
-                        className="font-semibold"
+                        variant="solid"
                     >
                         View all projects
                     </Button>

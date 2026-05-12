@@ -17,9 +17,9 @@ export default function ReferenceModal ({name, role, position, company, companyL
                     
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Profile Actions" variant="flat">
-                    <DropdownSection aria-label="Profile & Actions" showDivider>
+                    <DropdownSection aria-label="Profile & Actions">
                         <DropdownItem key="profile" className="gap-2 " isReadOnly>
-                            <p className="font-semibold">{name}</p>
+                            <p>{name}</p>
                             <p className="">{role}</p>
                         </DropdownItem>
                         <DropdownItem key="description" className="" isReadOnly>

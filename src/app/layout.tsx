@@ -54,8 +54,8 @@ export default function RootLayout({
       },
       {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0,
       }
     );
 

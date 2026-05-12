@@ -19,6 +19,9 @@
 
 
 @theme {
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-sans);
+
     --color-back_ground: #ffffff;
     --color-fore_ground: #171717;
     --color-darkback_ground: #121212;

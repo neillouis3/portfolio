@@ -1,77 +1,70 @@
 "use client"
-import {Chip, Link, Card, CardBody, Divider, Avatar} from "@heroui/react";
+import {Chip, Link} from "@heroui/react";
 import ResumeModal from "./resumeModal";
 import ContactModal from "./contactModal";
+import AboutBanners from "./aboutBanners";
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function AboutContent() {
   return (
       <div className="w-full h-[60vh] -mt-16 flex flex-row justify-center gap-6 items-center">
-        <Card className="flex-5 w-full h-full shadow-lg">
-          <CardBody className="flex flex-col gap-6 p-8">
-            <div className="flex items-center gap-4">
-              <Avatar
-                src="/avatar.png"
-                className="w-20 h-20"
-                isBordered
+        <section className="flex-5 w-full h-full flex flex-col gap-6 py-12">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-3xl">Neil Louise A. Castillon</h1>
+            <div className="flex flex-wrap items-center gap-2">
+              <Chip
+                size="md"
+                radius="sm"
+                variant="flat"
                 color="primary"
-                showFallback
-                name="NL"
-              />
-              <div className="flex flex-col">
-                <h1 className="text-3xl font-semibold">Neil Louise A. Castillon</h1>
-                <Chip size="md" radius="sm" color="primary" variant="flat" className="mt-1 w-fit">
-                  Software Developer
-                </Chip>
-              </div>
+                classNames={{
+                  base: "px-3",
+                }}
+              >
+                Software Developer
+              </Chip>
+              <AboutBanners />
             </div>
-            
-            <Divider />
-            
-            <div className="flex-1 flex flex-col gap-3 text-sm">
-              <p>
-                Hi! I&apos;m Louise
-                <motion.span
-                  className="text-xl inline-block mx-1"
-                  animate={{ rotate: [0, 20, 0] }}
-                  transition={{
-                    duration: 1,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatDelay: 0,
-                  }}
-                >
-                  👋
-                </motion.span>
-                and I&apos;m a 3rd year computer engineering student @{" "}
-                <Link 
-                  underline="always" 
-                  href="https://www.mun.ca" 
-                  size="sm" 
-                  isExternal
-                  className="font-medium"
-                >
-                  Memorial University
-                </Link>{" "}
-                who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.
-              </p>
-              <p>
-                My interests extend to robotics, centralized automation systems, and AI&apos;s application to electrical systems.
-              </p>
-              <p>
-                Beyond tech, I enjoy music and playing the guitar, and I&apos;m also a big fan of photography. I also love to travel and explore new places.
-              </p>
-            </div>
-            
-            <Divider />
-            
-            <div className="flex gap-2">
-              <ContactModal />
-              <ResumeModal />
-            </div>
-          </CardBody>
-        </Card>
+          </div>
+
+          <p className="text-sm">
+            Hi! I&apos;m Louise
+            <motion.span
+              className="text-xl inline-block mx-1"
+              animate={{ rotate: [0, 20, 0] }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 0,
+              }}
+            >
+              👋
+            </motion.span>
+            and I&apos;m a 4th year computer engineering student @{" "}
+            <Link
+              underline="always"
+              href="https://www.mun.ca"
+              size="sm"
+              isExternal
+            >
+              Memorial University
+            </Link>{" "}
+            who is passionate about technology. I believe technology should be beneficial, enhancing quality of life and making everyday tasks easier.
+          </p>
+          <p className="text-sm">
+            My interests extend to robotics, centralized automation systems, and AI&apos;s application to electrical systems.
+          </p>
+          <p className="text-sm">
+            Beyond tech, I enjoy music and playing the guitar, and I&apos;m also a big fan of photography. I love to travel and explore new places, go hiking, and I&apos;m a huge fan of One Piece.
+          </p>
+
+          <div className="flex gap-2 mt-auto">
+            <ContactModal />
+            <ResumeModal />
+          </div>
+        </section>
         
         <div className="flex-2 h-full w-full relative">
           <motion.svg 

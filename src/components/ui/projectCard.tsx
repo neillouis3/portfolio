@@ -53,7 +53,7 @@ export default function ProjectCard({
                     <h3 className="text-2xl">
                         {title}
                     </h3>
-                    <p className="text-xs text-default-500 uppercase ">
+                    <p className="text-xs text-default-500">
                         {subtitle}
                     </p>
                 </div>

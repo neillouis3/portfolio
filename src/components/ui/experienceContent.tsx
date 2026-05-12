@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef, useEffect } from "react";
 import ReferenceModal from "./referenceModal";
-import {Link, Accordion, AccordionItem, Avatar, Chip, Card, CardBody} from "@heroui/react";
+import {Link, Accordion, AccordionItem, Avatar} from "@heroui/react";
 import type {Selection} from "@heroui/react";
 
 
@@ -38,17 +38,14 @@ export default function ExperienceContent() {
 
 
     return (
-        <Card ref={contentRef} className="w-full shadow-lg">
-            <CardBody className="p-8">
-                <div className="mb-6">
-                    <h2 className="text-2xl font-semibold mb-2">Experience</h2>
-                    <p className="text-default-500 text-sm">Professional work history</p>
-                </div>
-                
-                <Accordion 
+        <div ref={contentRef} className="w-full">
+            <Accordion 
                     selectedKeys={selectedKeys}
                     variant="splitted"
                     onSelectionChange={setSelectedKeys}
+                    itemClasses={{
+                        base: "shadow-none bg-transparent px-0",
+                    }}
                 >
                      <AccordionItem
                         key="1"
@@ -63,40 +60,36 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<Chip size="sm" variant="flat" color="success">Jan 2026 - Present</Chip>}
+                        subtitle={<span className="text-xs text-default-500">Jan 2026 - Present</span>}
                         title={
-                            <div className="flex flex-col gap-1">
-                                <p className="text-md font-semibold">Associate Implementation Consultant Intern</p>
-                                <Link size="sm" href="https://orionhealth.com/ca/" underline="hover" color="foreground" isExternal>
+                            <p className="text-sm">
+                                Associate Implementation Consultant Intern @{" "}
+                                <Link size="sm" href="https://orionhealth.com/ca/" underline="always" color="foreground" isExternal>
                                     Orion Health Limited
                                 </Link>
-                            </div>
+                            </p>
                         }
                     >
                         <div className="lg:pl-16 flex flex-col gap-4 text-sm">
-                            <ul className="space-y-2 list-disc list-inside">
-                                <li>Supporting design, configuration, testing, and documentation of healthcare software solutions based on project requirements and client specifications.</li>
-                                <li>Learning and participating in multiple stages of testing including System, Integration, and Performance testing for implemented solutions.</li>
-                                <li>Assisting with data extraction, conversion, and manipulation using RDBMS while maintaining technical documentation for project deliverables.</li>
-                                <li>Providing remote and onsite troubleshooting support to clients, utilizing Issue Tracking systems to analyze and resolve technical problems.</li>
+                            <ul className="flex flex-col gap-1 text-default-700">
+                                <li>- Supporting design, configuration, testing, and documentation of healthcare software solutions based on project requirements and client specifications.</li>
+                                <li>- Learning and participating in multiple stages of testing including System, Integration, and Performance testing for implemented solutions.</li>
+                                <li>- Assisting with data extraction, conversion, and manipulation using RDBMS while maintaining technical documentation for project deliverables.</li>
+                                <li>- Providing remote and onsite troubleshooting support to clients, utilizing Issue Tracking systems to analyze and resolve technical problems.</li>
                             </ul>
-                            <div className="max-lg:hidden flex flex-col gap-2">
-                                <div className="flex flex-wrap gap-1 items-center">
-                                    <span className="text-default-500 text-xs">Technologies:</span>
-                                    {["Java", "Python", "JavaScript", "HTML", "REST/SOAP", "XML", "Linux", "Bash"].map(tech => (
-                                        <Chip key={tech} size="sm" variant="flat" color="primary">{tech}</Chip>
-                                    ))}
-                                </div>
-                                <div className="flex flex-wrap gap-1 items-center">
-                                    <span className="text-default-500 text-xs">Tools:</span>
-                                    {["Git", "Issue Tracking Systems", "RDBMS"].map(tool => (
-                                        <Chip key={tool} size="sm" variant="flat" color="default">{tool}</Chip>
-                                    ))}
-                                </div>
+                            <div className="max-lg:hidden flex flex-col gap-1 text-xs">
+                                <p>
+                                    <span className="text-default-500">Technologies:</span>{" "}
+                                    <span className="text-default-700">Java, Python, JavaScript, HTML, REST/SOAP, XML, Linux, Bash</span>
+                                </p>
+                                <p>
+                                    <span className="text-default-500">Tools:</span>{" "}
+                                    <span className="text-default-700">Git, Issue Tracking Systems, RDBMS</span>
+                                </p>
                             </div>
                             
-                            <div className="flex flex-row gap-2 items-center flex-wrap">
-                                <p className="text-xs text-default-500">References:</p> 
+                            <div className="flex flex-row gap-2 items-center flex-wrap text-xs">
+                                <p className="text-default-500">References:</p> 
                                 <ReferenceModal
                                     name="Marcus de Leon"
                                     role="Supervisor"
@@ -121,39 +114,35 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<Chip size="sm" variant="flat" color="default">May 2024 - Jan 2025</Chip>}
+                        subtitle={<span className="text-xs text-default-500">May 2024 - Jan 2025</span>}
                         title={
-                            <div className="flex flex-col gap-1">
-                                <p className="text-md font-semibold">Software Developer</p>
-                                <Link size="sm" href="https://www.jischool.org" underline="hover" color="foreground" isExternal>
+                            <p className="text-sm">
+                                Software Developer @{" "}
+                                <Link size="sm" href="https://www.jischool.org" underline="always" color="foreground" isExternal>
                                     Jeddah International School
                                 </Link>
-                            </div>
+                            </p>
                         }
                     >
                         <div className="lg:pl-16 flex flex-col gap-4 text-sm">
-                            <ul className="space-y-2 list-disc list-inside">
-                                <li>Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</li>
-                                <li>Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
-                                <li>Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
+                            <ul className="flex flex-col gap-1 text-default-700">
+                                <li>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</li>
+                                <li>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
+                                <li>- Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
                             </ul>
-                            <div className="max-lg:hidden flex flex-col gap-2">
-                                <div className="flex flex-wrap gap-1 items-center">
-                                    <span className="text-default-500 text-xs">Technologies:</span>
-                                    {["PHP", "Laravel", "Javascript", "MySQL", "AWS"].map(tech => (
-                                        <Chip key={tech} size="sm" variant="flat" color="primary">{tech}</Chip>
-                                    ))}
-                                </div>
-                                <div className="flex flex-wrap gap-1 items-center">
-                                    <span className="text-default-500 text-xs">Tools:</span>
-                                    {["Figma", "Notion", "Teams", "Git"].map(tool => (
-                                        <Chip key={tool} size="sm" variant="flat" color="default">{tool}</Chip>
-                                    ))}
-                                </div>
+                            <div className="max-lg:hidden flex flex-col gap-1 text-xs">
+                                <p>
+                                    <span className="text-default-500">Technologies:</span>{" "}
+                                    <span className="text-default-700">PHP, Laravel, JavaScript, MySQL, AWS</span>
+                                </p>
+                                <p>
+                                    <span className="text-default-500">Tools:</span>{" "}
+                                    <span className="text-default-700">Figma, Notion, Teams, Git</span>
+                                </p>
                             </div>
                             
-                            <div className="flex flex-row gap-2 items-center flex-wrap">
-                                <p className="text-xs text-default-500">References:</p> 
+                            <div className="flex flex-row gap-2 items-center flex-wrap text-xs">
+                                <p className="text-default-500">References:</p> 
                                 <ReferenceModal
                                     name="Saif Khalid"
                                     role="Supervisor"
@@ -186,39 +175,35 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<Chip size="sm" variant="flat" color="default">Sep 2023 - Jan 2024</Chip>}
+                        subtitle={<span className="text-xs text-default-500">Sep 2023 - Jan 2024</span>}
                         title={
-                            <div className="flex flex-col gap-1">
-                                <p className="text-md font-semibold">Software Developer</p>
-                                <Link size="sm" href="https://www.nleats.com" underline="hover" color="foreground" isExternal>
+                            <p className="text-sm">
+                                Software Developer @{" "}
+                                <Link size="sm" href="https://www.nleats.com" underline="always" color="foreground" isExternal>
                                     NL Eats
                                 </Link>
-                            </div>
+                            </p>
                         }
                     >
                         <div className="lg:pl-16 flex flex-col gap-4 text-sm">
-                            <ul className="space-y-2 list-disc list-inside">
-                                <li>Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</li>
-                                <li>Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
-                                <li>Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
+                            <ul className="flex flex-col gap-1 text-default-700">
+                                <li>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</li>
+                                <li>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
+                                <li>- Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
                             </ul>
-                            <div className="max-lg:hidden flex flex-col gap-2">
-                                <div className="flex flex-wrap gap-1 items-center">
-                                    <span className="text-default-500 text-xs">Technologies:</span>
-                                    {["React JS", "React Native", "MongoDB", "Microsoft Azure", "Firebase"].map(tech => (
-                                        <Chip key={tech} size="sm" variant="flat" color="primary">{tech}</Chip>
-                                    ))}
-                                </div>
-                                <div className="flex flex-wrap gap-1 items-center">
-                                    <span className="text-default-500 text-xs">Tools:</span>
-                                    {["Figma", "Notion", "Slack"].map(tool => (
-                                        <Chip key={tool} size="sm" variant="flat" color="default">{tool}</Chip>
-                                    ))}
-                                </div>
+                            <div className="max-lg:hidden flex flex-col gap-1 text-xs">
+                                <p>
+                                    <span className="text-default-500">Technologies:</span>{" "}
+                                    <span className="text-default-700">React JS, React Native, MongoDB, Microsoft Azure, Firebase</span>
+                                </p>
+                                <p>
+                                    <span className="text-default-500">Tools:</span>{" "}
+                                    <span className="text-default-700">Figma, Notion, Slack</span>
+                                </p>
                             </div>
                             
-                            <div className="flex flex-row gap-2 items-center flex-wrap">
-                                <p className="text-xs text-default-500">References:</p> 
+                            <div className="flex flex-row gap-2 items-center flex-wrap text-xs">
+                                <p className="text-default-500">References:</p> 
                                 <ReferenceModal
                                     name="Saif Ahmed"
                                     role="Supervisor"
@@ -231,8 +216,7 @@ export default function ExperienceContent() {
                         </div>
                     </AccordionItem>
                     
-                </Accordion>
-            </CardBody>
-        </Card>
+            </Accordion>
+        </div>
     )
 }

@@ -19,11 +19,11 @@ export default function Home() {
         {/* <h1 className="absolute bottom-0 w-full z-40 text-center pt-8 pb-16 uppercase text-primary text-5xl font-bold">Experience</h1> */}
         
       </div>
-      <div data-section="activity" className="h-fit mt-64 mb-32 flex items-center ">
+      {/* <div data-section="activity" className="h-fit mt-64 mb-32 flex items-center ">
         <LatestActivityContent />
-      </div>
+      </div> */}
       
-      <div data-section="work" className="h-fit mt-64 mb-32 flex items-center ">
+      <div data-section="work" className="h-fit mt-32 mb-32 flex items-center ">
         <ExperienceContent />
       </div>
 

@@ -51,7 +51,7 @@ export default function LatestActivityContent() {
         <div ref={ref} className="w-full h-fit min-h-[60vh] -mt-16 flex flex-col">
         
 
-            <div className="mb-8 rounded-md border border-default-200 w-fit p-3 overflow-x-auto">
+            {/* <div className="mb-8 rounded-md border border-default-200 w-fit p-3 overflow-x-auto">
                 {mounted ? (
                     <GitHubCalendar
                         username="neillouis3"
@@ -83,7 +83,6 @@ export default function LatestActivityContent() {
                                         href={commit.html_url}
                                         isExternal
                                         size="sm"
-                                        className="font-medium"
                                     >
                                         {commit.commit.message.split('\n')[0]}
                                     </Link>
@@ -124,7 +123,7 @@ export default function LatestActivityContent() {
                         </TableRow>
                     ))}
                 </TableBody>
-            </Table>
+            </Table> */}
         </div>
     );
 }

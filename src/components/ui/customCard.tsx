@@ -15,7 +15,7 @@ export default function CustomCard() {
             <CardFooter>
                 <div className="flex flex-col text-sm w-full">
                     <div className="flex flex-row justify-between w-full items-center">
-                        <h4 className="font-bold text-large">JCHEKIM</h4>
+                        <h4 className="text-large">JCHEKIM</h4>
                         <Chip size="sm" className="mt-0" variant="dot">Maintanance</Chip>
                     </div>
                     

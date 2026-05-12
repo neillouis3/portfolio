@@ -73,7 +73,7 @@ export default function ProjectItem({
       className={`h-[60vh] lg:w-[50vw] lg:pr-56 ${className}`}
     >
       <h1 className="text-3xl">{title}</h1>
-      <h2 className="text-sm text-default-500 mb-4 uppercase tracking-wide">{subtitle}</h2>
+      <h2 className="text-sm text-default-500 mb-4">{subtitle}</h2>
       <div className="ml-0.5">  
         <motion.div 
           initial={{ opacity: 0 }}
