@@ -60,7 +60,7 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<span className="text-xs text-default-500">Jan 2026 - Present</span>}
+                        subtitle={<span className="text-sm text-default-500">Jan 2026 - Present</span>}
                         title={
                             <p className="text-sm">
                                 Associate Implementation Consultant Intern @{" "}
@@ -77,7 +77,7 @@ export default function ExperienceContent() {
                                 <li>- Assisting with data extraction, conversion, and manipulation using RDBMS while maintaining technical documentation for project deliverables.</li>
                                 <li>- Providing remote and onsite troubleshooting support to clients, utilizing Issue Tracking systems to analyze and resolve technical problems.</li>
                             </ul>
-                            <div className="max-lg:hidden flex flex-col gap-1 text-xs">
+                            <div className="max-lg:hidden flex flex-col gap-1 text-sm">
                                 <p>
                                     <span className="text-default-500">Technologies:</span>{" "}
                                     <span className="text-default-700">Java, Python, JavaScript, HTML, REST/SOAP, XML, Linux, Bash</span>
@@ -88,7 +88,7 @@ export default function ExperienceContent() {
                                 </p>
                             </div>
                             
-                            <div className="flex flex-row gap-2 items-center flex-wrap text-xs">
+                            <div className="flex flex-row gap-2 items-center flex-wrap text-sm">
                                 <p className="text-default-500">References:</p> 
                                 <ReferenceModal
                                     name="Marcus de Leon"
@@ -114,7 +114,7 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<span className="text-xs text-default-500">May 2024 - Jan 2025</span>}
+                        subtitle={<span className="text-sm text-default-500">May 2024 - Jan 2025</span>}
                         title={
                             <p className="text-sm">
                                 Software Developer @{" "}
@@ -130,7 +130,7 @@ export default function ExperienceContent() {
                                 <li>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
                                 <li>- Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
                             </ul>
-                            <div className="max-lg:hidden flex flex-col gap-1 text-xs">
+                            <div className="max-lg:hidden flex flex-col gap-1 text-sm">
                                 <p>
                                     <span className="text-default-500">Technologies:</span>{" "}
                                     <span className="text-default-700">PHP, Laravel, JavaScript, MySQL, AWS</span>
@@ -141,7 +141,7 @@ export default function ExperienceContent() {
                                 </p>
                             </div>
                             
-                            <div className="flex flex-row gap-2 items-center flex-wrap text-xs">
+                            <div className="flex flex-row gap-2 items-center flex-wrap text-sm">
                                 <p className="text-default-500">References:</p> 
                                 <ReferenceModal
                                     name="Saif Khalid"
@@ -175,7 +175,7 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<span className="text-xs text-default-500">Sep 2023 - Jan 2024</span>}
+                        subtitle={<span className="text-sm text-default-500">Sep 2023 - Jan 2024</span>}
                         title={
                             <p className="text-sm">
                                 Software Developer @{" "}
@@ -191,7 +191,7 @@ export default function ExperienceContent() {
                                 <li>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
                                 <li>- Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
                             </ul>
-                            <div className="max-lg:hidden flex flex-col gap-1 text-xs">
+                            <div className="max-lg:hidden flex flex-col gap-1 text-sm">
                                 <p>
                                     <span className="text-default-500">Technologies:</span>{" "}
                                     <span className="text-default-700">React JS, React Native, MongoDB, Microsoft Azure, Firebase</span>
@@ -202,7 +202,7 @@ export default function ExperienceContent() {
                                 </p>
                             </div>
                             
-                            <div className="flex flex-row gap-2 items-center flex-wrap text-xs">
+                            <div className="flex flex-row gap-2 items-center flex-wrap text-sm">
                                 <p className="text-default-500">References:</p> 
                                 <ReferenceModal
                                     name="Saif Ahmed"
