@@ -8,7 +8,7 @@
         "languages": ["Typescript", "Next.js", "Tailwind CSS", "MongoDB", "Clerk", "UploadThing", "Mongoose"],
         "category": "software",
         "liveLink": "https://archive0.vercel.app/",
-        "githubLink": "https://github.com/neillouis3/milestone",
+        "githubLink": "https://github.com/neillouis3/Archived",
         "delay": 0.5,
         "duration": 2.5,
         "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
@@ -35,8 +35,8 @@
         "description": "An app that allows users to navigate through a map and find the shortest path to their destination.",
         "languages": ["Typescript", "Next.js", "Tailwind CSS", "MySQL", "Clerk", "Google Maps"],
         "category": "software",
-        "liveLink": "https://github.com/neillouis3/milestone",
-        "githubLink": "https://github.com/neillouis3/milestone",
+        "liveLink": "https://navigate0.vercel.app/",
+        "githubLink": "https://github.com/neillouis3/Navigate",
         "delay": 0.5,
         "duration": 2.5,
         "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
@@ -70,14 +70,14 @@
         "rotatePattern": [0, -2.5, 2.5, -2, 2, -1.5, 1.5, -1, 1, 0]
     },
     {
-        "title": "noted",
+        "title": "Noted",
         "subtitle": "Web development",
         "imageSrc": "/noted.png",
         "imageAlt": "Card background",
-        "description": "A note-taking app built with Typescript and React.js, where users can add, edit, and delete notes. Features a clean, responsive design with a modern developer-first stack.",
-        "languages": ["Typescript", "React.js", "Tailwind CSS", "Next.js", "Lexical"],
+        "description": "A simple, distraction-free note-taking app built with Next.js and TypeScript. Users can create, edit, and delete notes with a clean, responsive interface across desktop and mobile.",
+        "languages": ["Typescript", "React.js", "Tailwind CSS", "Next.js"],
         "category": "software",
-        "liveLink": "https://github.com/neillouis3/noted",
+        "liveLink": "https://noted-six-wheat.vercel.app/",
         "githubLink": "https://github.com/neillouis3/noted",
         "delay": 1.5,
         "duration": 3,
