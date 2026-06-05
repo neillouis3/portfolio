@@ -5,9 +5,6 @@ import ExperienceContent from "@/components/ui/experienceContent";
 import EducationContent from "@/components/ui/educationContent";
 import ProjectContent from "@/components/ui/projectContent";
 import LatestActivityContent from "@/components/ui/latestActivityContent";
-import { metadata as layoutMetadata } from "./layout-metadata";
-
-export const metadata = layoutMetadata;
 
 export default function Home() {
 
