@@ -117,7 +117,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
                                                 onChange={setCurrentPage}
                                                 showControls
                                                 color="primary"
-                                                size="lg"
+                                                size="sm"
                                             />
                                         </div>
                                     )}
