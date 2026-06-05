@@ -1,17 +1,31 @@
 [
     {
-        "title": "milestones",
+        "title": "Archived",
         "subtitle": "Full-stack web development",
-        "imageSrc": "/milestoneDemoIMG.png",
+        "imageSrc": "/archived.png",
         "imageAlt": "Card background",
         "description": "A full-stack social media app built with Next.js, TypeScript, and TailwindCSS, where users celebrate and share life achievements. Features Clerk authentication, UploadThing media uploads, and a MongoDB backend for scalable data storage. Clean, responsive design with a modern developer-first stack.",
         "languages": ["Typescript", "Next.js", "Tailwind CSS", "MongoDB", "Clerk", "UploadThing", "Mongoose"],
         "category": "software",
-        "liveLink": "https://github.com/neillouis3/milestone",
+        "liveLink": "https://archive0.vercel.app/",
         "githubLink": "https://github.com/neillouis3/milestone",
         "delay": 0.5,
         "duration": 2.5,
         "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
+    },
+    {
+        "title": "Teavie",
+        "subtitle": "Web development",
+        "imageSrc": "/teavie.png",
+        "imageAlt": "Card background",
+        "description": "A desktop application built with Java, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.",
+        "languages": ["Python", "Typescript", "Next.js", "Tailwind CSS", "MySQL"],
+        "category": "software",
+        "liveLink": "https://teavie.vercel.app/",
+        "githubLink": "https://github.com/neillouis3/teavie",
+        "delay": 1,
+        "duration": 2.5,
+        "rotatePattern": [0, 2, -2, 1.5, -1.5, 1, -1, 0.5, -0.5, 0]
     },
     {
         "title": "Navigate",
@@ -40,20 +54,6 @@
         "delay": 0.5,
         "duration": 2.5,
         "rotatePattern": [0, -2, 2, -1.5, 1.5, -1, 1, -0.5, 0.5, 0]
-    },
-    {
-        "title": "Teavie",
-        "subtitle": "Web development",
-        "imageSrc": "/teavie.png",
-        "imageAlt": "Card background",
-        "description": "A desktop application built with Java, where users can add, edit, and delete tasks, and mark them as completed. Features a clean, responsive design with a modern developer-first stack.",
-        "languages": ["Python", "Typescript", "Next.js", "Tailwind CSS", "MySQL"],
-        "category": "software",
-        "liveLink": "https://teavie.vercel.app/",
-        "githubLink": "https://github.com/neillouis3/teavie",
-        "delay": 1,
-        "duration": 2.5,
-        "rotatePattern": [0, 2, -2, 1.5, -1.5, 1, -1, 0.5, -0.5, 0]
     },
     {
         "title": "Portfolio Website",
