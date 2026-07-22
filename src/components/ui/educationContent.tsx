@@ -4,7 +4,8 @@ import { Button, Link } from "@heroui/react";
 import { motion, useInView } from "framer-motion";
 
 const TECHNICAL = ["Web Development", "Mobile Development", "Cybersecurity", "Software Development", "Machine Learning"];
-const LANGUAGES = ["Python", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Node.js", "MySQL", "MongoDB", "Clerk"];
+const LANGUAGES = ["Python", "JavaScript", "TypeScript"];
+const TOOLS = ["React", "Next.js", "Tailwind CSS", "Node.js", "MySQL", "MongoDB", "Supabase", "Clerk", "Auth0"];
 const SOFT = ["Communication", "Teamwork", "Leadership", "Problem Solving", "Time Management", "Adaptability"];
 
 const CERTS = [
@@ -102,6 +103,10 @@ export default function EducationContent() {
                             <div className="flex flex-col">
                                 <p className="text-sm text-default-500">Programming Languages</p>
                                 <p className="text-sm">{LANGUAGES.join(", ")}</p>
+                            </div>
+                            <div className="flex flex-col">
+                                <p className="text-sm text-default-500">Frameworks & Tools</p>
+                                <p className="text-sm">{TOOLS.join(", ")}</p>
                             </div>
                             <div className="flex flex-col">
                                 <p className="text-sm text-default-500">Soft</p>

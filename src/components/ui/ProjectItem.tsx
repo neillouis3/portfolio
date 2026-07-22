@@ -90,14 +90,20 @@ export default function ProjectItem({
             shadow="sm"
           />
         </motion.div>
-        <div className="flex flex-col mt-4">
-          <Link isExternal showAnchorIcon size="sm" underline="hover" href={liveLink}>
-            Live Demo
-          </Link>
-          <Link isExternal showAnchorIcon size="sm" underline="hover" href={githubLink}>
-            Github Repo
-          </Link>
-        </div>
+        {(liveLink || githubLink) && (
+          <div className="flex flex-col mt-4">
+            {liveLink && (
+              <Link isExternal showAnchorIcon size="sm" underline="hover" href={liveLink}>
+                Live Demo
+              </Link>
+            )}
+            {githubLink && (
+              <Link isExternal showAnchorIcon size="sm" underline="hover" href={githubLink}>
+                Github Repo
+              </Link>
+            )}
+          </div>
+        )}
         <div className="w-full text-sm lg:hidden mt-4">
           <p>{description}</p>
         </div>

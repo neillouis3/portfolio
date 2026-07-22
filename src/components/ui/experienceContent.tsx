@@ -60,7 +60,7 @@ export default function ExperienceContent() {
                             }}
                         />
                         }
-                        subtitle={<span className="text-sm text-default-500">Jan 2026 - Present</span>}
+                        subtitle={<span className="text-sm text-default-500">Jan 2026 - May 2026</span>}
                         title={
                             <p className="text-sm">
                                 Associate Implementation Consultant Intern @{" "}
@@ -187,14 +187,14 @@ export default function ExperienceContent() {
                     >
                         <div className="lg:pl-16 flex flex-col gap-4 text-sm">
                             <ul className="flex flex-col gap-1 text-default-700">
-                                <li>- Collaborating to create a dashboard web application to conduct reports and analysis on student and teacher data.</li>
-                                <li>- Developing comprehensive reports on website issues and design considerations, and implemented code solutions to address identified problems.</li>
-                                <li>- Debugging and troubleshooting computer hardware and software, involving network server environments.</li>
+                                <li>- Collaborated and led a team to develop the NL Eats Hydroponic mobile app using MongoDB and JavaScript.</li>
+                                <li>- Designed and launched 2 dynamic websites, using Figma and JavaScript, to raise awareness about food insecurity by 20%.</li>
+                                <li>- Conducted analysis on streamline connection between hydroponic systems and servers, improving latency by 30%.</li>
                             </ul>
                             <div className="max-lg:hidden flex flex-col gap-1 text-sm">
                                 <p>
                                     <span className="text-default-500">Technologies:</span>{" "}
-                                    <span className="text-default-700">React JS, React Native, MongoDB, Microsoft Azure, Firebase</span>
+                                    <span className="text-default-700">JavaScript, MongoDB, React Native</span>
                                 </p>
                                 <p>
                                     <span className="text-default-500">Tools:</span>{" "}
