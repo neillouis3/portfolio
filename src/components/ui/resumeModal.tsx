@@ -13,32 +13,18 @@ import {
 export default function ResumeModal() {
   const {isOpen, onOpen, onClose} = useDisclosure();
 
-
-  const handleOpen = () => {
-
-    onOpen();
-  };
-
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // Path to your PDF
-    link.download = "resume.pdf"; // Optional: File name for download
+    link.href = "/resume.pdf";
+    link.download = "resume.pdf";
     link.click();
   };
 
   return (
-    <div>
-      <div className="flex flex-wrap gap-3">
-
-        <Button
-          key="resume"
-          className="capitalize"
-          color="default" size="sm" variant="ghost"
-          onPress={() => handleOpen()}
-        >
-          View resume
-        </Button>
-      </div>
+    <>
+      <Button size="md" variant="bordered" onPress={onOpen}>
+        View resume
+      </Button>
       <Modal backdrop="blur" size="xl" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
         {() => (
@@ -52,8 +38,7 @@ export default function ResumeModal() {
             ></embed>
             </ModalBody>
             <ModalFooter>
-
-              <Button color="primary" onPress={handleDownload}>
+              <Button color="primary" size="md" onPress={handleDownload}>
                 Download
               </Button>
             </ModalFooter>
@@ -61,8 +46,6 @@ export default function ResumeModal() {
         )}
         </ModalContent>
       </Modal>
-    </div>
-      
-    
+    </>
   );
 }

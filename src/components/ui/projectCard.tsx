@@ -4,6 +4,7 @@ import { Button, Chip, Image } from "@heroui/react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ExternalLinkIcon, Github01Icon } from "@hugeicons/core-free-icons";
 import { motion } from "framer-motion";
+import { getTechIcon } from "./techIconMap";
 
 interface ProjectCardProps {
     title: string;
@@ -52,31 +53,36 @@ export default function ProjectCard({
             <div className=" py-4 h-full">
                 {/* Title and Subtitle */}
                 <div className="mb-3">
-                    <h3 className="text-2xl">
+                    <h3 className="text-sm font-medium tracking-tight">
                         {title}
                     </h3>
-                    <p className="text-xs text-default-500">
+                    <p className="text-sm text-default-500">
                         {subtitle}
                     </p>
                 </div>
                 {/* Description */}
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+                <p className="text-foreground text-sm mb-4 line-clamp-3">
                     {description}
                 </p>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-1 mb-4">
-                    {languages.map((lang, index) => (
-                        <Chip
-                            key={index}
-                            size="sm"
-                            radius="sm"
-                            color="primary"
-                            variant="faded"
-                        >
-                            {lang}
-                        </Chip>
-                    ))}
+                    {languages.map((lang, index) => {
+                        const Icon = getTechIcon(lang);
+                        return (
+                            <Chip
+                                key={index}
+                                size="sm"
+                                radius="sm"
+                                color="primary"
+                                variant="faded"
+                                className="h-6 min-h-6 text-xs"
+                                startContent={Icon ? <Icon size={14} /> : undefined}
+                            >
+                                {lang}
+                            </Chip>
+                        );
+                    })}
                 </div>
 
                 {(liveLink || githubLink) && (
@@ -90,6 +96,7 @@ export default function ProjectCard({
                                 size="sm"
                                 variant="flat"
                                 color="primary"
+                                className="text-sm font-normal !h-7 !min-h-7 px-3"
                                 startContent={<HugeiconsIcon icon={ExternalLinkIcon} size={16} />}
                             >
                                 Demo
@@ -104,6 +111,7 @@ export default function ProjectCard({
                                 size="sm"
                                 variant="flat"
                                 color="default"
+                                className="text-sm font-normal !h-7 !min-h-7 px-3"
                                 startContent={<HugeiconsIcon icon={Github01Icon} size={16} />}
                             >
                                 GitHub

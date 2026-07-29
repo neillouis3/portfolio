@@ -70,7 +70,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
                     <>
                         <ModalHeader className="flex flex-col gap-3 px-8">
                             <div>
-                                <h2 className="text-3xl font-normal">
+                                <h2 className="text-2xl font-normal tracking-tight">
                                     Projects
                                 </h2>
 
@@ -124,7 +124,7 @@ export default function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
                                 </>
                             ) : (
                                 <div className="text-center py-12">
-                                    <p className="text-gray-500 dark:text-gray-400 text-lg">
+                                    <p className="text-default-500 text-sm">
                                         No projects found in this category yet.
                                     </p>
                                 </div>

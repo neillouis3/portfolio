@@ -17,6 +17,43 @@
   }
 }
 
+/* Match button type to body: same family, size, weight */
+button {
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.contribution-calendar text {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+}
+
+.contribution-calendar .react-activity-calendar__footer,
+.contribution-calendar .react-activity-calendar__count,
+.contribution-calendar .react-activity-calendar__legend-colors {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    color: var(--heroui-default-500, #71717a);
+}
+
+.contribution-calendar article {
+    width: 100% !important;
+}
+
+.contribution-calendar .react-activity-calendar__footer {
+    width: 100%;
+}
+
+/* Don't CSS-stretch the SVG — block size is computed to fill the row.
+   Stretching would also scale month labels. */
+.contribution-calendar svg {
+    max-width: 100%;
+    height: auto;
+}
+
 
 @theme {
     --font-sans: var(--font-geist-sans);

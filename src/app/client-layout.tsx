@@ -6,7 +6,7 @@ import Footer from "@/components/ui/footer";
 import { useEffect, useRef, useState } from "react";
 import scrollIntoView from "scroll-into-view-if-needed";
 
-type SectionKey = "about" | "work" | "education" | "projects";
+type SectionKey = "about" | "featured" | "work" | "education" | "projects";
 
 export default function ClientLayout({
   children,
@@ -17,6 +17,7 @@ export default function ClientLayout({
 
   const sectionsRef = useRef<Record<SectionKey, HTMLElement | null>>({
     about: null,
+    featured: null,
     work: null,
     education: null,
     projects: null,
@@ -72,6 +73,7 @@ export default function ClientLayout({
           ref={(el) => {
             if (el) {
               sectionsRef.current.about = el.querySelector("[data-section='about']") || null;
+              sectionsRef.current.featured = el.querySelector("[data-section='featured']") || null;
               sectionsRef.current.work = el.querySelector("[data-section='work']") || null;
               sectionsRef.current.education = el.querySelector("[data-section='education']") || null;
               sectionsRef.current.projects = el.querySelector("[data-section='projects']") || null;

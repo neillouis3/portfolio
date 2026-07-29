@@ -320,3 +320,111 @@ export const MongoDB: React.FC<{
     
   
 }
+type IconProps = {
+  fill?: string;
+  size?: number;
+  height?: number;
+  width?: number;
+  [key: string]: string | number | undefined;
+};
+
+const base = ({ fill = "currentColor", size, height, width }: IconProps) => ({
+  fill,
+  height: (size || height || 16) as number,
+  width: (size || width || 16) as number,
+  viewBox: "0 0 24 24",
+  xmlns: "http://www.w3.org/2000/svg",
+});
+
+export const Clerk: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.5a3 3 0 110 6 3 3 0 010-6zm0 14.2a7.2 7.2 0 01-6-3.22c.03-1.99 4-3.08 6-3.08s5.97 1.09 6 3.08a7.2 7.2 0 01-6 3.22z" />
+  </svg>
+);
+
+export const UploadThing: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M12 3l4 4h-3v8h-2V7H8l4-4zm-7 14h14v2H5v-2z" />
+  </svg>
+);
+
+export const Mongoose: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8zm8-5.5A5.5 5.5 0 006.5 12 5.5 5.5 0 0012 17.5 5.5 5.5 0 0017.5 12 5.5 5.5 0 0012 6.5zM9 11h6v2H9v-2z" />
+  </svg>
+);
+
+export const Golang: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M4 9h2.5l.5 1H4v2h3.2l.5 1H4v2h4.5L10 17H4a2 2 0 01-2-2V9a2 2 0 012-2h6l-1 2H4v0zm10.5 0c1.9 0 3.5 1.3 3.5 3.5S16.4 16 14.5 16H12v1h-2V7h4.5zm0 2H12v5h2.5c.8 0 1.5-.7 1.5-1.5S15.3 11 14.5 11zm5.5-2h2l-3 10h-2l3-10z" />
+  </svg>
+);
+
+export const Figma: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M8 2a3 3 0 000 6h3V2H8zm5 0v6h3a3 3 0 000-6h-3zM8 10a3 3 0 000 6h3v-6H8zm5 0v6h3a3 3 0 000-6h-3zM8 18a3 3 0 106 0v-2H8v2z" />
+  </svg>
+);
+
+export const HeroUI: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.2l6.5 3.6v7.4L12 19.8l-6.5-3.6V7.8L12 4.2zM11 9v6h2V9h-2z" />
+  </svg>
+);
+
+export const Recharts: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M4 19h16v2H4v-2zm2-2V9h2v8H6zm5 0V5h2v12h-2zm5 0v-5h2v5h-2z" />
+  </svg>
+);
+
+export const GoogleMaps: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+  </svg>
+);
+
+export const ReactNative: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <circle cx="12" cy="12" r="2.2" />
+    <ellipse cx="12" cy="12" rx="10" ry="4.2" fill="none" stroke="currentColor" strokeWidth="1.5" />
+    <ellipse cx="12" cy="12" rx="10" ry="4.2" fill="none" stroke="currentColor" strokeWidth="1.5" transform="rotate(60 12 12)" />
+    <ellipse cx="12" cy="12" rx="10" ry="4.2" fill="none" stroke="currentColor" strokeWidth="1.5" transform="rotate(120 12 12)" />
+  </svg>
+);
+
+export const Expo: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zm0 2.3L6.5 8.5v7L12 18.7l5.5-3.2v-7L12 5.3z" />
+  </svg>
+);
+
+export const Arduino: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M3 10h4v4H3v-4zm14 0h4v4h-4v-4zM8 11h8v2H8v-2zm-5 5h18v2H3v-2zM5 6h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z" />
+  </svg>
+);
+
+export const Azure: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M12.4 2L4 18.5h5.2L18.5 2h-6.1zm1.2 5.3L9.8 15h3.4l5.3-7.7H13.6zM3 20.5L8.5 9.2 11 14H6.2L3 20.5z" />
+  </svg>
+);
+
+export const Wails: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M3 6h18v2H3V6zm2 4h14v10H5V10zm2 2v6h10v-6H7z" />
+  </svg>
+);
+
+export const Supabase: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z" />
+  </svg>
+);
+
+export const Auth0: React.FC<IconProps> = (props) => (
+  <svg {...base(props)} {...props}>
+    <path d="M21.98 7.448 19.62 0H4.347L2.02 7.448c-1.352 4.312.03 9.206 3.815 12.015L12.007 24l6.157-4.552c3.755-2.81 5.182-7.688 3.815-12.015l-6.16 4.58 2.343 7.45-6.157-4.597-6.158 4.58 2.358-7.433-6.188-4.55 7.63-.045L12.008 0l2.356 7.404 7.615.044z" />
+  </svg>
+);
