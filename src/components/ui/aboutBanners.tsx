@@ -339,7 +339,7 @@ export default function AboutBanners() {
   }, [time]);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-start gap-x-10 gap-y-5 sm:gap-x-12">
         <MetaItem label="Location">
           <HoverPopover

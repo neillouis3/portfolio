@@ -29,11 +29,11 @@ export default function AboutContent() {
         </div>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-6">
         <AboutBanners />
       </div>
 
-      <div className="mt-10 flex flex-col gap-5 text-sm leading-relaxed text-foreground">
+      <div className="mt-12 flex flex-col w-[90%] text-sm leading-relaxed text-foreground">
         <p>
           Hi! I&apos;m Louise
           <motion.span
@@ -48,7 +48,7 @@ export default function AboutContent() {
           >
             👋
           </motion.span>
-          , a fourth-year Computer Engineering student at{" "}
+          , a fifth-year Computer Engineering student at{" "}
           <Link
             underline="always"
             href="https://www.mun.ca"
@@ -57,7 +57,7 @@ export default function AboutContent() {
           >
             Memorial University
           </Link>{" "}
-          with a passion for technology that improves everyday life.
+          with a passion for technology that improves everyday life. I ocassionally work on personal projects that has clean and pleasing visuals.
         </p>
         <p>
           I&apos;m interested in robotics, automation, and AI for electrical

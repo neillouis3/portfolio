@@ -52,6 +52,48 @@ export default function ExperienceContent() {
                 >
                      <AccordionItem
                         key="1"
+                        aria-label="Central Counselling & Assessment Services"
+                        startContent={
+                        <Avatar
+                            size="sm"
+                            radius="sm"
+                            src="/ccasLogo.png"
+                            classNames={{
+                                base: "bg-white"
+                            }}
+                        />
+                        }
+                        subtitle={<span className="text-sm text-default-500">Sep 2026 - Present</span>}
+                        title={
+                            <p className="text-sm">
+                                Full-Stack Software Developer @{" "}
+                                <Link size="sm" href="https://centralcounselling.ca/" underline="always" color="foreground" isExternal>
+                                    Central Counselling & Assessment Services Inc.
+                                </Link>
+                            </p>
+                        }
+                    >
+                        <div className="lg:pl-10 flex flex-col gap-4 text-sm">
+                            <ul className="flex flex-col gap-1 text-default-700">
+                                <li>- Maintaining and extending a knowledge-driven digital platform for guided therapeutic sessions, assessments, progress tracking, and practitioner tools.</li>
+                                <li>- Taking over the existing codebase through a structured handoff, including Supabase, PostgreSQL schemas, deployment, and session architecture.</li>
+                                <li>- Building configurable session and workflow engines with phase-based state, transition logic, and modular therapeutic content assembly.</li>
+                                <li>- Extending administrator tools, APIs, and client-facing delivery layers while testing, refactoring, and documenting platform improvements.</li>
+                            </ul>
+                            <div className="flex flex-col gap-1 text-sm">
+                                <p className="max-lg:hidden">
+                                    <span className="text-default-500">Technologies:</span>{" "}
+                                    <span className="text-default-700">TypeScript, React, Next.js, Supabase, PostgreSQL</span>
+                                </p>
+                                <p className="max-lg:hidden">
+                                    <span className="text-default-500">Tools:</span>{" "}
+                                    <span className="text-default-700">Git, REST APIs, Role-based Auth</span>
+                                </p>
+                            </div>
+                        </div>
+                    </AccordionItem>
+                     <AccordionItem
+                        key="2"
                         aria-label="Orion Health"
                         startContent={
                         <Avatar
@@ -104,7 +146,7 @@ export default function ExperienceContent() {
                         </div>
                     </AccordionItem>
                     <AccordionItem
-                        key="2"
+                        key="3"
                         aria-label="Jeddah International School"
                         startContent={
                         <Avatar
@@ -164,7 +206,7 @@ export default function ExperienceContent() {
                         </div>
                     </AccordionItem>
                     <AccordionItem
-                        key="3"
+                        key="4"
                         aria-label="NL Eats"
                         startContent={
                         <Avatar
